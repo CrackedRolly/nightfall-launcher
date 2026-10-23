@@ -32,7 +32,10 @@
     fetch('i18n/'+l+'.json',{cache:'force-cache'}).then(function(r){return r.json()}).then(function(d){dict=d;cb()}).catch(function(){dict=null;lang='en';cb()})}
   NF.setLang=function(l){lang=l;NF.lang=l;try{localStorage.setItem('nf-lang',l)}catch(e){}load(l,apply)};
   NF.refresh=apply;
+  function fitLabels(){var sel=document.getElementById('lang');if(!sel)return;var narrow=matchMedia('(max-width:760px)').matches;
+    for(var i=0;i<sel.options.length;i++){var o=sel.options[i];if(!o.dataset.full)o.dataset.full=o.textContent;o.textContent=narrow?o.dataset.full.split(' (')[0]:o.dataset.full}}
   function init(){
+    fitLabels();try{matchMedia('(max-width:760px)').addEventListener('change',fitLabels)}catch(e){}
     var sel=document.getElementById('lang');if(sel){sel.value=lang;sel.addEventListener('change',function(){NF.setLang(sel.value)})}
     load(lang,apply);
   }

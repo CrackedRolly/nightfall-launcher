@@ -122,7 +122,7 @@ footer .fine{grid-column:1/-1;border-top:1px solid var(--ln);padding-top:22px;ma
   nav .links{display:none;position:absolute;top:62px;left:0;right:0;flex-direction:column;gap:0;background:rgba(10,10,11,.98);border-bottom:1px solid var(--ln);padding:8px 24px 16px;margin:0}
   nav .links a{padding:12px 0;border-bottom:1px solid var(--ln);font-size:15px}nav.open .links{display:flex}
   .menu-btn{display:grid;place-items:center}nav .right .btn.discord span{display:none}
-  .lang select{max-width:120px}
+  .lang select{max-width:140px}
   .hero{padding:64px 0 24px}.hero p.lead{font-size:16px}section{padding:72px 0}
   .grid{grid-template-columns:1fr}.strip{grid-template-columns:1fr}.band{padding:48px 20px}
 }
