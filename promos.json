@@ -1,0 +1,31 @@
+{
+ "version": 1,
+ "promos": [
+  {
+   "id": "house-discord",
+   "slot": "home",
+   "label": "Nightfall",
+   "title": "Join the Nightfall Discord",
+   "body": "Updates, help with crashes, and modpack picks from other players.",
+   "cta": "Join Discord",
+   "url": "https://discord.gg/PGanscBPUt"
+  },
+  {
+   "id": "house-site",
+   "slot": "news",
+   "label": "Nightfall",
+   "title": "Nightfall Launcher",
+   "body": "Crash help, changelog and the feature comparison are on the website.",
+   "cta": "Visit the site",
+   "url": "https://crackedrolly.github.io/nightfall-launcher/"
+  },
+  {
+   "id": "house-loading",
+   "slot": "loading",
+   "label": "Nightfall",
+   "title": "Stuck on a crash? Crash Help explains 114 of them.",
+   "url": "https://crackedrolly.github.io/nightfall-launcher/crash-help.html"
+  }
+ ],
+ "_doc": "Promo slots for the Nightfall launcher. slot: home|news|loading. label: Sponsored|Partner|Nightfall. url/image must be https. Optional from/until (ISO dates) and weight 1-100. Validated in the app; bad entries are dropped."
+}
