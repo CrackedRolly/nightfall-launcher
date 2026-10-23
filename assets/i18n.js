@@ -21,6 +21,8 @@
       el.innerHTML=v}
     var alts=document.querySelectorAll('[data-i18n-alt]');
     for(i=0;i<alts.length;i++){var a=alts[i],ak=a.getAttribute('data-i18n-alt');if(!(('alt:'+ak) in en))en['alt:'+ak]=a.alt;a.alt=(dict&&dict[ak])||en['alt:'+ak]}
+    var phs=document.querySelectorAll('[data-i18n-ph]');
+    for(i=0;i<phs.length;i++){var q=phs[i],pk=q.getAttribute('data-i18n-ph');if(!(('ph:'+pk) in en))en['ph:'+pk]=q.placeholder;q.placeholder=(dict&&dict[pk])||en['ph:'+pk]}
     root.lang=lang;
     var tk=document.body.getAttribute('data-title-key');if(tk&&dict&&dict[tk])document.title=dict[tk];
     if(tk==='meta.title'){var m=document.querySelector('meta[name=description]');if(m){if(!en._d)en._d=m.content;m.content=(dict&&dict['meta.desc'])||en._d}}

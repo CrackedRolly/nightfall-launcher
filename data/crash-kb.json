@@ -1,0 +1,1867 @@
+{
+ "version": 1,
+ "updated": "2026-10-23",
+ "note": "Shared by the Nightfall launcher and website. Regexes are JavaScript syntax, matched case-insensitively and multi-line.",
+ "categories": {
+  "memory": "Memory",
+  "java": "Java",
+  "mods": "Mods & loaders",
+  "world": "Worlds",
+  "graphics": "Graphics & drivers",
+  "system": "Windows & files",
+  "download": "Downloads",
+  "auth": "Sign-in",
+  "network": "Servers & network",
+  "launcher": "Exit codes & launcher"
+ },
+ "entries": [
+  {
+   "id": "out-of-memory",
+   "cat": "memory",
+   "title": "Out of memory (Java heap space)",
+   "sig": [
+    "java\\.lang\\.OutOfMemoryError: Java heap space",
+    "OutOfMemoryError(?!: (Metaspace|unable to create|Direct buffer))"
+   ],
+   "cause": "The game used all the RAM it was given. Big modpacks, high render distance and shaders are the usual reasons.",
+   "fixes": [
+    "Raise this instance’s memory by 2 GB (most modpacks want 4–8 GB).",
+    "Lower render distance and turn off shaders, then try again.",
+    "Remove or update memory-heavy mods; add FerriteCore and ModernFix if you use Fabric/Forge.",
+    "Close browsers and other games while playing."
+   ],
+   "action": "ram"
+  },
+  {
+   "id": "oom-metaspace",
+   "cat": "memory",
+   "title": "Out of memory (Metaspace)",
+   "sig": [
+    "OutOfMemoryError: Metaspace"
+   ],
+   "cause": "Java ran out of space for class data, which happens with very large modpacks or a too-small MaxMetaspaceSize flag.",
+   "fixes": [
+    "Remove any -XX:MaxMetaspaceSize flag from the extra JVM arguments.",
+    "Raise the instance memory by 2 GB.",
+    "Use the Java version Nightfall picks automatically."
+   ],
+   "action": "jvm-reset"
+  },
+  {
+   "id": "oom-direct",
+   "cat": "memory",
+   "title": "Out of direct buffer memory",
+   "sig": [
+    "OutOfMemoryError: Direct buffer memory"
+   ],
+   "cause": "Native (off-heap) memory ran out, usually from huge texture packs, shaders or a 32-bit Java.",
+   "fixes": [
+    "Use a smaller resource pack or turn off shaders.",
+    "Make sure you use 64-bit Java (clear the custom Java path).",
+    "Raise memory by 2 GB."
+   ],
+   "action": "java-auto"
+  },
+  {
+   "id": "oom-threads",
+   "cat": "memory",
+   "title": "Unable to create native thread",
+   "sig": [
+    "OutOfMemoryError: unable to create (new )?native thread"
+   ],
+   "cause": "The system refused to create more threads, often because the PC itself is out of memory or a mod leaks threads.",
+   "fixes": [
+    "Close other programs and try again.",
+    "Lower the instance memory if it is more than half your PC’s RAM.",
+    "Update or remove the mod named in the stack trace."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "heap-reserve",
+   "cat": "memory",
+   "title": "Could not reserve enough space for object heap",
+   "sig": [
+    "Could not reserve enough space for (\\d+KB )?object heap",
+    "Invalid maximum heap size",
+    "Invalid initial heap size"
+   ],
+   "cause": "Java could not get the RAM you set. Either the value is larger than your free memory, or a 32-bit Java is in use (max ~1.5 GB).",
+   "fixes": [
+    "Lower the memory slider (keep at least 2 GB free for Windows).",
+    "Clear the custom Java path so Nightfall uses its own 64-bit Java.",
+    "Remove -Xmx/-Xms from the extra JVM arguments; the slider already sets them."
+   ],
+   "action": "java-auto"
+  },
+  {
+   "id": "jvm-create",
+   "cat": "java",
+   "title": "Could not create the Java Virtual Machine",
+   "sig": [
+    "Error: Could not create the Java Virtual Machine",
+    "Unrecognized (VM )?option",
+    "Error occurred during initialization of VM"
+   ],
+   "cause": "Java refused to start, nearly always because of a wrong flag in the extra JVM arguments or a memory value it cannot reserve.",
+   "fixes": [
+    "Clear the extra JVM arguments.",
+    "Lower the memory slider.",
+    "Clear the custom Java path."
+   ],
+   "action": "jvm-reset"
+  },
+  {
+   "id": "gc-overhead",
+   "cat": "memory",
+   "title": "GC overhead limit exceeded",
+   "sig": [
+    "GC overhead limit exceeded"
+   ],
+   "cause": "Java spent almost all its time cleaning memory, a sign the game is about to run out of RAM.",
+   "fixes": [
+    "Raise memory by 2 GB.",
+    "Lower render distance/simulation distance.",
+    "Remove heavy mods or resource packs."
+   ],
+   "action": "ram"
+  },
+  {
+   "id": "too-much-ram",
+   "cat": "memory",
+   "title": "Too much RAM allocated (stutters / freezes)",
+   "sig": [
+    "Allocated:\\s*\\d+%.*\\b(9\\d|100)%"
+   ],
+   "cause": "Giving Minecraft nearly all your RAM starves Windows and causes stutters or crashes. More is not always better.",
+   "fixes": [
+    "Set memory to about half of your PC’s RAM, and no more than 8–10 GB for most packs.",
+    "Use the recommended value on the memory slider."
+   ]
+  },
+  {
+   "id": "java-too-old",
+   "cat": "java",
+   "title": "Java is too old (UnsupportedClassVersionError)",
+   "sig": [
+    "UnsupportedClassVersionError",
+    "Unsupported class file major version",
+    "has been compiled by a more recent version of the Java Runtime",
+    "class file version (6[1-9]|7\\d)\\.0"
+   ],
+   "cause": "The game or a mod needs a newer Java than the one used. Minecraft 1.17 needs Java 16+, 1.18–1.20.4 need Java 17, 1.20.5+ needs Java 21.",
+   "fixes": [
+    "Clear the custom Java path so Nightfall downloads the correct Java automatically.",
+    "If you must use your own Java, install Java 21 (for 1.20.5+) or 17 (1.18–1.20.4)."
+   ],
+   "action": "java-auto"
+  },
+  {
+   "id": "java-too-new",
+   "cat": "java",
+   "title": "Java is too new for this version",
+   "sig": [
+    "Unsupported Java detected",
+    "java\\.lang\\.ClassCastException: class jdk\\.internal\\.loader\\.ClassLoaders\\$AppClassLoader cannot be cast to class java\\.net\\.URLClassLoader",
+    "Unable to make field .* accessible: module java\\.base does not \"opens",
+    "Mod ID: .*Java 8"
+   ],
+   "cause": "Old Minecraft (1.16 and older) and old Forge need Java 8. Running them on Java 17/21 breaks the class loader.",
+   "fixes": [
+    "Clear the custom Java path so Nightfall uses Java 8 for this version.",
+    "For Forge 1.12.2 and older, Java 8 is required."
+   ],
+   "action": "java-auto"
+  },
+  {
+   "id": "java-32bit",
+   "cat": "java",
+   "title": "32-bit Java in use",
+   "sig": [
+    "Java HotSpot\\(TM\\) Client VM",
+    "os\\.arch:?\\s*x86\\b",
+    "32-bit Java",
+    "Is 64bit: false"
+   ],
+   "cause": "32-bit Java can only use about 1.5 GB of RAM and is much slower.",
+   "fixes": [
+    "Clear the custom Java path (Nightfall downloads 64-bit Java).",
+    "Uninstall old 32-bit Java from Windows."
+   ],
+   "action": "java-auto"
+  },
+  {
+   "id": "java-not-found",
+   "cat": "java",
+   "title": "Java executable not found",
+   "sig": [
+    "(java|javaw)(\\.exe)?[\"\\']?: (No such file|not found)",
+    "Cannot run program \".*java(w)?(\\.exe)?\"",
+    "spawn .*java(w)?(\\.exe)? ENOENT"
+   ],
+   "cause": "The Java path in settings points to a file that does not exist (Java was uninstalled or moved).",
+   "fixes": [
+    "Clear the custom Java path; Nightfall downloads Java automatically.",
+    "Or pick the java.exe inside your Java’s bin folder."
+   ],
+   "action": "java-auto"
+  },
+  {
+   "id": "java-runtime-corrupt",
+   "cat": "java",
+   "title": "Java runtime is broken or incomplete",
+   "sig": [
+    "Error: could not find (libjava|java\\.dll)",
+    "Error opening zip file or JAR manifest missing",
+    "Error: Could not find or load main class",
+    "jvm\\.dll.*not found"
+   ],
+   "cause": "The Java installation is incomplete (interrupted download, antivirus removed a file) or the classpath is broken.",
+   "fixes": [
+    "Remove the Java runtime in Settings → Java; it re-downloads on next launch.",
+    "Repair the instance.",
+    "Add the Nightfall folder to your antivirus exclusions."
+   ],
+   "action": "repair"
+  },
+  {
+   "id": "java-modules",
+   "cat": "java",
+   "title": "Java module access error (add-opens)",
+   "sig": [
+    "InaccessibleObjectException",
+    "module .* does not \"?opens",
+    "IllegalAccessError: class .* \\(in unnamed module"
+   ],
+   "cause": "An old mod uses Java internals that newer Java blocks.",
+   "fixes": [
+    "Update the mod named in the error.",
+    "Use the Java version Nightfall picks for this Minecraft version."
+   ],
+   "action": "java-auto"
+  },
+  {
+   "id": "fabric-missing-dep",
+   "cat": "mods",
+   "title": "Fabric: mod requires another mod",
+   "sig": [
+    "Mod resolution encountered an incompatible mod set",
+    "requires (any version|version [^\\s]+) of (mod )?[\\'\"]?[\\w-]+",
+    "Unmet dependency listing",
+    "which is missing!"
+   ],
+   "cause": "A Fabric/Quilt mod needs a library mod (often Fabric API, Cloth Config, Architectury) or a specific version of it.",
+   "fixes": [
+    "Read the first \"requires\" line: it names the missing mod and version.",
+    "Install the missing mod from Browse (Fabric API is the most common).",
+    "Or disable the mod that needs it.",
+    "Use the Updates tab to bring all mods to matching versions."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "fabric-api-missing",
+   "cat": "mods",
+   "title": "Fabric API is missing",
+   "sig": [
+    "requires (any version|version .*) of (mod )?[\\'\"]?fabric(-api)?[\\'\"]?",
+    "fabric-api.*which is missing"
+   ],
+   "cause": "Almost every Fabric mod needs Fabric API, and it is not installed.",
+   "fixes": [
+    "Install Fabric API from Browse (Nightfall picks the version that matches)."
+   ],
+   "action": "mods",
+   "prio": 30
+  },
+  {
+   "id": "fabric-incompatible",
+   "cat": "mods",
+   "title": "Fabric: incompatible mods",
+   "sig": [
+    "is incompatible with",
+    "Incompatible mods? found",
+    "breaks .* which is present"
+   ],
+   "cause": "Two mods declare that they cannot run together (for example OptiFine/OptiFabric with Sodium).",
+   "fixes": [
+    "Disable one of the two mods named in the log.",
+    "Use Sodium + Iris instead of OptiFine on Fabric."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "wrong-mc-version-mod",
+   "cat": "mods",
+   "title": "Mod is for a different Minecraft version",
+   "sig": [
+    "requires (version )?.*of minecraft",
+    "Minecraft .* is not supported",
+    "Mod .* only supports Minecraft",
+    "requires minecraft"
+   ],
+   "cause": "A mod was made for another Minecraft version.",
+   "fixes": [
+    "Download the build of that mod for your exact Minecraft version (Browse filters this automatically).",
+    "Or remove the mod."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "wrong-loader",
+   "cat": "mods",
+   "title": "Mod for the wrong loader",
+   "sig": [
+    "is a Forge mod.*Fabric|is a Fabric mod.*Forge",
+    "Found a Forge mod in a Fabric|Found Fabric mod.*Forge",
+    "mods\\.toml.*not found.*fabric\\.mod\\.json|fabric\\.mod\\.json.*NeoForge",
+    "Mod file .* is (missing|not) a valid mod",
+    "is not a valid mod file"
+   ],
+   "cause": "A Forge mod was dropped into a Fabric instance (or the other way round). Each loader only runs its own mods.",
+   "fixes": [
+    "Remove the mod and download the version for your loader, or use Sinytra Connector on Forge/NeoForge if you know what you are doing.",
+    "Quilt can run most Fabric mods, but not Forge mods."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "duplicate-mods",
+   "cat": "mods",
+   "title": "Duplicate mods",
+   "sig": [
+    "Duplicate mods? found",
+    "DuplicateModsFoundException",
+    "found duplicate mod",
+    "Found duplicate mods",
+    "Mod ID .* is (provided|present) by (two|multiple)"
+   ],
+   "cause": "The same mod is installed twice, usually an old and a new version side by side.",
+   "fixes": [
+    "Open the Content tab and remove the older copy.",
+    "Check the mods folder for \"(1).jar\" style copies."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "mixin-apply",
+   "cat": "mods",
+   "title": "Mixin apply failed",
+   "sig": [
+    "Mixin apply (for mod [\\w-]+ )?failed",
+    "MixinApplyError",
+    "InvalidInjectionException",
+    "Critical injection failure",
+    "MixinTransformerError",
+    "org\\.spongepowered\\.asm\\.mixin\\.transformer\\.throwables"
+   ],
+   "cause": "A mod tried to patch Minecraft code that changed or that another mod already patched. The log names the mod.",
+   "fixes": [
+    "Look for \"for mod <name>\" in the error and update or disable that mod.",
+    "Update all mods (Updates tab).",
+    "If it started after adding a mod, disable that one first."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "mixin-conflict",
+   "cat": "mods",
+   "title": "Two mods patch the same code",
+   "sig": [
+    "@Overwrite conflict",
+    "Mixin .* conflicts with",
+    "mixin target .* was not found",
+    "Redirector .* conflict"
+   ],
+   "cause": "Two mods change the same part of the game in incompatible ways.",
+   "fixes": [
+    "Disable recently added mods one at a time to find the pair.",
+    "Check each mod page for known incompatibilities."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "class-not-found",
+   "cat": "mods",
+   "title": "Class not found / method missing",
+   "sig": [
+    "ClassNotFoundException",
+    "NoClassDefFoundError",
+    "NoSuchMethodError",
+    "NoSuchFieldError",
+    "AbstractMethodError"
+   ],
+   "cause": "A mod was built against a different Minecraft, loader or library version, or a library mod is missing.",
+   "fixes": [
+    "Check the class name in the error: it usually contains the mod’s package name.",
+    "Update that mod and its libraries, or remove it.",
+    "Make sure loader and Fabric API are up to date."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "forge-missing-mods",
+   "cat": "mods",
+   "title": "Forge/NeoForge: missing or unsupported mods",
+   "sig": [
+    "Missing or unsupported mandatory dependencies",
+    "Mod [\\w-]+ requires [\\w-]+ ",
+    "Failure message: Mod .* requires",
+    "The following problems were found",
+    "ModLoadingException"
+   ],
+   "cause": "Forge/NeoForge stopped because a mod is missing a dependency or the versions do not match.",
+   "fixes": [
+    "Read the \"Mod X requires Y\" line and install Y in the version it asks for.",
+    "Make sure the Forge/NeoForge version is new enough for your mods."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "forge-mod-errors",
+   "cat": "mods",
+   "title": "Forge: mods have errors (FML error screen)",
+   "sig": [
+    "Mod loading has failed",
+    "LoadingFailedException",
+    "fml\\.modloading\\.(brokenfile|errorduringevent)",
+    "Caught exception from [\\w ]+ \\("
+   ],
+   "cause": "One or more mods crashed while loading. The mod is named in \"Caught exception from\".",
+   "fixes": [
+    "Find \"Caught exception from <mod>\" and update or remove that mod.",
+    "Check that the mod matches your Minecraft and Forge version."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "neoforge-forge-mix",
+   "cat": "mods",
+   "title": "Forge mods in a NeoForge instance (or reverse)",
+   "sig": [
+    "neoforge.*mods\\.toml.*forge|requires forge.*neoforge",
+    "Mod .* requires forge ",
+    "META-INF/neoforge\\.mods\\.toml"
+   ],
+   "cause": "NeoForge 1.20.2+ no longer loads Forge mods (and Forge does not load NeoForge mods).",
+   "fixes": [
+    "Download the NeoForge version of the mod.",
+    "Or use a Forge instance for Forge-only mods."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "quilt-error",
+   "cat": "mods",
+   "title": "Quilt: mod loading failed",
+   "sig": [
+    "org\\.quiltmc\\.loader\\.impl\\.FormattedException",
+    "Quilt Loader.*(could not|failed)",
+    "quilt\\.mod\\.json.*(invalid|error)"
+   ],
+   "cause": "Quilt could not load a mod, usually a missing dependency or a Fabric mod that needs Fabric-only internals.",
+   "fixes": [
+    "Install Quilted Fabric API (QFAPI) instead of plain Fabric API.",
+    "Update or remove the mod named in the error."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "loader-too-old",
+   "cat": "mods",
+   "title": "Loader is too old for a mod",
+   "sig": [
+    "requires (version )?[>=\\s]*[\\d.]+ (or later )?of (mod )?(fabricloader|fabric-loader|quilt_loader|forge|neoforge)",
+    "Fabric Loader .* is outdated",
+    "requires fabricloader"
+   ],
+   "cause": "A mod needs a newer Fabric/Quilt/Forge loader than the one this instance uses.",
+   "fixes": [
+    "Edit the instance and pick the newest loader version."
+   ],
+   "action": "edit"
+  },
+  {
+   "id": "corrupt-mod-jar",
+   "cat": "mods",
+   "title": "Broken or corrupted mod file",
+   "sig": [
+    "zip END header not found",
+    "ZipException",
+    "invalid (LOC|CEN) header",
+    "Error reading mod file",
+    "Failed to read mod file",
+    "java\\.util\\.zip\\.ZipError"
+   ],
+   "cause": "A mod .jar is damaged (incomplete download, or it is not really a jar).",
+   "fixes": [
+    "Remove the mod named in the log and reinstall it from Browse.",
+    "Never download mods from re-upload sites; use Modrinth or CurseForge."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "config-corrupt",
+   "cat": "mods",
+   "title": "Corrupted mod config",
+   "sig": [
+    "(Failed to load|Error loading|Invalid) config(uration)? (file|for)",
+    "ParsingException.*\\.(toml|json5?)",
+    "com\\.electronwill\\.nightconfig.*ParsingException",
+    "MalformedJsonException",
+    "JsonSyntaxException"
+   ],
+   "cause": "A mod’s config file is broken (often after a crash or a manual edit).",
+   "fixes": [
+    "Delete the config file named in the log from the instance’s config folder; the mod recreates it."
+   ],
+   "action": "folder"
+  },
+  {
+   "id": "optifine-fabric",
+   "cat": "mods",
+   "title": "OptiFine with Fabric/Sodium",
+   "sig": [
+    "optifabric",
+    "OptiFine.*(Sodium|Iris)|(Sodium|Iris).*OptiFine",
+    "net\\.optifine.*Mixin"
+   ],
+   "cause": "OptiFine does not work well with modern mods. On Fabric it conflicts with Sodium/Iris and many others.",
+   "fixes": [
+    "Remove OptiFine/OptiFabric and use Sodium + Iris (Recommendations → Performance) for the same benefits."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "optifine-forge",
+   "cat": "mods",
+   "title": "OptiFine incompatible with Forge mods",
+   "sig": [
+    "optifine.*(Rubidium|Embeddium|Oculus)",
+    "OptiFine.*incompatible|incompatible.*OptiFine",
+    "net\\.optifine.*Forge"
+   ],
+   "cause": "OptiFine conflicts with Embeddium/Rubidium/Oculus and many Forge mods, and must match the exact Forge version.",
+   "fixes": [
+    "Remove OptiFine and use Embeddium + Oculus instead.",
+    "If you keep it, use the OptiFine build that matches your Forge version exactly."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "sodium-iris-mismatch",
+   "cat": "mods",
+   "title": "Sodium/Iris version mismatch",
+   "sig": [
+    "Iris.*requires.*sodium",
+    "sodium.*(incompatible|unsupported)",
+    "Incompatible Sodium version"
+   ],
+   "cause": "Iris needs one specific Sodium version.",
+   "fixes": [
+    "Update Sodium and Iris together from the Updates tab."
+   ],
+   "action": "update",
+   "prio": 20
+  },
+  {
+   "id": "shader-compile",
+   "cat": "graphics",
+   "title": "Shader pack failed to compile",
+   "sig": [
+    "Failed to (compile|link) (shader|program)",
+    "shader.*compil(e|ation) error",
+    "Iris.*Failed to load shader pack",
+    "ShaderCompileException"
+   ],
+   "cause": "The shader pack does not support your GPU, driver or Iris version.",
+   "fixes": [
+    "Turn shaders off (press O in game with Iris) or choose another pack.",
+    "Update your GPU driver.",
+    "Update Iris."
+   ],
+   "action": "drivers"
+  },
+  {
+   "id": "shader-memory",
+   "cat": "graphics",
+   "title": "Shaders ran out of GPU memory",
+   "sig": [
+    "GL_OUT_OF_MEMORY",
+    "out of video memory",
+    "VK_ERROR_OUT_OF_DEVICE_MEMORY"
+   ],
+   "cause": "Shaders plus high resolution packs needed more video memory than your GPU has.",
+   "fixes": [
+    "Use a lighter shader profile or turn shaders off.",
+    "Lower render distance and resource pack resolution."
+   ]
+  },
+  {
+   "id": "entity-culling-conflict",
+   "cat": "mods",
+   "title": "Rendering mod conflict",
+   "sig": [
+    "(EntityCulling|Embeddium|Rubidium|Sodium).*(conflict|incompatible)",
+    "IncompatibleModException"
+   ],
+   "cause": "Two rendering mods both try to replace the same renderer.",
+   "fixes": [
+    "Keep only one renderer mod (Sodium on Fabric, Embeddium on Forge)."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "ticking-entity",
+   "cat": "world",
+   "title": "Ticking entity crash",
+   "sig": [
+    "Ticking entity",
+    "Entity being ticked"
+   ],
+   "cause": "An entity (mob, item, minecart) in the world causes a crash every time it updates, usually from a mod bug.",
+   "fixes": [
+    "Update the mod that adds the entity (see \"Entity Type\" in the report).",
+    "Back up the world, then remove the entity with a tool like MCA Selector or by setting \"removeErroringEntities\" in the mod’s config (Forge).",
+    "Restore an older backup of the world."
+   ],
+   "action": "worlds"
+  },
+  {
+   "id": "ticking-block",
+   "cat": "world",
+   "title": "Ticking block entity crash",
+   "sig": [
+    "Ticking block entity",
+    "Block entity being ticked"
+   ],
+   "cause": "A block entity (chest, machine, furnace) crashes when it updates.",
+   "fixes": [
+    "Update the mod that adds the block (see \"Block type\" in the report).",
+    "On Forge, set removeErroringBlockEntities=true in config/forge-common.toml, play once, then turn it off.",
+    "Restore a world backup."
+   ],
+   "action": "worlds"
+  },
+  {
+   "id": "ticking-world",
+   "cat": "world",
+   "title": "Exception ticking world",
+   "sig": [
+    "Exception ticking world",
+    "Exception in server tick loop"
+   ],
+   "cause": "Something in the world crashed the internal server (chunk, entity or a mod’s world logic).",
+   "fixes": [
+    "Update all mods.",
+    "Try the world with recently added mods disabled.",
+    "Restore a backup from the Worlds tab."
+   ],
+   "action": "worlds"
+  },
+  {
+   "id": "world-corrupt",
+   "cat": "world",
+   "title": "World or chunk is corrupted",
+   "sig": [
+    "Couldn\\'?t load chunk",
+    "Chunk file at .* is in the wrong location",
+    "Failed to read level\\.dat",
+    "level\\.dat.*(corrupt|EOF)",
+    "RegionFileStorage.*(error|corrupt)",
+    "Exception reading .*\\.mca",
+    "Invalid (chunk|NBT)"
+   ],
+   "cause": "A world file was damaged (power loss, crash during save, or a disk issue).",
+   "fixes": [
+    "Restore a backup from the Worlds tab.",
+    "Rename level.dat_old to level.dat inside the world folder.",
+    "Use MCA Selector to delete only the broken chunks."
+   ],
+   "action": "worlds"
+  },
+  {
+   "id": "world-newer",
+   "cat": "world",
+   "title": "World saved in a newer version",
+   "sig": [
+    "(World|Level) was saved (with|in) a newer version",
+    "Unsupported world data version",
+    "DataFixer.*newer"
+   ],
+   "cause": "Opening a world in an older Minecraft version than it was last played in can corrupt it.",
+   "fixes": [
+    "Open the world in the same or a newer Minecraft version.",
+    "Back it up before switching versions."
+   ],
+   "action": "worlds"
+  },
+  {
+   "id": "missing-registry",
+   "cat": "world",
+   "title": "Missing blocks/items after removing mods",
+   "sig": [
+    "Missing registry entries",
+    "Unidentified mapping from registry",
+    "Registry .* is missing entries",
+    "missing mappings"
+   ],
+   "cause": "The world contains things from a mod that is no longer installed.",
+   "fixes": [
+    "Reinstall the removed mod, or accept the warning knowing those blocks/items will be deleted.",
+    "Back up the world first."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "datapack-error",
+   "cat": "world",
+   "title": "Data pack failed to load",
+   "sig": [
+    "Failed to load datapacks",
+    "Errors in currently selected data ?packs",
+    "Couldn\\'?t load data ?pack"
+   ],
+   "cause": "A data pack (in the world or from a mod) has errors.",
+   "fixes": [
+    "Start the world in Safe Mode from the error screen.",
+    "Remove the broken data pack from the world’s datapacks folder.",
+    "Update mods that add recipes or worldgen."
+   ],
+   "action": "worlds"
+  },
+  {
+   "id": "session-lock",
+   "cat": "world",
+   "title": "World is open in another game (session.lock)",
+   "sig": [
+    "session\\.lock",
+    "The save is being accessed from another location",
+    "Failed to check session lock"
+   ],
+   "cause": "Another Minecraft window or a backup program is using the world.",
+   "fixes": [
+    "Close other Minecraft windows and backup/sync tools (OneDrive) and try again.",
+    "Move the instance out of OneDrive-synced folders."
+   ]
+  },
+  {
+   "id": "pixel-format",
+   "cat": "graphics",
+   "title": "Pixel format not accelerated",
+   "sig": [
+    "Pixel format not accelerated",
+    "WGL: The driver does not appear to support OpenGL",
+    "GLFW error 65542",
+    "No OpenGL context"
+   ],
+   "cause": "Windows is using a basic display driver, or the game runs on a GPU without OpenGL support.",
+   "fixes": [
+    "Install the latest driver from your GPU maker (NVIDIA, AMD or Intel), not just Windows Update.",
+    "On laptops, set Java (javaw.exe) to use the dedicated GPU in Windows Graphics settings.",
+    "Remote Desktop sessions do not support OpenGL; play locally."
+   ],
+   "action": "drivers"
+  },
+  {
+   "id": "glfw-65543",
+   "cat": "graphics",
+   "title": "OpenGL version not supported (GLFW 65543)",
+   "sig": [
+    "GLFW error 65543",
+    "OpenGL 3\\.2 .*required",
+    "Requested OpenGL version 3\\.2",
+    "WGL: OpenGL profile requested but WGL_ARB_create_context_profile is unavailable"
+   ],
+   "cause": "Minecraft 1.17+ needs OpenGL 3.2. The GPU or its driver is too old.",
+   "fixes": [
+    "Update the GPU driver.",
+    "Very old Intel HD (2nd/3rd gen) GPUs cannot run 1.17+; play 1.16.5 or older."
+   ],
+   "action": "drivers"
+  },
+  {
+   "id": "glfw-65544",
+   "cat": "graphics",
+   "title": "GLFW error 65544 / window could not be created",
+   "sig": [
+    "GLFW error 65544",
+    "Failed to create the GLFW window",
+    "GLFW error 65537",
+    "Unable to initialize GLFW"
+   ],
+   "cause": "The game could not open a window, usually a graphics driver or display configuration problem.",
+   "fixes": [
+    "Update the GPU driver.",
+    "Disconnect extra monitors and try again.",
+    "Turn off \"Start in fullscreen\" for this instance."
+   ],
+   "action": "drivers"
+  },
+  {
+   "id": "intel-driver",
+   "cat": "graphics",
+   "title": "Intel graphics driver crash",
+   "sig": [
+    "ig\\d+icd(32|64)\\.dll",
+    "igxelpicd64\\.dll",
+    "Intel.*(HD|UHD|Iris) Graphics.*(crash|EXCEPTION_ACCESS_VIOLATION)"
+   ],
+   "cause": "A known crash in Intel’s OpenGL driver.",
+   "fixes": [
+    "Install the newest Intel graphics driver from intel.com (not the laptop maker’s old one).",
+    "On laptops with NVIDIA/AMD, make Java use that GPU instead."
+   ],
+   "action": "drivers",
+   "prio": 15
+  },
+  {
+   "id": "amd-driver",
+   "cat": "graphics",
+   "title": "AMD graphics driver crash",
+   "sig": [
+    "atio6axx\\.dll",
+    "atioglxx\\.dll",
+    "amdxc64\\.dll",
+    "AMD Radeon.*EXCEPTION_ACCESS_VIOLATION"
+   ],
+   "cause": "A crash inside AMD’s OpenGL driver. Some driver versions have OpenGL bugs.",
+   "fixes": [
+    "Update the AMD Adrenalin driver, or roll back one version if it started after an update.",
+    "Disable AMD overlays (Radeon overlay, Anti-Lag)."
+   ],
+   "action": "drivers",
+   "prio": 15
+  },
+  {
+   "id": "nvidia-driver",
+   "cat": "graphics",
+   "title": "NVIDIA graphics driver crash",
+   "sig": [
+    "nvoglv(32|64)\\.dll",
+    "nvogl.*EXCEPTION",
+    "NVIDIA.*EXCEPTION_ACCESS_VIOLATION"
+   ],
+   "cause": "A crash inside NVIDIA’s OpenGL driver, often fixed by a clean driver install.",
+   "fixes": [
+    "Update the NVIDIA driver (choose \"Clean installation\").",
+    "Turn off \"Threaded optimization\" for javaw.exe in NVIDIA Control Panel if it persists."
+   ],
+   "action": "drivers",
+   "prio": 15
+  },
+  {
+   "id": "access-violation",
+   "cat": "graphics",
+   "title": "Native crash (EXCEPTION_ACCESS_VIOLATION)",
+   "sig": [
+    "EXCEPTION_ACCESS_VIOLATION",
+    "A fatal error has been detected by the Java Runtime Environment",
+    "SIGSEGV",
+    "hs_err_pid"
+   ],
+   "cause": "Java crashed in native code: usually a GPU driver, an overlay hooking the game, or a broken native library.",
+   "fixes": [
+    "Update the GPU driver.",
+    "Turn off overlays: Discord, Steam, GeForce Experience, MSI Afterburner/RivaTuner, OBS game capture.",
+    "Look at the \"Problematic frame\" line: a .dll name there points to the culprit."
+   ],
+   "action": "drivers"
+  },
+  {
+   "id": "overlay-crash",
+   "cat": "graphics",
+   "title": "Overlay or recording software crash",
+   "sig": [
+    "RTSSHooks(64)?\\.dll",
+    "DiscordHook(64)?\\.dll",
+    "graphics-hook(32|64)\\.dll",
+    "GameOverlayRenderer(64)?\\.dll",
+    "nvspcap64\\.dll",
+    "OWExplorer|overwolf"
+   ],
+   "cause": "An overlay (RivaTuner, Discord, OBS, Steam, Overwolf) injected into the game and crashed it.",
+   "fixes": [
+    "Disable the overlay for Minecraft/javaw.exe or close that program.",
+    "Update the overlay software."
+   ],
+   "prio": 15
+  },
+  {
+   "id": "opengl-error-1282",
+   "cat": "graphics",
+   "title": "OpenGL Error 1282",
+   "sig": [
+    "OpenGL Error.*1282",
+    "GL_INVALID_OPERATION"
+   ],
+   "cause": "A rendering mod or shader issued an invalid OpenGL call. Usually harmless spam, sometimes black screens.",
+   "fixes": [
+    "Turn shaders off to test.",
+    "Update Sodium/Iris/OptiFine.",
+    "Disable \"Show GL errors\" in video settings if it is just spam."
+   ]
+  },
+  {
+   "id": "black-screen",
+   "cat": "graphics",
+   "title": "Black or white screen on start",
+   "sig": [
+    "Unable to (load|create) (framebuffer|texture)",
+    "Framebuffer.*(incomplete|status)",
+    "GL_FRAMEBUFFER_UNSUPPORTED"
+   ],
+   "cause": "The game could not create its drawing surfaces, usually a driver issue or a resource pack with huge textures.",
+   "fixes": [
+    "Update the GPU driver.",
+    "Remove large resource packs.",
+    "Turn off fullscreen and set a normal window size."
+   ],
+   "action": "drivers"
+  },
+  {
+   "id": "texture-stitch",
+   "cat": "graphics",
+   "title": "Texture atlas too large",
+   "sig": [
+    "Unable to fit: .* - size:",
+    "StitcherException",
+    "Maximum texture size"
+   ],
+   "cause": "Too many or too large textures for your GPU’s maximum texture size (common with big modpacks + HD packs).",
+   "fixes": [
+    "Remove HD resource packs.",
+    "Lower mipmap levels in video settings.",
+    "Raise memory if it is also low."
+   ]
+  },
+  {
+   "id": "lwjgl-native",
+   "cat": "graphics",
+   "title": "LWJGL native library failed to load",
+   "sig": [
+    "Failed to locate library: (lwjgl|glfw)",
+    "UnsatisfiedLinkError",
+    "Can\\'?t load (IA )?32-bit \\.dll on a AMD 64-bit platform",
+    "no lwjgl in java\\.library\\.path"
+   ],
+   "cause": "The game’s native libraries are missing, blocked, or for the wrong architecture.",
+   "fixes": [
+    "Repair the instance so natives are re-extracted.",
+    "Add the Nightfall folder to antivirus exclusions.",
+    "Clear the custom Java path (wrong 32/64-bit Java)."
+   ],
+   "action": "repair"
+  },
+  {
+   "id": "vcruntime",
+   "cat": "system",
+   "title": "Missing Visual C++ runtime",
+   "sig": [
+    "VCRUNTIME140(_1)?\\.dll",
+    "MSVCP140\\.dll",
+    "api-ms-win-crt"
+   ],
+   "cause": "Windows is missing the Microsoft Visual C++ Redistributable needed by some natives.",
+   "fixes": [
+    "Install the latest \"Visual C++ Redistributable x64\" from Microsoft."
+   ],
+   "action": "vcredist"
+  },
+  {
+   "id": "sound-openal",
+   "cat": "system",
+   "title": "Sound engine failed (OpenAL)",
+   "sig": [
+    "Failed to open OpenAL device",
+    "OpenAL initialization failed",
+    "Error starting SoundSystem",
+    "ALC_INVALID_DEVICE"
+   ],
+   "cause": "No audio device, or another app has exclusive control of it. The game keeps running without sound.",
+   "fixes": [
+    "Plug in or enable an audio device and restart the game.",
+    "Turn off \"exclusive mode\" for your audio device in Windows Sound settings."
+   ]
+  },
+  {
+   "id": "exit-1",
+   "cat": "launcher",
+   "title": "Exit code 1",
+   "sig": [
+    "\\[Nightfall\\] exit code: 1$"
+   ],
+   "codes": [
+    1
+   ],
+   "cause": "A generic Java error. The real reason is earlier in the log or crash report.",
+   "fixes": [
+    "Open the latest log and look for the first \"Exception\" or \"Error\" line.",
+    "Check the other matches on this page for that line.",
+    "Disable recently added mods."
+   ],
+   "action": "logs"
+  },
+  {
+   "id": "exit-minus1",
+   "cat": "launcher",
+   "title": "Exit code -1",
+   "sig": [
+    "\\[Nightfall\\] exit code: -1$"
+   ],
+   "codes": [
+    -1
+   ],
+   "cause": "The game stopped abruptly, usually a mod crash before logging finished or a driver problem.",
+   "fixes": [
+    "Check the crash report; if none, update GPU drivers.",
+    "Disable recently added mods.",
+    "Repair the instance."
+   ],
+   "action": "logs"
+  },
+  {
+   "id": "exit-805306369",
+   "cat": "launcher",
+   "title": "Exit code -805306369",
+   "sig": [
+    "\\[Nightfall\\] exit code: -805306369"
+   ],
+   "codes": [
+    -805306369
+   ],
+   "cause": "Windows ended Java (0xCFFFFFFF). Commonly memory exhaustion, an incompatible mod, or GPU driver trouble.",
+   "fixes": [
+    "Raise memory by 2 GB, but keep half your RAM free.",
+    "Update GPU drivers.",
+    "Disable recently added mods or shaders."
+   ],
+   "action": "ram"
+  },
+  {
+   "id": "exit-1073740791",
+   "cat": "launcher",
+   "title": "Exit code -1073740791 / 1073740791 (0xC0000409)",
+   "sig": [
+    "\\[Nightfall\\] exit code: -?1073740791"
+   ],
+   "codes": [
+    -1073740791,
+    1073740791
+   ],
+   "cause": "A native \"stack buffer overrun\" crash. Almost always a GPU driver, overlay or a native mod library.",
+   "fixes": [
+    "Update the GPU driver (clean install).",
+    "Close overlays (Discord, RivaTuner, OBS, Overwolf).",
+    "Remove mods that ship native code (e.g. voice chat, replay)."
+   ],
+   "action": "drivers"
+  },
+  {
+   "id": "exit-1073741819",
+   "cat": "launcher",
+   "title": "Exit code -1073741819 (0xC0000005)",
+   "sig": [
+    "\\[Nightfall\\] exit code: -?1073741819"
+   ],
+   "codes": [
+    -1073741819,
+    3221225477
+   ],
+   "cause": "Access violation in native code: drivers, overlays, or antivirus injecting into Java.",
+   "fixes": [
+    "Update GPU drivers.",
+    "Disable overlays and test with antivirus exclusions for the Nightfall folder."
+   ],
+   "action": "drivers"
+  },
+  {
+   "id": "exit-1073741571",
+   "cat": "launcher",
+   "title": "Exit code -1073741571 (stack overflow)",
+   "sig": [
+    "\\[Nightfall\\] exit code: -?1073741571",
+    "StackOverflowError"
+   ],
+   "codes": [
+    -1073741571
+   ],
+   "cause": "Infinite recursion, usually a mod bug or two mods calling each other.",
+   "fixes": [
+    "Disable recently added mods.",
+    "Add -Xss4M to the extra JVM arguments only if a mod page tells you to."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "exit-1073741515",
+   "cat": "launcher",
+   "title": "Exit code -1073741515 (missing DLL)",
+   "sig": [
+    "\\[Nightfall\\] exit code: -?1073741515"
+   ],
+   "codes": [
+    -1073741515
+   ],
+   "cause": "A required Windows DLL is missing, usually the Visual C++ runtime.",
+   "fixes": [
+    "Install the latest Visual C++ Redistributable x64.",
+    "Clear the custom Java path."
+   ],
+   "action": "vcredist"
+  },
+  {
+   "id": "exit-1073741502",
+   "cat": "launcher",
+   "title": "Exit code -1073741502 (DLL init failed)",
+   "sig": [
+    "\\[Nightfall\\] exit code: -?1073741502"
+   ],
+   "codes": [
+    -1073741502
+   ],
+   "cause": "A DLL failed to start, often antivirus or a broken system library.",
+   "fixes": [
+    "Restart the PC.",
+    "Add the Nightfall folder to antivirus exclusions.",
+    "Install Visual C++ Redistributable x64."
+   ],
+   "action": "vcredist"
+  },
+  {
+   "id": "exit-137",
+   "cat": "launcher",
+   "title": "Exit code 137 (killed, out of memory)",
+   "sig": [
+    "\\[Nightfall\\] exit code: 137"
+   ],
+   "codes": [
+    137
+   ],
+   "cause": "The operating system killed the game because the computer ran out of memory.",
+   "fixes": [
+    "Lower the instance memory so the PC has room.",
+    "Close other programs."
+   ],
+   "action": "ram"
+  },
+  {
+   "id": "exit-143",
+   "cat": "launcher",
+   "title": "Exit code 143 / killed",
+   "sig": [
+    "\\[Nightfall\\] exit code: 143"
+   ],
+   "codes": [
+    143
+   ],
+   "cause": "Something stopped the game from outside (task manager, Stop button, or the system).",
+   "fixes": [
+    "If you did not stop it, check antivirus history for a blocked Java."
+   ]
+  },
+  {
+   "id": "exit-134",
+   "cat": "launcher",
+   "title": "Exit code 134 (abort)",
+   "sig": [
+    "\\[Nightfall\\] exit code: 134"
+   ],
+   "codes": [
+    134
+   ],
+   "cause": "Java aborted, often from a native library or driver assertion.",
+   "fixes": [
+    "Update GPU drivers.",
+    "Repair the instance."
+   ],
+   "action": "drivers"
+  },
+  {
+   "id": "exit-255",
+   "cat": "launcher",
+   "title": "Exit code 255",
+   "sig": [
+    "\\[Nightfall\\] exit code: 255"
+   ],
+   "codes": [
+    255
+   ],
+   "cause": "A general failure that happens before Minecraft starts, often Java or classpath trouble.",
+   "fixes": [
+    "Clear the custom Java path and extra JVM arguments.",
+    "Repair the instance."
+   ],
+   "action": "repair"
+  },
+  {
+   "id": "exit-0-early",
+   "cat": "launcher",
+   "title": "Game closed right after starting (exit 0)",
+   "sig": [
+    "\\[Nightfall\\] exit code: 0$"
+   ],
+   "codes": [
+    0
+   ],
+   "cause": "The game exited normally very quickly: usually Forge/Fabric showed an error screen and you closed it, or the window failed silently.",
+   "fixes": [
+    "Open the latest log to see the last lines.",
+    "Check mods for missing dependencies."
+   ],
+   "action": "logs"
+  },
+  {
+   "id": "hash-mismatch",
+   "cat": "download",
+   "title": "Download corrupted (hash mismatch)",
+   "sig": [
+    "(sha1|hash|checksum).*mismatch",
+    "hash mismatch",
+    "Checksum (failed|error)",
+    "Invalid (sha1|hash)"
+   ],
+   "cause": "A file arrived damaged or was changed by a proxy/antivirus.",
+   "fixes": [
+    "Repair the instance (it re-downloads broken files).",
+    "Try again later or on another network."
+   ],
+   "action": "repair"
+  },
+  {
+   "id": "download-failed",
+   "cat": "download",
+   "title": "Download failed / no internet",
+   "sig": [
+    "Failed to download",
+    "UnknownHostException",
+    "getaddrinfo ENOTFOUND",
+    "ECONNRESET",
+    "ETIMEDOUT",
+    "SocketTimeoutException",
+    "fetch failed"
+   ],
+   "cause": "A server could not be reached: no internet, DNS trouble, or a firewall/VPN blocking it.",
+   "fixes": [
+    "Check your internet connection and try again.",
+    "Turn off VPN/proxy, or allow Nightfall in your firewall.",
+    "Lower parallel downloads in Settings on slow connections."
+   ],
+   "action": "settings"
+  },
+  {
+   "id": "ssl-error",
+   "cat": "download",
+   "title": "SSL / certificate error",
+   "sig": [
+    "SSLHandshakeException",
+    "PKIX path building failed",
+    "unable to (find valid|get local issuer) certification",
+    "CERT_HAS_EXPIRED",
+    "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
+   ],
+   "cause": "Secure connections are being intercepted (antivirus HTTPS scanning, school/work proxy) or the PC clock is wrong.",
+   "fixes": [
+    "Set the Windows clock to update automatically.",
+    "Turn off HTTPS scanning in your antivirus, or try another network."
+   ]
+  },
+  {
+   "id": "assets-missing",
+   "cat": "download",
+   "title": "Missing assets (no sounds, purple-black textures)",
+   "sig": [
+    "Unable to (load|find) (sound|asset)",
+    "Missing (sound|asset) for event",
+    "Missing textures? in model"
+   ],
+   "cause": "Game assets were not fully downloaded.",
+   "fixes": [
+    "Repair the instance."
+   ],
+   "action": "repair"
+  },
+  {
+   "id": "libraries-missing",
+   "cat": "download",
+   "title": "Missing library / classpath error",
+   "sig": [
+    "Could not find or load main class (net\\.minecraft|cpw|net\\.fabricmc|org\\.quiltmc|net\\.neoforged)",
+    "library .* (missing|not found)",
+    "Error: Unable to initialize main class"
+   ],
+   "cause": "A library jar is missing or damaged, so Java cannot find the game.",
+   "fixes": [
+    "Repair the instance.",
+    "Add the Nightfall folder to antivirus exclusions."
+   ],
+   "action": "repair"
+  },
+  {
+   "id": "antivirus-block",
+   "cat": "system",
+   "title": "Antivirus or firewall blocked the game",
+   "sig": [
+    "Access is denied",
+    "EPERM: operation not permitted",
+    "EBUSY",
+    "The process cannot access the file because it is being used",
+    "Operation did not complete successfully because the file contains a virus"
+   ],
+   "cause": "Security software locked, quarantined or blocked a game file or Java.",
+   "fixes": [
+    "Add the Nightfall data folder and javaw.exe to your antivirus exclusions.",
+    "Restore quarantined files, then repair the instance.",
+    "Allow javaw.exe in Windows Firewall for multiplayer."
+   ],
+   "action": "repair"
+  },
+  {
+   "id": "path-special",
+   "cat": "system",
+   "title": "Folder path with special characters",
+   "sig": [
+    "Illegal char <.*> at index",
+    "InvalidPathException",
+    "Malformed \\\\uxxxx encoding",
+    "URISyntaxException.*(Illegal character|path)"
+   ],
+   "cause": "The game folder path contains characters some mods cannot handle (non-Latin letters, !, # or very long paths).",
+   "fixes": [
+    "Move the Nightfall data folder to a simple path like C:\\Nightfall (Settings → Data folder).",
+    "Avoid \"!\" and \"#\" in folder names."
+   ],
+   "action": "folder"
+  },
+  {
+   "id": "onedrive",
+   "cat": "system",
+   "title": "Instance inside OneDrive / cloud folder",
+   "sig": [
+    "OneDrive",
+    "cloud file provider"
+   ],
+   "cause": "Cloud sync locks files while the game writes them, causing failed saves and crashes.",
+   "fixes": [
+    "Keep the Nightfall data folder outside OneDrive/Dropbox/Google Drive."
+   ],
+   "action": "folder"
+  },
+  {
+   "id": "disk-full",
+   "cat": "system",
+   "title": "Disk is full",
+   "sig": [
+    "No space left on device",
+    "There is not enough space on the disk",
+    "ENOSPC"
+   ],
+   "cause": "The drive ran out of space while downloading or saving.",
+   "fixes": [
+    "Free some disk space (Java + assets need about 1–2 GB per version).",
+    "Delete old instances or backups you do not need."
+   ]
+  },
+  {
+   "id": "file-in-use",
+   "cat": "system",
+   "title": "File in use by another program",
+   "sig": [
+    "being used by another process",
+    "FileSystemException.*(in use|locked)"
+   ],
+   "cause": "Another program (a second game window, backup tool, antivirus scan) has the file open.",
+   "fixes": [
+    "Close other Minecraft windows and try again.",
+    "Restart the PC if it persists."
+   ]
+  },
+  {
+   "id": "permission",
+   "cat": "system",
+   "title": "Permission denied",
+   "sig": [
+    "AccessDeniedException",
+    "Permission denied",
+    "EACCES"
+   ],
+   "cause": "Nightfall or Java cannot write to the folder.",
+   "fixes": [
+    "Do not run the game from Program Files; keep the data folder in your user folder.",
+    "Check that the folder is not read-only."
+   ],
+   "action": "folder"
+  },
+  {
+   "id": "launcher-profiles",
+   "cat": "launcher",
+   "title": "Forge installer: launcher_profiles.json",
+   "sig": [
+    "launcher_profiles\\.json",
+    "There is no minecraft launcher profile"
+   ],
+   "cause": "The Forge installer expected the official launcher’s files.",
+   "fixes": [
+    "Nightfall creates this file itself; repair the instance and try again."
+   ],
+   "action": "repair"
+  },
+  {
+   "id": "forge-installer",
+   "cat": "launcher",
+   "title": "Forge/NeoForge installer failed",
+   "sig": [
+    "(Forge|NeoForge) installer (failed|exited)",
+    "Processor failed",
+    "Failed to run processor",
+    "installer.*exit code"
+   ],
+   "cause": "The loader installer could not finish, usually a download problem or a too-old Java for the installer.",
+   "fixes": [
+    "Try again (downloads sometimes fail).",
+    "Choose a different (newer) loader version in Edit instance.",
+    "Fabric/Quilt are more reliable if your mods support them."
+   ],
+   "action": "edit"
+  },
+  {
+   "id": "version-json",
+   "cat": "launcher",
+   "title": "Version file damaged",
+   "sig": [
+    "Unexpected end of JSON input",
+    "SyntaxError: Unexpected token .* in JSON",
+    "version json.*(invalid|corrupt)"
+   ],
+   "cause": "A downloaded version/profile file is incomplete.",
+   "fixes": [
+    "Repair the instance."
+   ],
+   "action": "repair"
+  },
+  {
+   "id": "xsts-no-xbox",
+   "cat": "auth",
+   "title": "No Xbox profile (XSTS 2148916233)",
+   "sig": [
+    "2148916233"
+   ],
+   "cause": "The Microsoft account has never signed in to Xbox, so it has no Xbox profile.",
+   "fixes": [
+    "Sign in once at xbox.com (or minecraft.net) to create the profile, then sign in to Nightfall again."
+   ],
+   "action": "signin",
+   "prio": 5
+  },
+  {
+   "id": "xsts-country",
+   "cat": "auth",
+   "title": "Xbox not available in your country (2148916235)",
+   "sig": [
+    "2148916235"
+   ],
+   "cause": "Xbox Live is not available in the account’s country/region.",
+   "fixes": [
+    "The account region cannot be changed easily; contact Xbox support."
+   ]
+  },
+  {
+   "id": "xsts-adult-kr",
+   "cat": "auth",
+   "title": "Adult verification needed (2148916236 / 2148916237)",
+   "sig": [
+    "214891623[67]"
+   ],
+   "cause": "South Korean accounts must complete age verification on xbox.com.",
+   "fixes": [
+    "Sign in at xbox.com and complete adult verification, then try again."
+   ],
+   "action": "signin"
+  },
+  {
+   "id": "xsts-child",
+   "cat": "auth",
+   "title": "Child account needs family approval (2148916238)",
+   "sig": [
+    "2148916238"
+   ],
+   "cause": "The account is under 18 and must be added to a Microsoft Family group by an adult.",
+   "fixes": [
+    "Ask a parent to add the account at account.microsoft.com/family and allow Xbox/Minecraft."
+   ]
+  },
+  {
+   "id": "xsts-banned",
+   "cat": "auth",
+   "title": "Xbox account banned or suspended",
+   "sig": [
+    "2148916227"
+   ],
+   "cause": "The Xbox account is banned or suspended.",
+   "fixes": [
+    "Check enforcement.xbox.com for details."
+   ]
+  },
+  {
+   "id": "xsts-tos",
+   "cat": "auth",
+   "title": "Xbox terms need accepting (2148916234)",
+   "sig": [
+    "2148916234"
+   ],
+   "cause": "The account must accept the latest Xbox terms of use.",
+   "fixes": [
+    "Sign in at xbox.com and accept the terms, then sign in to Nightfall again."
+   ],
+   "action": "signin"
+  },
+  {
+   "id": "xsts-parental",
+   "cat": "auth",
+   "title": "Parental controls block online play (2148916229)",
+   "sig": [
+    "2148916229"
+   ],
+   "cause": "Family settings do not allow this account to play online/multiplayer.",
+   "fixes": [
+    "A parent can allow multiplayer in the Xbox Family Settings app."
+   ]
+  },
+  {
+   "id": "no-minecraft",
+   "cat": "auth",
+   "title": "Account does not own Minecraft: Java Edition",
+   "sig": [
+    "does not own Minecraft",
+    "NOT_FOUND.*profile",
+    "Account has no Minecraft profile",
+    "no (Java Edition|Minecraft) (license|profile)"
+   ],
+   "cause": "The signed-in Microsoft account has no Java Edition licence or no player name yet.",
+   "fixes": [
+    "Use the account that bought Minecraft (Game Pass PC also counts).",
+    "Create your player name once at minecraft.net/profile."
+   ],
+   "action": "signin"
+  },
+  {
+   "id": "mojang-approval",
+   "cat": "auth",
+   "title": "Waiting for Mojang approval (403)",
+   "sig": [
+    "Waiting for Mojang approval",
+    "Invalid app registration",
+    "AppRegInfo"
+   ],
+   "cause": "Microsoft and Xbox sign-in worked, but Mojang has not approved this launcher’s app ID yet.",
+   "fixes": [
+    "Nothing is wrong with your account. Use dev mode for offline singleplayer testing until approval."
+   ],
+   "action": "signin"
+  },
+  {
+   "id": "token-expired",
+   "cat": "auth",
+   "title": "Sign-in expired",
+   "sig": [
+    "invalid_grant",
+    "AADSTS70000",
+    "AADSTS700082",
+    "refresh token.*(expired|invalid)",
+    "401.*Unauthorized"
+   ],
+   "cause": "The saved sign-in is no longer valid (password changed, signed out everywhere, or 90 days unused).",
+   "fixes": [
+    "Remove the account and sign in again."
+   ],
+   "action": "signin"
+  },
+  {
+   "id": "device-code-expired",
+   "cat": "auth",
+   "title": "Sign-in code expired",
+   "sig": [
+    "expired_token",
+    "authorization_declined",
+    "code (has )?expired"
+   ],
+   "cause": "The Microsoft code was not entered in time, or the request was declined.",
+   "fixes": [
+    "Start sign-in again and enter the new code within 15 minutes."
+   ],
+   "action": "signin"
+  },
+  {
+   "id": "rate-limited",
+   "cat": "auth",
+   "title": "Too many requests (429)",
+   "sig": [
+    "\\b429\\b.*(Too Many|rate)",
+    "TooManyRequests"
+   ],
+   "cause": "Mojang or Microsoft temporarily limited requests from your network.",
+   "fixes": [
+    "Wait a few minutes and try again."
+   ]
+  },
+  {
+   "id": "invalid-session",
+   "cat": "network",
+   "title": "Invalid session when joining a server",
+   "sig": [
+    "Invalid session",
+    "Failed to verify username",
+    "Failed to log in: Invalid session",
+    "disconnect\\.loginFailedInfo\\.invalidSession"
+   ],
+   "cause": "The server could not verify your login with Mojang: an expired token, or an offline/dev profile on an online-mode server.",
+   "fixes": [
+    "Restart Nightfall so the token refreshes, then join again.",
+    "Dev mode profiles cannot join online-mode servers."
+   ],
+   "action": "signin"
+  },
+  {
+   "id": "outdated-client",
+   "cat": "network",
+   "title": "Outdated client / server",
+   "sig": [
+    "Outdated (client|server)",
+    "Incompatible client",
+    "multiplayer\\.disconnect\\.outdated_client",
+    "Please use (Minecraft|version) [\\d.]+"
+   ],
+   "cause": "Your Minecraft version differs from the server’s.",
+   "fixes": [
+    "Create or switch to an instance with the server’s version (shown in the server list ping).",
+    "Some servers allow newer clients through ViaVersion, not older ones."
+   ],
+   "action": "edit"
+  },
+  {
+   "id": "connection-refused",
+   "cat": "network",
+   "title": "Connection refused",
+   "sig": [
+    "Connection refused",
+    "ConnectException",
+    "ECONNREFUSED"
+   ],
+   "cause": "Nothing is listening at that address/port: the server is offline, the address is wrong, or a firewall blocks it.",
+   "fixes": [
+    "Check the server address and port.",
+    "Check if the server is online (server list ping).",
+    "Allow javaw.exe through Windows Firewall."
+   ],
+   "action": "servers"
+  },
+  {
+   "id": "connection-timeout",
+   "cat": "network",
+   "title": "Connection timed out",
+   "sig": [
+    "Connection timed out",
+    "io\\.netty\\.channel\\.ConnectTimeoutException",
+    "Timed out"
+   ],
+   "cause": "The server did not answer in time: it is down, far away, or a firewall/VPN drops the traffic.",
+   "fixes": [
+    "Try again; check the server status.",
+    "Turn off VPN, or try another network."
+   ],
+   "action": "servers"
+  },
+  {
+   "id": "unknown-host",
+   "cat": "network",
+   "title": "Unknown host",
+   "sig": [
+    "Unknown host",
+    "UnresolvedAddressException"
+   ],
+   "cause": "The server address could not be found (typo or DNS issue).",
+   "fixes": [
+    "Check the spelling of the server address.",
+    "Try a public DNS like 1.1.1.1."
+   ],
+   "action": "servers"
+  },
+  {
+   "id": "mod-mismatch-server",
+   "cat": "network",
+   "title": "Mod mismatch with server",
+   "sig": [
+    "Mismatched mod channel list",
+    "Server is missing mods",
+    "Mod rejections",
+    "Incompatible FML modded server",
+    "This server has mods that require"
+   ],
+   "cause": "The server and your instance have different mods or mod versions.",
+   "fixes": [
+    "Use the server’s modpack (import its .mrpack) so versions match exactly."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "chat-signing",
+   "cat": "network",
+   "title": "Chat signing / profile key error",
+   "sig": [
+    "Chat (message )?validation failed",
+    "Invalid signature for profile public key",
+    "Missing profile public key",
+    "multiplayer\\.disconnect\\.(missing|invalid)_public_key"
+   ],
+   "cause": "The server requires signed chat but the profile key is missing or expired.",
+   "fixes": [
+    "Restart Nightfall and the game so a new key is fetched.",
+    "Dev mode/offline profiles cannot use signed chat."
+   ],
+   "action": "signin"
+  },
+  {
+   "id": "banned-server",
+   "cat": "network",
+   "title": "Banned or not whitelisted",
+   "sig": [
+    "You are banned",
+    "You are not white-?listed",
+    "multiplayer\\.disconnect\\.(banned|not_whitelisted)"
+   ],
+   "cause": "The server does not allow your account.",
+   "fixes": [
+    "Contact the server staff."
+   ]
+  },
+  {
+   "id": "multiplayer-disabled",
+   "cat": "network",
+   "title": "Multiplayer is disabled",
+   "sig": [
+    "Multiplayer is disabled",
+    "multiplayer.*(disabled|not allowed).*Microsoft account"
+   ],
+   "cause": "Account or family settings block multiplayer.",
+   "fixes": [
+    "A parent can allow multiplayer in Xbox Family Settings.",
+    "Check xbox.com privacy settings: \"You can join multiplayer games\" must be allowed."
+   ]
+  },
+  {
+   "id": "server-full",
+   "cat": "network",
+   "title": "Server is full",
+   "sig": [
+    "The server is full",
+    "multiplayer\\.disconnect\\.server_full"
+   ],
+   "cause": "The server reached its player limit.",
+   "fixes": [
+    "Try again later."
+   ]
+  },
+  {
+   "id": "already-running",
+   "cat": "launcher",
+   "title": "Game already running",
+   "sig": [
+    "Stop the game first",
+    "Game is running"
+   ],
+   "cause": "This instance is already open.",
+   "fixes": [
+    "Switch to the open game window, or press Stop in Nightfall."
+   ]
+  },
+  {
+   "id": "modded-unknown",
+   "cat": "mods",
+   "title": "Generic mod crash (crash report names a mod)",
+   "sig": [
+    "Suspected Mods?: (?!NONE)",
+    "Suspected mod(s)?:"
+   ],
+   "cause": "The crash report lists the mod it suspects.",
+   "fixes": [
+    "Update the suspected mod, or disable it to confirm.",
+    "Report the crash to that mod’s issue tracker with the mclo.gs link."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "rendering-overlay",
+   "cat": "graphics",
+   "title": "Rendering overlay / screen crash",
+   "sig": [
+    "Rendering overlay",
+    "Rendering screen",
+    "Screen render details"
+   ],
+   "cause": "A menu or overlay crashed while drawing, usually a UI or HUD mod.",
+   "fixes": [
+    "Update or disable HUD/menu mods (minimaps, mod menus, custom main menus)."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "keybind-crash",
+   "cat": "mods",
+   "title": "Keybind / controls crash",
+   "sig": [
+    "KeyMapping.*(null|crash)",
+    "Duplicate key ?binding"
+   ],
+   "cause": "A mod registered a broken keybind.",
+   "fixes": [
+    "Delete options.txt in the instance folder to reset controls (back it up first)."
+   ],
+   "action": "folder"
+  },
+  {
+   "id": "resource-pack",
+   "cat": "graphics",
+   "title": "Resource pack failed to load",
+   "sig": [
+    "Failed to load resource ?pack",
+    "Unable to parse (resource ?pack|pack\\.mcmeta)",
+    "Invalid pack\\.mcmeta"
+   ],
+   "cause": "A resource pack is broken or for another version.",
+   "fixes": [
+    "Remove the pack from resourcepacks and restart."
+   ],
+   "action": "folder"
+  },
+  {
+   "id": "macos-arm",
+   "cat": "system",
+   "title": "Wrong architecture natives (Apple/ARM)",
+   "sig": [
+    "mach-o, but wrong architecture",
+    "incompatible architecture \\(have \\'?x86_64"
+   ],
+   "cause": "Natives for the wrong CPU architecture were loaded.",
+   "fixes": [
+    "Clear the custom Java path so a native Java is used.",
+    "Repair the instance."
+   ],
+   "action": "java-auto"
+  },
+  {
+   "id": "nightfall-companion",
+   "cat": "mods",
+   "title": "Nightfall companion mod problem",
+   "sig": [
+    "nightfall-companion.*(Exception|error)",
+    "\\[nightfall\\].*(failed|error)"
+   ],
+   "cause": "The small companion mod (in-game mod toggles) failed.",
+   "fixes": [
+    "Update Nightfall; the companion mod is re-installed on launch.",
+    "You can disable it in the Content tab; the game works without it."
+   ],
+   "action": "mods"
+  }
+ ]
+}

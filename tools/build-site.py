@@ -57,7 +57,7 @@ def nav(current):
     def a(href, key, cur): return f'<a href="{href}" data-i18n="{key}"{" aria-current=\"page\"" if cur==current else ""}>{EN[key]}</a>'
     return f'''<nav id="nav"><div class="w">
 <a class="brand" href="./"><img src="assets/star.svg" alt="" width="22" height="22"><span>NIGHTFALL</span></a>
-<div class="links" id="links">{a("./#features","nav.features","")}{a("./#compare","nav.compare","")}{a("changelog.html","nav.changelog","log")}{a("faq.html","nav.faq","faq")}{a("crash-help.html","nav.crash","")}</div>
+<div class="links" id="links">{a("./#features","nav.features","")}{a("./#compare","nav.compare","")}{a("changelog.html","nav.changelog","log")}{a("faq.html","nav.faq","faq")}{a("crash-help.html","nav.crash","crash")}</div>
 <div class="right">
 <label class="lang"><span class="sr" data-i18n="nav.lang">{EN["nav.lang"]}</span><select id="lang" aria-label="Language">{opts}</select></label>
 <a class="btn sm discord" href="{INVITE}" rel="noopener">{svg("discord")}<span data-i18n="nav.discord">Discord</span></a>
@@ -173,3 +173,23 @@ for c,_ in LANGS:
     if c=='en': continue
     shutil.copy(os.path.join(SRC, c+'.json'), os.path.join(ROOT,'i18n',c+'.json'))
 print('built')
+
+# ---- crash-help.html: built from data/crash-kb.json (same file the launcher ships) ----
+def crash_help():
+    kb = json.load(open(os.path.join(ROOT, 'data', 'crash-kb.json'), encoding='utf-8'))
+    E = html.escape; cats = kb['categories']; items = []
+    for e in kb['entries']:
+        codes = ''.join(f'<span class="code">exit {c}</span>' for c in e.get('codes', []))
+        items.append(f'<details class="kb" id="{e["id"]}" data-cat="{e["cat"]}"><summary><span class="cat">{E(cats[e["cat"]])}</span><span class="t">{E(e["title"])}</span><a class="anchor" href="#{e["id"]}" aria-label="Link to this error">#</a></summary>'
+            f'<div class="body"><p>{E(e["cause"])}</p>{("<p>"+codes+"</p>") if codes else ""}<ol>{"".join(f"<li>{E(x)}</li>" for x in e["fixes"])}</ol>'
+            f'<p class="sig">Matches: {" · ".join(f"<code>{E(x)}</code>" for x in e["sig"][:3])}</p></div></details>')
+    chips = f'<button class="chip on" data-cat="" data-i18n="help.all">{EN["help.all"]}</button>' + ''.join(f'<button class="chip" data-cat="{k}">{E(v)}</button>' for k, v in cats.items())
+    js = open(os.path.join(ROOT, 'tools', 'crash-help.js'), encoding='utf-8').read()
+    return (f'<main id="main"><div class="w help"><div class="page-hero"><span class="mono" data-i18n="help.kicker">{EN["help.kicker"]}</span><h1 data-i18n="help.title">{EN["help.title"]}</h1>'
+        f'<p><b>{len(kb["entries"])}</b> &middot; <span data-i18n="help.sub">{EN["help.sub"]}</span></p></div>'
+        f'<div class="kbtools"><input id="q" type="search" data-i18n-ph="help.search" placeholder="{E(EN["help.search"])}" aria-label="Search"><button class="btn sm" id="chk" type="button" data-i18n="help.check">{EN["help.check"]}</button></div>'
+        f'<div class="checker" id="checker" hidden><label for="log" class="note" data-i18n="help.privacy">{EN["help.privacy"]}</label><textarea id="log" rows="7"></textarea><div id="res" aria-live="polite" data-likely="{E(EN["help.likely"])}" data-none="{E(EN["help.nomatch"])}"></div></div>'
+        f'<div class="chips" role="group" aria-label="Categories">{chips}</div><p class="note"><span id="count">{len(kb["entries"])}</span> <span data-i18n="help.errors">{EN["help.errors"]}</span> &middot; <span data-i18n="help.en">{EN["help.en"]}</span></p>'
+        f'<div class="kblist" id="list">{"".join(items)}</div>'
+        f'<p class="note"><a href="{REPO}/issues" data-i18n="help.issue">{EN["help.issue"]}</a> &middot; <a href="data/crash-kb.json">crash-kb.json</a> ({kb["updated"]})</p></div></main><script>{js}</script>')
+write('crash-help.html', head('help.title', 'meta.desc', 'crash-help.html', 'Crash help — Nightfall Launcher') + nav('crash') + crash_help() + footer())
