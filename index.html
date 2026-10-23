@@ -6,19 +6,37 @@
 <main class="w"><div class="hero"><img src="assets/Nightfall-Launcher-Banner.png" width="1500" height="500" alt="Nightfall Launcher"></div>
 <section class="pitch"><div><h1>A quiet, fast launcher for Minecraft: Java Edition.</h1>
 <p>Nightfall puts instances, mods and performance tuning in one place. Sign in with your Microsoft account, pick a version, and play. No accounts of ours, no clutter.</p>
-<p class="mono">Windows first · macOS and Linux later · free</p></div>
-<div class="st"><b>In development</b><p>There is no public build yet. When the first release is ready it will be posted here and on GitHub.</p><span class="btn" aria-disabled="true">Download — coming soon</span></div></section>
+<p class="mono">Windows first · macOS and Linux later · free</p>
+<p class="note"><b>Heads up:</b> Microsoft sign-in is waiting for Mojang to approve the app. Until then you can install and set everything up, but playing on online servers starts working after approval. No reinstall needed, the launcher updates itself.</p></div>
+<div class="st" id="download"><b>Version <span id="dlv">0.1.1</span></b>
+<a class="btn pri" id="dl" href="https://github.com/CrackedRolly/nightfall-launcher/releases/latest/download/Nightfall-Launcher-0.1.1-win-x64.exe"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Download for Windows</a>
+<p class="mono meta"><span id="dls">79 MB</span> · Windows 10/11, 64-bit · auto-updates</p>
+<p class="small"><a href="https://github.com/CrackedRolly/nightfall-launcher/releases/latest">All releases</a></p></div></section>
+<section class="warn"><h2>// windows warning?</h2>
+<div class="wg"><div><p>The installer isn't code-signed yet (a certificate costs money we'd rather not spend this early), so Windows SmartScreen may say <b>"Windows protected your PC"</b> the first time you run it.</p>
+<ol><li>Click <b>More info</b>.</li><li>Click <b>Run anyway</b>.</li></ol>
+<p class="small">You only see this once. Updates install without it. The file comes straight from this project's GitHub releases.</p></div>
+<div class="dia" aria-hidden="true"><div class="win"><div class="bar"></div><i class="l1"></i><i class="l2"></i><i class="l3 s"></i><span class="lk">More info <em>1</em></span><div class="bt"><span class="ra">Run anyway <em>2</em></span><span>Don't run</span></div></div></div></div></section>
 <h2 id="features">// what it does</h2><dl>
 <dt>Microsoft sign-in</dt><dd>Official Microsoft OAuth login. Your password never touches the launcher, and tokens stay on your PC.</dd>
-<dt>Fabric &amp; Forge</dt><dd>Install a loader for any supported version in one click, each in its own instance.</dd>
+<dt>Fabric instances</dt><dd>Vanilla or Fabric for any version, each in its own instance, with the right Java downloaded for you. Forge and NeoForge are planned.</dd>
 <dt>Modrinth browsing</dt><dd>Search, install and update mods, resource packs and modpacks through the Modrinth API, with dependencies resolved for you.</dd>
 <dt>Performance profile</dt><dd>A ready-made set: <code>Sodium</code> <code>Lithium</code> <code>FerriteCore</code> <code>EntityCulling</code> <code>ImmediatelyFast</code> <code>ModernFix</code>.</dd>
 <dt>Java &amp; memory</dt><dd>Sensible RAM allocation and JVM flags chosen for your machine, with a manual override if you know what you're doing.</dd>
 <dt>Recommendations</dt><dd>Curated bundles for PvP, Performance, Survival and Shaders. Install a whole setup instead of hunting for twenty mods.</dd>
 <dt>Toggle mods in-game</dt><dd>Turn mods off from inside the game and hit Restart. Minecraft closes, relaunches with the new set and lands on the title screen.</dd></dl>
 <h2>// status</h2><div class="road"><ul>
-<li><span class="mono">done</span>Branding, Azure app registration</li>
-<li><span class="mono">waiting</span>Minecraft services API approval from Mojang</li>
-<li><span class="mono">next</span>Sign-in, instances, Fabric install</li>
-<li><span class="mono">later</span>Modrinth browser, Recommendations, in-game toggle, macOS/Linux</li></ul></div></main>
-<footer><div class="w"><div>Nightfall Launcher is not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.<br>© 2026 Nightfall Launcher</div><div><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="https://github.com/crackedrolly">GitHub</a></div></div></footer></body></html>
+<li><span class="mono">done</span>Branding, Azure app registration, Mojang review form submitted</li>
+<li><span class="mono">done</span>v0.1.1 released: instances, Fabric, Modrinth browser, Recommendations, in-game mod toggle, auto-update</li>
+<li><span class="mono">waiting</span>Minecraft services API approval from Mojang (needed for sign-in and online play)</li>
+<li><span class="mono">next</span>Forge / NeoForge, skins, code-signed installer</li>
+<li><span class="mono">later</span>macOS and Linux builds</li></ul></div></main>
+<footer><div class="w"><div>Nightfall Launcher is not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.<br>© 2026 Nightfall Launcher</div><div><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="https://github.com/crackedrolly">GitHub</a></div></div></footer>
+<script>
+fetch('https://api.github.com/repos/CrackedRolly/nightfall-launcher/releases/latest').then(r=>r.ok?r.json():Promise.reject()).then(r=>{
+  const a=r.assets.find(x=>/\.exe$/i.test(x.name)); if(!a) return;
+  document.getElementById('dl').href=a.browser_download_url;
+  document.getElementById('dlv').textContent=r.tag_name.replace(/^v/,'');
+  document.getElementById('dls').textContent=Math.round(a.size/1048576)+' MB';
+}).catch(()=>{});
+</script></body></html>
