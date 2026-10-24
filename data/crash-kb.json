@@ -1555,7 +1555,7 @@
    ],
    "cause": "Microsoft and Xbox sign-in worked, but Mojang has not approved this launcher’s app ID yet.",
    "fixes": [
-    "Nothing is wrong with your account. Use dev mode for offline singleplayer testing until approval."
+    "Nothing is wrong with your account. Sign-in starts working as soon as Mojang approves the launcher."
    ],
    "action": "signin"
   },
@@ -1617,7 +1617,7 @@
    "cause": "The server could not verify your login with Mojang: an expired token, or an offline/dev profile on an online-mode server.",
    "fixes": [
     "Restart Nightfall so the token refreshes, then join again.",
-    "Dev mode profiles cannot join online-mode servers."
+    "Sign in with a Microsoft account that owns Minecraft to join online-mode servers."
    ],
    "action": "signin"
   },
@@ -1716,7 +1716,7 @@
    "cause": "The server requires signed chat but the profile key is missing or expired.",
    "fixes": [
     "Restart Nightfall and the game so a new key is fetched.",
-    "Dev mode/offline profiles cannot use signed chat."
+    "Make sure you are signed in with Microsoft; offline profiles cannot use signed chat."
    ],
    "action": "signin"
   },
