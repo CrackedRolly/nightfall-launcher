@@ -159,3 +159,9 @@ figcaption{padding:12px 10px 7px;font-size:13.5px;color:var(--dim)}figcaption b{
 .kb .sig{font-size:12px;color:var(--mut)}.kb code,.kb .code{font:12px var(--mono);border:1px solid var(--ln2);border-radius:4px;padding:1px 6px;color:var(--tx2);margin-right:6px}
 .kb:target summary{background:var(--s1)}
 @media(max-width:700px){.kb summary{flex-wrap:wrap;gap:4px 10px}.kb .cat{width:100%}.kb .body{padding-left:6px}.help .kbtools{flex-direction:column}}
+/* legal pages */
+.doc h2{margin:40px 0 10px;font-size:22px;scroll-margin-top:84px;overflow-wrap:anywhere}.doc ol{padding-left:22px}.doc li{overflow-wrap:anywhere}
+.doc .sumbox{border:1px solid var(--ln2);background:var(--s2);border-radius:10px;padding:18px 22px;margin:24px 0}.doc .sumbox h2{margin:0 0 10px;font-size:18px}
+.doc .toc{border-left:2px solid var(--ln3);padding:4px 0 4px 18px;margin:24px 0 8px}.doc .toc h2{margin:0 0 8px;font-size:16px;text-transform:uppercase;letter-spacing:.08em;color:var(--tx2)}.doc .toc li{margin-bottom:4px}
+.doc .lnote{font-size:13px;border:1px dashed var(--ln3);border-radius:8px;padding:10px 14px}.doc .lnote[hidden]{display:none}
+@media (max-width:600px){.doc{padding:40px 18px 32px}.doc h2{font-size:19px}}
