@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-10-23",
+ "updated": "2026-10-24",
  "note": "Shared by the Nightfall launcher and website. Regexes are JavaScript syntax, matched case-insensitively and multi-line.",
  "categories": {
   "memory": "Memory",
@@ -1801,6 +1801,282 @@
    "cause": "A menu or overlay crashed while drawing, usually a UI or HUD mod.",
    "fixes": [
     "Update or disable HUD/menu mods (minimaps, mod menus, custom main menus)."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "embeddium-sodium-dup",
+   "cat": "mods",
+   "title": "Sodium and Embeddium installed together",
+   "sig": [
+    "sodium.*embeddium|embeddium.*sodium.*(duplicate|conflict|incompatible)",
+    "Embeddium is not compatible with Sodium"
+   ],
+   "cause": "Embeddium is a port of Sodium. Having both loads the same renderer twice.",
+   "fixes": [
+    "Remove one of them: on Fabric keep Sodium, on Forge/NeoForge keep Embeddium (or Sodium on NeoForge 1.21+)."
+   ],
+   "action": "mods",
+   "prio": 40
+  },
+  {
+   "id": "rubidium-old",
+   "cat": "mods",
+   "title": "Rubidium is outdated",
+   "sig": [
+    "rubidium.*(failed|crash|incompatible)",
+    "me\\.jellysquid\\.mods\\.sodium.*rubidium"
+   ],
+   "cause": "Rubidium is no longer updated and breaks with newer Forge mods.",
+   "fixes": [
+    "Replace Rubidium with Embeddium.",
+    "If you use Oculus, update it to a build made for Embeddium."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "iris-oculus-mix",
+   "cat": "mods",
+   "title": "Iris and Oculus mixed up",
+   "sig": [
+    "oculus.*iris|iris.*requires.*sodium.*forge"
+   ],
+   "cause": "Iris is for Fabric/Quilt/NeoForge, Oculus is the Forge port. A wrong one for your loader won’t load.",
+   "fixes": [
+    "Fabric/NeoForge: use Iris. Forge: use Oculus + Embeddium."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "create-addon-mismatch",
+   "cat": "mods",
+   "title": "Create addon doesn’t match your Create version",
+   "sig": [
+    "com\\.simibubi\\.create.*NoSuchMethodError",
+    "requires create.*(0\\.5|6\\.0)",
+    "Create.*addon.*requires"
+   ],
+   "cause": "Create addons are built for one Create version (0.5.1 vs 6.0). A mismatch crashes while loading.",
+   "fixes": [
+    "Update every Create addon together with Create, or roll Create back in Updates → Version history."
+   ],
+   "action": "update",
+   "prio": 40
+  },
+  {
+   "id": "architectury-missing",
+   "cat": "mods",
+   "title": "Architectury API is missing",
+   "sig": [
+    "requires.*architectury",
+    "dev/architectury/.*ClassNotFoundException",
+    "ClassNotFoundException: dev\\.architectury"
+   ],
+   "cause": "Many cross-loader mods need Architectury API.",
+   "fixes": [
+    "Install Architectury API for your loader and Minecraft version from Browse."
+   ],
+   "action": "mods",
+   "prio": 40
+  },
+  {
+   "id": "cloth-config-missing",
+   "cat": "mods",
+   "title": "Cloth Config is missing",
+   "sig": [
+    "requires.*cloth-config",
+    "me/shedaniel/clothconfig.*ClassNotFound",
+    "ClassNotFoundException: me\\.shedaniel\\.clothconfig"
+   ],
+   "cause": "A mod needs Cloth Config for its settings screen.",
+   "fixes": [
+    "Install Cloth Config API from Browse."
+   ],
+   "action": "mods",
+   "prio": 40
+  },
+  {
+   "id": "geckolib-missing",
+   "cat": "mods",
+   "title": "GeckoLib is missing or the wrong version",
+   "sig": [
+    "requires.*geckolib",
+    "software/bernie/geckolib.*(ClassNotFound|NoSuchMethod)"
+   ],
+   "cause": "Animated-mob mods need GeckoLib, usually a specific major version (3, 4).",
+   "fixes": [
+    "Install or update GeckoLib to the version the mod asks for."
+   ],
+   "action": "mods",
+   "prio": 40
+  },
+  {
+   "id": "kotlin-missing",
+   "cat": "mods",
+   "title": "Kotlin for Forge / Fabric Language Kotlin missing",
+   "sig": [
+    "requires.*fabric-language-kotlin",
+    "requires.*kotlinforforge",
+    "kotlin/jvm/internal/Intrinsics.*ClassNotFound",
+    "ClassNotFoundException: kotlin\\."
+   ],
+   "cause": "Mods written in Kotlin need the Kotlin language library.",
+   "fixes": [
+    "Fabric: install Fabric Language Kotlin. Forge/NeoForge: install Kotlin for Forge."
+   ],
+   "action": "mods",
+   "prio": 40
+  },
+  {
+   "id": "nosuchmethod-mod",
+   "cat": "mods",
+   "title": "A mod calls code that changed (NoSuchMethodError)",
+   "sig": [
+    "java\\.lang\\.NoSuchMethodError",
+    "java\\.lang\\.NoSuchFieldError",
+    "java\\.lang\\.AbstractMethodError"
+   ],
+   "cause": "Two mods (or a mod and its library) are from different versions.",
+   "fixes": [
+    "Update all mods for this version at once (Updates → Update all).",
+    "If it started after an update, roll back that mod in Updates → Version history.",
+    "The ‘Mods that show up in the crash’ list names the most likely mod."
+   ],
+   "action": "update"
+  },
+  {
+   "id": "incompatible-class-change",
+   "cat": "mods",
+   "title": "Mod built for another Minecraft version",
+   "sig": [
+    "IncompatibleClassChangeError",
+    "java\\.lang\\.VerifyError"
+   ],
+   "cause": "A mod jar was built against a different Minecraft or library version.",
+   "fixes": [
+    "Check that every mod says it supports exactly your Minecraft version.",
+    "Use Check for problems in the Content tab."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "mixin-target-missing",
+   "cat": "mods",
+   "title": "Mixin target not found",
+   "sig": [
+    "Mixin.*target.*was not found",
+    "InvalidMixinException.*could not find",
+    "@Shadow field .* was not located"
+   ],
+   "cause": "A mod tries to patch game code that doesn’t exist in this version, usually a mod made for another version.",
+   "fixes": [
+    "Update the named mod, or remove it if it has no build for this version."
+   ],
+   "action": "mods",
+   "prio": 40
+  },
+  {
+   "id": "mod-config-parse",
+   "cat": "mods",
+   "title": "A mod’s config file is broken",
+   "sig": [
+    "Failed loading config file",
+    "ParsingException.*\\.toml",
+    "com\\.electronwill\\.nightconfig.*ParsingException",
+    "JsonSyntaxException.*config"
+   ],
+   "cause": "A config file was cut off or edited by hand with a mistake.",
+   "fixes": [
+    "Delete the named file in the instance’s config folder. The mod makes a fresh one."
+   ],
+   "action": "folder",
+   "prio": 40
+  },
+  {
+   "id": "forge-early-window",
+   "cat": "graphics",
+   "title": "Forge/NeoForge loading window crashed",
+   "sig": [
+    "EarlyDisplay|earlywindow.*(fail|exception)",
+    "fml\\.earlyWindowControl"
+   ],
+   "cause": "The early loading screen doesn’t work with some graphics drivers.",
+   "fixes": [
+    "Open config/fml.toml in the instance folder and set earlyWindowControl = false.",
+    "Update your graphics driver."
+   ],
+   "action": "folder"
+  },
+  {
+   "id": "watchdog-timeout",
+   "cat": "world",
+   "title": "Server watchdog: a tick took too long",
+   "sig": [
+    "A single server tick took .* seconds",
+    "ServerHangWatchdog",
+    "Watchdog"
+   ],
+   "cause": "The integrated server froze, usually from a laggy farm, huge explosion or a heavy worldgen mod.",
+   "fixes": [
+    "Raise memory, lower simulation distance, or remove the mod named in the stack trace."
+   ],
+   "action": "ram"
+  },
+  {
+   "id": "chunk-load-failed",
+   "cat": "world",
+   "title": "Chunk failed to load",
+   "sig": [
+    "Couldn't load chunk",
+    "Failed to read chunk",
+    "Chunk file at .* is in the wrong location"
+   ],
+   "cause": "Part of the world file is damaged or was saved by a mod you removed.",
+   "fixes": [
+    "Back up the world, then open it with the mod you removed, or let Minecraft regenerate the chunk."
+   ],
+   "action": "worlds"
+  },
+  {
+   "id": "modernfix-dynres",
+   "cat": "mods",
+   "title": "ModernFix dynamic resources problem",
+   "sig": [
+    "modernfix.*dynamic.?resources",
+    "ModernFix.*model.*(null|fail)"
+   ],
+   "cause": "ModernFix’s dynamic resources option doesn’t work with a few model mods.",
+   "fixes": [
+    "Open config/modernfix-mixins.properties and set mixin.perf.dynamic_resources=false."
+   ],
+   "action": "folder"
+  },
+  {
+   "id": "c2me-crash",
+   "cat": "mods",
+   "title": "C2ME crashed while generating chunks",
+   "sig": [
+    "com\\.ishland\\.c2me",
+    "c2me.*(Exception|Error)"
+   ],
+   "cause": "C2ME changes world generation threading; some mods aren’t safe with it.",
+   "fixes": [
+    "Remove C2ME from this instance. FPS is not affected; only chunk generation speed."
+   ],
+   "action": "mods"
+  },
+  {
+   "id": "entity-render-crash",
+   "cat": "graphics",
+   "title": "Crash while rendering an entity",
+   "sig": [
+    "Rendering entity in world",
+    "Description: Rendering entity"
+   ],
+   "cause": "A mob or item from a mod failed to draw, often a model or shader mod mismatch.",
+   "fixes": [
+    "Update the mod named in the crash.",
+    "Turn off shaders and try again."
    ],
    "action": "mods"
   },
