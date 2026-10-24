@@ -134,4 +134,5 @@ function set(d){b.innerHTML=d[pg];h.textContent=d[pg+'_t'];u.textContent=d.updat
 if(!E)E={};E[pg]=b.innerHTML;E[pg+'_t']=h.textContent;E.updated=u.textContent;E.note='';
 document.addEventListener('nf:lang',function(e){var l=e.detail;document.documentElement.lang=l;if(l==='en')return set(E);if(C[l])return set(C[l]);fetch('i18n/legal/'+l+'.json').then(function(r){return r.json()}).then(function(d){C[l]=d;if((window.NF&&NF.lang)===l)set(d)}).catch(function(){set(E)})});})();</script>
 <script src="assets/site.js" defer></script>
+<script src="assets/meteors.js" defer></script>
 </body></html>
