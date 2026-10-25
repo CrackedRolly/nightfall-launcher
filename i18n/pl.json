@@ -422,5 +422,9 @@
  "v3.n037": "Nowości w 0.3.7",
  "v3.n037.1": "Układaj instancje w folderach (PvP, Modpacki, Stare wersje…) prosto z ich karty.",
  "v3.n037.2": "Foldery pojawiają się jako filtry obok wyszukiwarki.",
- "v3.n037.3": "Ulubione instancje zostają na górze."
+ "v3.n037.3": "Ulubione instancje zostają na górze.",
+ "v3.n038": "Nowości w 0.3.8",
+ "v3.n038.1": "Menedżer światów: zmieniaj nazwy światów i eksportuj je jako .zip.",
+ "v3.n038.2": "Każda kopia jest na liście; przywróć ją jako kopię lub zastąp obecny świat.",
+ "v3.n038.3": "Usunięcie świata zostawia kopię, więc błąd można cofnąć."
 }

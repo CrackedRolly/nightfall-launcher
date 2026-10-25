@@ -238,5 +238,9 @@
  "v3.n037": "Novedades de 0.3.7",
  "v3.n037.1": "Organiza instancias en carpetas (PvP, Modpacks, Versiones antiguas…) desde su tarjeta.",
  "v3.n037.2": "Las carpetas aparecen como filtros junto a la búsqueda.",
- "v3.n037.3": "Las instancias favoritas se quedan arriba."
+ "v3.n037.3": "Las instancias favoritas se quedan arriba.",
+ "v3.n038": "Novedades de 0.3.8",
+ "v3.n038.1": "Gestor de mundos: renombra mundos y expórtalos como .zip.",
+ "v3.n038.2": "Todas las copias aparecen en una lista; restaura como copia o reemplaza el mundo actual.",
+ "v3.n038.3": "Borrar un mundo guarda una copia, así los errores tienen arreglo."
 }

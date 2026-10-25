@@ -238,5 +238,9 @@
  "v3.n037": "0.3.7'de yeni",
  "v3.n037.1": "Örnekleri doğrudan kartlarından klasörlere koy (PvP, Mod paketleri, Eski sürümler…).",
  "v3.n037.2": "Klasörler aramanın yanında filtre olarak görünür.",
- "v3.n037.3": "Yıldızlı örnekler en üstte kalır."
+ "v3.n037.3": "Yıldızlı örnekler en üstte kalır.",
+ "v3.n038": "0.3.8'de yeni",
+ "v3.n038.1": "Dünya yöneticisi: dünyaları yeniden adlandır ve .zip olarak dışa aktar.",
+ "v3.n038.2": "Tüm yedekler listelenir; kopya olarak geri yükle ya da mevcut dünyayı değiştir.",
+ "v3.n038.3": "Bir dünyayı silmek yedek bırakır, hatalar geri alınabilir."
 }

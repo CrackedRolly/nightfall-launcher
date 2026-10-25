@@ -422,5 +422,9 @@
  "v3.n037": "Novità della 0.3.7",
  "v3.n037.1": "Metti le istanze in cartelle (PvP, Modpack, Versioni vecchie…) direttamente dalla loro scheda.",
  "v3.n037.2": "Le cartelle compaiono come filtri accanto alla ricerca.",
- "v3.n037.3": "Le istanze preferite restano in cima."
+ "v3.n037.3": "Le istanze preferite restano in cima.",
+ "v3.n038": "Novità della 0.3.8",
+ "v3.n038.1": "Gestione mondi: rinomina i mondi ed esportali come .zip.",
+ "v3.n038.2": "Ogni backup è in elenco; ripristinalo come copia o sostituisci il mondo attuale.",
+ "v3.n038.3": "Eliminare un mondo ne tiene un backup, così gli errori si possono annullare."
 }

@@ -422,5 +422,9 @@
  "v3.n037": "Nouveautés de la 0.3.7",
  "v3.n037.1": "Rangez vos instances dans des dossiers (PvP, Modpacks, Anciennes versions…) depuis leur carte.",
  "v3.n037.2": "Les dossiers apparaissent comme filtres à côté de la recherche.",
- "v3.n037.3": "Les instances favorites restent en haut."
+ "v3.n037.3": "Les instances favorites restent en haut.",
+ "v3.n038": "Nouveautés de la 0.3.8",
+ "v3.n038.1": "Gestion des mondes : renommez vos mondes et exportez-les en .zip.",
+ "v3.n038.2": "Chaque sauvegarde est listée ; restaurez-la en copie ou remplacez le monde actuel.",
+ "v3.n038.3": "Supprimer un monde garde une sauvegarde, une erreur peut être annulée."
 }

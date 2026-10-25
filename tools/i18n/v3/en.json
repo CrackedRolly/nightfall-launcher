@@ -238,5 +238,9 @@
  "v3.n037": "New in 0.3.7",
  "v3.n037.1": "Put instances in folders (PvP, Modpacks, Old versions…) right from their card.",
  "v3.n037.2": "Folders appear as filters next to the instance search.",
- "v3.n037.3": "Starred instances stay at the top."
+ "v3.n037.3": "Starred instances stay at the top.",
+ "v3.n038": "New in 0.3.8",
+ "v3.n038.1": "World manager: rename worlds and export them as a .zip.",
+ "v3.n038.2": "Every backup is listed; restore it as a copy or replace the current world.",
+ "v3.n038.3": "Deleting a world keeps a backup, so mistakes can be undone."
 }

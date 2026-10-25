@@ -238,5 +238,9 @@
  "v3.n037": "Nou în 0.3.7",
  "v3.n037.1": "Pune instanțele în dosare (PvP, Modpackuri, Versiuni vechi…) direct de pe cardul lor.",
  "v3.n037.2": "Dosarele apar ca filtre lângă căutare.",
- "v3.n037.3": "Instanțele favorite rămân sus."
+ "v3.n037.3": "Instanțele favorite rămân sus.",
+ "v3.n038": "Nou în 0.3.8",
+ "v3.n038.1": "Manager de lumi: redenumește lumile și exportă-le ca .zip.",
+ "v3.n038.2": "Toate copiile apar într-o listă; restaurează ca o copie sau înlocuiește lumea actuală.",
+ "v3.n038.3": "Ștergerea unei lumi păstrează o copie, ca greșelile să poată fi anulate."
 }
