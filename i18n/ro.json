@@ -385,5 +385,11 @@
  "v3.n.version.t": "Schimbă versiunea sau loaderul",
  "v3.n.version.d": "Fiecare mod e înlocuit cu o versiune compatibilă. Cele fără una sunt listate și oprite, iar o copie de siguranță permite anularea.",
  "v3.n.templates.t": "Șabloane și actualizări de pack",
- "v3.n.templates.d": "Salvează o instanță ca șablon pentru altele noi și actualizează un modpack dintr-un fișier mai nou, păstrând configurările și lumile."
+ "v3.n.templates.d": "Salvează o instanță ca șablon pentru altele noi și actualizează un modpack dintr-un fișier mai nou, păstrând configurările și lumile.",
+ "v3.n033": "Nou în 0.3.3",
+ "v3.n033.1": "Cel mai nou Java 21 (Temurin) și mai multă memorie de la pornire pentru FPS mai stabil.",
+ "v3.n033.2": "Limita ta de FPS nu mai e suprascrisă niciodată; comparație FPS mai corectă și o pornire de test identică cu CurseForge.",
+ "v3.n033.3": "Oprește tot HUD-ul dintr-un comutator sau o tastă și primești înapoi exact ce aveai.",
+ "v3.n033.4": "Instanțele noi pornesc curat: transferă toate setările dintr-o altă instanță sau pornește de la zero.",
+ "v3.n033.5": "Reparat: Personalizare nu mai schimbă mărimea GUI."
 }

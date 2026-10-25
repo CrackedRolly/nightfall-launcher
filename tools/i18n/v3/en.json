@@ -201,5 +201,11 @@
  "v3.n.version.t": "Change version or loader",
  "v3.n.version.d": "Every mod is swapped for a compatible build. Mods without one are listed and turned off, and a backup makes it undoable.",
  "v3.n.templates.t": "Templates and pack updates",
- "v3.n.templates.d": "Save an instance as a template for new ones, and update a modpack from a newer file while keeping your configs and worlds."
+ "v3.n.templates.d": "Save an instance as a template for new ones, and update a modpack from a newer file while keeping your configs and worlds.",
+ "v3.n033": "New in 0.3.3",
+ "v3.n033.1": "Newest Java 21 (Temurin) and a fuller starting memory allocation, for smoother FPS.",
+ "v3.n033.2": "Your FPS cap is never overwritten; a fairer Compare FPS and a CurseForge-identical test launch.",
+ "v3.n033.3": "Turn off all HUD with one switch or a key, and get exactly what you had back.",
+ "v3.n033.4": "New instances start clean: transfer all your settings from another instance, or start fresh.",
+ "v3.n033.5": "Fixed: Customize no longer changes your GUI scale."
 }

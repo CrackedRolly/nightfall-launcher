@@ -201,5 +201,11 @@
  "v3.n.version.t": "Changer de version ou de loader",
  "v3.n.version.d": "Chaque mod est remplacé par une version compatible. Ceux qui n'en ont pas sont listés et désactivés, et une sauvegarde permet d'annuler.",
  "v3.n.templates.t": "Modèles et mises à jour de pack",
- "v3.n.templates.d": "Enregistrez une instance comme modèle pour les suivantes et mettez à jour un modpack depuis un fichier plus récent en gardant vos configs et vos mondes."
+ "v3.n.templates.d": "Enregistrez une instance comme modèle pour les suivantes et mettez à jour un modpack depuis un fichier plus récent en gardant vos configs et vos mondes.",
+ "v3.n033": "Nouveau dans 0.3.3",
+ "v3.n033.1": "Java 21 le plus récent (Temurin) et plus de mémoire dès le départ pour des FPS plus stables.",
+ "v3.n033.2": "Ta limite de FPS n’est jamais écrasée ; comparaison de FPS plus juste et lancement de test identique à CurseForge.",
+ "v3.n033.3": "Coupe tout le HUD d’un interrupteur ou d’une touche, et retrouve exactement ce que tu avais.",
+ "v3.n033.4": "Les nouvelles instances démarrent vierges : transfère tous tes paramètres depuis une autre instance ou repars de zéro.",
+ "v3.n033.5": "Corrigé : Personnaliser ne change plus la taille de l’interface."
 }

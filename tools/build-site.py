@@ -291,7 +291,7 @@ write('faq.html', head('FAQ — Nightfall Launcher','meta.desc','faq.html') + na
 FALLBACK_NOTE = f'<article class="rel"><div class="when"><div class="v">v{VER}</div></div><div class="notes"><p><a class="lnk" href="{REPO}/releases" rel="noopener" data-i18n="log.github">{EN["log.github"]}</a></p></div></article>'
 write('changelog.html', head('Changelog — Nightfall Launcher','meta.desc','changelog.html') + nav('log') +
       f'<main id="main"><div class="w">{page_hero("log.kicker","log.title","log.sub", f"<div class=cta-row><a class=\"btn sm\" href=\"{REPO}/releases.atom\" rel=\"noopener\">{svg("rss")}<span data-i18n=\"v3.log.rss\">{EN["v3.log.rss"]}</span></a></div>")}'
-      f'<nav class="jump" id="jump" aria-label="{E(EN["v3.log.jump"])}"></nav><p class="note" id="log-status" aria-live="polite" data-i18n="log.loading">{EN["log.loading"]}</p><div id="releases">{FALLBACK_NOTE}</div></div></main>' + footer())
+      f'<nav class="jump" id="jump" aria-label="{E(EN["v3.log.jump"])}"></nav><p class="note" id="log-status" aria-live="polite" data-i18n="log.loading">{EN["log.loading"]}</p><section class="rel hl033"><h2 data-i18n="v3.n033">{EN["v3.n033"]}</h2><ul>{"".join(f"<li data-i18n=v3.n033.{i}>{EN[f'v3.n033.{i}']}</li>" for i in range(1,6))}</ul></section><div id="releases">{FALLBACK_NOTE}</div></div></main>' + footer())
 
 # ---------- legal ----------
 def legal(fn, title):

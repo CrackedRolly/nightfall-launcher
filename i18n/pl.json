@@ -385,5 +385,11 @@
  "v3.n.version.t": "Zmiana wersji lub loadera",
  "v3.n.version.d": "Każdy mod jest zamieniany na zgodną wersję. Mody bez niej są wypisane i wyłączone, a kopia zapasowa pozwala to cofnąć.",
  "v3.n.templates.t": "Szablony i aktualizacja paczek",
- "v3.n.templates.d": "Zapisz instancję jako szablon dla nowych i zaktualizuj modpack z nowszego pliku, zachowując swoje configi i światy."
+ "v3.n.templates.d": "Zapisz instancję jako szablon dla nowych i zaktualizuj modpack z nowszego pliku, zachowując swoje configi i światy.",
+ "v3.n033": "Nowości w 0.3.3",
+ "v3.n033.1": "Najnowsza Java 21 (Temurin) i więcej pamięci od startu dla płynniejszych FPS.",
+ "v3.n033.2": "Twój limit FPS nigdy nie jest nadpisywany; uczciwsze porównanie FPS i testowe uruchomienie jak w CurseForge.",
+ "v3.n033.3": "Wyłącz cały HUD jednym przełącznikiem lub klawiszem i odzyskaj dokładnie to, co było.",
+ "v3.n033.4": "Nowe instancje startują czysto: przenieś wszystkie ustawienia z innej instancji albo zacznij od nowa.",
+ "v3.n033.5": "Naprawiono: Dostosuj nie zmienia już rozmiaru GUI."
 }

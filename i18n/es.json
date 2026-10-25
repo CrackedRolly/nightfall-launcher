@@ -385,5 +385,11 @@
  "v3.n.version.t": "Cambiar versión o loader",
  "v3.n.version.d": "Cada mod se cambia por una versión compatible. Los que no tienen se listan y se desactivan, y una copia de seguridad permite deshacerlo.",
  "v3.n.templates.t": "Plantillas y actualizar packs",
- "v3.n.templates.d": "Guarda una instancia como plantilla para otras nuevas y actualiza un modpack desde un archivo más nuevo sin perder tus configs ni mundos."
+ "v3.n.templates.d": "Guarda una instancia como plantilla para otras nuevas y actualiza un modpack desde un archivo más nuevo sin perder tus configs ni mundos.",
+ "v3.n033": "Novedades de 0.3.3",
+ "v3.n033.1": "Java 21 más reciente (Temurin) y más memoria desde el inicio para unos FPS más estables.",
+ "v3.n033.2": "Tu límite de FPS nunca se sobrescribe; comparación de FPS más justa y un inicio de prueba idéntico a CurseForge.",
+ "v3.n033.3": "Apaga todo el HUD con un interruptor o una tecla y recupera exactamente lo que tenías.",
+ "v3.n033.4": "Las instancias nuevas empiezan limpias: transfiere todos tus ajustes desde otra instancia o empieza de cero.",
+ "v3.n033.5": "Corregido: Personalizar ya no cambia el tamaño de la interfaz."
 }

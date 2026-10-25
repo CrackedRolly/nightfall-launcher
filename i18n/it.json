@@ -385,5 +385,11 @@
  "v3.n.version.t": "Cambia versione o loader",
  "v3.n.version.d": "Ogni mod viene sostituita con una versione compatibile. Quelle senza vengono elencate e disattivate, e un backup permette di annullare.",
  "v3.n.templates.t": "Modelli e aggiornamento pack",
- "v3.n.templates.d": "Salva un'istanza come modello per quelle nuove e aggiorna un modpack da un file più recente mantenendo config e mondi."
+ "v3.n.templates.d": "Salva un'istanza come modello per quelle nuove e aggiorna un modpack da un file più recente mantenendo config e mondi.",
+ "v3.n033": "Novità in 0.3.3",
+ "v3.n033.1": "Java 21 più recente (Temurin) e più memoria fin dall’avvio per FPS più stabili.",
+ "v3.n033.2": "Il tuo limite FPS non viene mai sovrascritto; confronto FPS più equo e un avvio di prova identico a CurseForge.",
+ "v3.n033.3": "Spegni tutto l’HUD con un interruttore o un tasto e ritrova esattamente ciò che avevi.",
+ "v3.n033.4": "Le nuove istanze partono pulite: trasferisci tutte le impostazioni da un’altra istanza o inizia da zero.",
+ "v3.n033.5": "Corretto: Personalizza non cambia più la dimensione della GUI."
 }
