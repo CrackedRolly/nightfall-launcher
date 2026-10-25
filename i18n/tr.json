@@ -430,5 +430,10 @@
  "v3.nv0.3.9": "0.3.9 ile gelenler",
  "v3.nv0.3.9.1": "Optimizasyon ön ayarları: Dengeli, Maks. FPS, Zayıf PC veya Aynı görünüm.",
  "v3.nv0.3.9.2": "Belleği, çöp toplayıcıyı ve performans modlarını önce ve sonra gör.",
- "v3.nv0.3.9.3": "Önce yedek alınır, tek tıkla geri alınabilir."
+ "v3.nv0.3.9.3": "Önce yedek alınır, tek tıkla geri alınabilir.",
+ "v3.nv0.4.0": "0.4.0 ile gelenler",
+ "v3.nv0.4.0.1": "Ortak mod deposu: birden çok kurulumun modları bir kez saklanır. Kazanılan alan Ayarlar’da.",
+ "v3.nv0.4.0.2": "Paylaşım kodları CurseForge dosyalarını da bulur; .nightfall dosyaları tek tıkla içe aktarılır.",
+ "v3.nv0.4.0.3": "Sorunları denetle: her çakışmayı veya eksik modu düzelt ya da yok say.",
+ "v3.nv0.4.0.4": "Çökme penceresinde tek tıkla düzeltme: eksik mod, suçlu mod, Java, RAM."
 }

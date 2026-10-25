@@ -246,5 +246,10 @@
  "v3.nv0.3.9": "Neu in 0.3.9",
  "v3.nv0.3.9.1": "Optimierungs-Voreinstellungen: Ausgewogen, Max. FPS, Schwacher PC oder Gleicher Look.",
  "v3.nv0.3.9.2": "Speicher, Garbage Collector und Performance-Mods vorher und nachher sehen.",
- "v3.nv0.3.9.3": "Vorher wird ein Backup erstellt, mit Rückgängig per Klick."
+ "v3.nv0.3.9.3": "Vorher wird ein Backup erstellt, mit Rückgängig per Klick.",
+ "v3.nv0.4.0": "Neu in 0.4.0",
+ "v3.nv0.4.0.1": "Geteilter Mod-Speicher: Mods mehrerer Instanzen werden nur einmal gespeichert. Platz gespart steht in den Einstellungen.",
+ "v3.nv0.4.0.2": "Share-Codes finden auch CurseForge-Dateien; .nightfall-Dateien mit einem Klick importieren.",
+ "v3.nv0.4.0.3": "Probleme prüfen: jeden Konflikt oder jede fehlende Mod beheben oder ignorieren.",
+ "v3.nv0.4.0.4": "Absturzdialog mit Ein-Klick-Lösungen: fehlende Mod, Verursacher, Java, RAM."
 }

@@ -246,5 +246,10 @@
  "v3.nv0.3.9": "New in 0.3.9",
  "v3.nv0.3.9.1": "Optimize presets: Balanced, Max FPS, Low-end PC or Same look.",
  "v3.nv0.3.9.2": "See memory, garbage collector and performance mods before and after.",
- "v3.nv0.3.9.3": "A backup is made first, with one-click Undo."
+ "v3.nv0.3.9.3": "A backup is made first, with one-click Undo.",
+ "v3.nv0.4.0": "New in 0.4.0",
+ "v3.nv0.4.0.1": "Shared mod storage: mods used by several instances are stored once. See Disk saved in Settings.",
+ "v3.nv0.4.0.2": "Share codes find CurseForge files too; .nightfall files import in one click.",
+ "v3.nv0.4.0.3": "Check for problems: fix or ignore each conflict or missing mod.",
+ "v3.nv0.4.0.4": "Crash dialog with one-click fixes: missing mod, culprit mod, Java, RAM."
 }

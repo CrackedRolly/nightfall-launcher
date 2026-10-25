@@ -430,5 +430,10 @@
  "v3.nv0.3.9": "Nouveautés de 0.3.9",
  "v3.nv0.3.9.1": "Préréglages d’optimisation : Équilibré, FPS max, PC modeste ou Même rendu.",
  "v3.nv0.3.9.2": "Vois la mémoire, le ramasse-miettes et les mods de performance avant et après.",
- "v3.nv0.3.9.3": "Une sauvegarde est faite avant, avec Annuler en un clic."
+ "v3.nv0.3.9.3": "Une sauvegarde est faite avant, avec Annuler en un clic.",
+ "v3.nv0.4.0": "Nouveautés de 0.4.0",
+ "v3.nv0.4.0.1": "Stockage de mods partagé : les mods de plusieurs instances sont stockés une fois. Espace gagné dans les Réglages.",
+ "v3.nv0.4.0.2": "Les codes de partage trouvent aussi les fichiers CurseForge ; les .nightfall s’importent en un clic.",
+ "v3.nv0.4.0.3": "Vérifier les problèmes : corrige ou ignore chaque conflit ou mod manquant.",
+ "v3.nv0.4.0.4": "Fenêtre de crash avec corrections en un clic : mod manquant, mod fautif, Java, RAM."
 }

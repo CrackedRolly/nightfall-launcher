@@ -246,5 +246,10 @@
  "v3.nv0.3.9": "Nowości w 0.3.9",
  "v3.nv0.3.9.1": "Profile optymalizacji: Zrównoważony, Maks. FPS, Słaby PC lub Ten sam wygląd.",
  "v3.nv0.3.9.2": "Zobacz pamięć, garbage collector i mody wydajności przed i po.",
- "v3.nv0.3.9.3": "Najpierw tworzona jest kopia zapasowa, z cofnięciem jednym kliknięciem."
+ "v3.nv0.3.9.3": "Najpierw tworzona jest kopia zapasowa, z cofnięciem jednym kliknięciem.",
+ "v3.nv0.4.0": "Nowości w 0.4.0",
+ "v3.nv0.4.0.1": "Wspólny magazyn modów: mody kilku instancji są zapisane raz. Zaoszczędzone miejsce w Ustawieniach.",
+ "v3.nv0.4.0.2": "Kody udostępniania znajdują też pliki CurseForge; pliki .nightfall importujesz jednym kliknięciem.",
+ "v3.nv0.4.0.3": "Sprawdź problemy: napraw lub ignoruj każdy konflikt lub brakujący mod.",
+ "v3.nv0.4.0.4": "Okno awarii z naprawami jednym kliknięciem: brakujący mod, winny mod, Java, RAM."
 }

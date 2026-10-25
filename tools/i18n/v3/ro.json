@@ -246,5 +246,10 @@
  "v3.nv0.3.9": "Nou în 0.3.9",
  "v3.nv0.3.9.1": "Presetări de optimizare: Echilibrat, FPS maxim, PC slab sau Același aspect.",
  "v3.nv0.3.9.2": "Vezi memoria, garbage collectorul și modurile de performanță înainte și după.",
- "v3.nv0.3.9.3": "Mai întâi se face o copie de rezervă, cu Anulare dintr-un clic."
+ "v3.nv0.3.9.3": "Mai întâi se face o copie de rezervă, cu Anulare dintr-un clic.",
+ "v3.nv0.4.0": "Nou în 0.4.0",
+ "v3.nv0.4.0.1": "Stocare comună: modurile mai multor instanțe sunt stocate o dată. Spațiul economisit apare în Setări.",
+ "v3.nv0.4.0.2": "Codurile găsesc și fișiere CurseForge; fișierele .nightfall se importă dintr-un clic.",
+ "v3.nv0.4.0.3": "Verifică probleme: rezolvă sau ignoră fiecare conflict sau mod lipsă.",
+ "v3.nv0.4.0.4": "Fereastra de crash cu remedieri dintr-un clic: mod lipsă, modul vinovat, Java, RAM."
 }
