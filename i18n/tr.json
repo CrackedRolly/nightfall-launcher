@@ -397,5 +397,19 @@
  "v3.n034.2": "Oyun içi menü her sürümde 23 dilin tamamına çevrildi.",
  "v3.n034.3": "Özelleştir: canlı önizlemeli 55 ücretsiz yazı tipi, yalnızca seçtiğinde indirilir (Minecraft 1.16+).",
  "v3.n034.4": "Her sürümde başlık ekranı arka planı: bir renk, kendi resmin ya da yazarı belirtilmiş ücretsiz bir Openverse fotoğrafı.",
- "v3.n034.5": "Çocuk modunda da Özelleştir var; çevrimiçi resim araması varsayılan olarak kapalı."
+ "v3.n034.5": "Çocuk modunda da Özelleştir var; çevrimiçi resim araması varsayılan olarak kapalı.",
+ "v3.fp.new035": "0.3.4 ve 0.3.5'te yeni",
+ "v3.fp.new035sub": "Yeni oyun içi menü, kendi görünümün ve zaten sahip olduğun paketler için önerilen modlar.",
+ "v3.n.menu035.t": "Yeni oyun içi menü",
+ "v3.n.menu035.d": "1.8.9'dan itibaren her sürümde, 23 dilde kategoriler, sayfalar ve arama.",
+ "v3.n.customize035.t": "Özelleştir",
+ "v3.n.customize035.d": "55 ücretsiz yazı tipi ve ücretsiz Openverse fotoğrafları dahil başlık ekranı arka planları.",
+ "v3.n.recsadd.t": "Mevcut örneğe ekle",
+ "v3.n.recsadd.d": "Örneğine göre seçilen önerilen modlar; önizleme, yedek ve tek tıkla geri alma ile.",
+ "v3.n035": "0.3.5'te yeni",
+ "v3.n035.1": "Öneriler: bir seti mevcut bir örneğe ekle; uyumlu örnekler en üstte.",
+ "v3.n035.2": "Her mod örneğin sürümüne ve yükleyicisine göre seçilir; zaten olanlar ve çakışanlar atlanır.",
+ "v3.n035.3": "Bir şey kurulmadan önce, bağımlılıklar dahil neyin değişeceğini görürsün.",
+ "v3.n035.4": "Önce yedek alınır, Geri al örneği tek tıkla eski haline getirir.",
+ "v3.n035.5": "Oyun içi menüde 17 metin daha tüm dillere çevrildi."
 }

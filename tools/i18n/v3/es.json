@@ -213,5 +213,19 @@
  "v3.n034.2": "El menú del juego está traducido a los 23 idiomas, en todas las versiones.",
  "v3.n034.3": "Personalizar: 55 fuentes gratis con vista previa en vivo, descargadas solo al elegirlas (Minecraft 1.16+).",
  "v3.n034.4": "Fondos de pantalla de título en todas las versiones: un color, tu propia imagen o una foto libre de Openverse con crédito.",
- "v3.n034.5": "El modo Niños también tiene Personalizar, con la búsqueda de imágenes en línea desactivada por defecto."
+ "v3.n034.5": "El modo Niños también tiene Personalizar, con la búsqueda de imágenes en línea desactivada por defecto.",
+ "v3.fp.new035": "Novedades de 0.3.4 y 0.3.5",
+ "v3.fp.new035sub": "Un nuevo menú en el juego, tu propio estilo y mods recomendados para los packs que ya tienes.",
+ "v3.n.menu035.t": "Nuevo menú en el juego",
+ "v3.n.menu035.d": "Categorías, páginas y búsqueda, en todas las versiones desde 1.8.9, en 23 idiomas.",
+ "v3.n.customize035.t": "Personalizar",
+ "v3.n.customize035.d": "55 fuentes gratis y fondos de pantalla de título, incluidas fotos libres de Openverse.",
+ "v3.n.recsadd.t": "Añadir a una instancia existente",
+ "v3.n.recsadd.d": "Mods recomendados ajustados a tu instancia, con vista previa, copia de seguridad y deshacer con un clic.",
+ "v3.n035": "Novedades de 0.3.5",
+ "v3.n035.1": "Recomendaciones: añade un set a una instancia que ya tienes, con las compatibles primero.",
+ "v3.n035.2": "Cada mod se ajusta a la versión y loader de la instancia; los que ya están o chocan se omiten.",
+ "v3.n035.3": "Ves exactamente qué cambia antes de instalar nada, dependencias incluidas.",
+ "v3.n035.4": "Antes se hace una copia de seguridad, y Deshacer restaura la instancia con un clic.",
+ "v3.n035.5": "17 textos más del menú del juego traducidos a todos los idiomas."
 }

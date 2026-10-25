@@ -397,5 +397,19 @@
  "v3.n034.2": "Meniul din joc e tradus în toate cele 23 de limbi, pe fiecare versiune.",
  "v3.n034.3": "Personalizare: 55 de fonturi gratuite cu previzualizare live, descărcate doar când alegi unul (Minecraft 1.16+).",
  "v3.n034.4": "Fundaluri pentru ecranul de titlu pe orice versiune: o culoare, poza ta sau o fotografie liberă de pe Openverse, cu autorul menționat.",
- "v3.n034.5": "Și modul Copii are Personalizare, cu căutarea online de imagini oprită implicit."
+ "v3.n034.5": "Și modul Copii are Personalizare, cu căutarea online de imagini oprită implicit.",
+ "v3.fp.new035": "Nou în 0.3.4 și 0.3.5",
+ "v3.fp.new035sub": "Un meniu nou în joc, propriul tău stil și moduri recomandate pentru pachetele pe care le ai deja.",
+ "v3.n.menu035.t": "Meniu nou în joc",
+ "v3.n.menu035.d": "Categorii, pagini și căutare, pe orice versiune de la 1.8.9, în 23 de limbi.",
+ "v3.n.customize035.t": "Personalizare",
+ "v3.n.customize035.d": "55 de fonturi gratuite și fundaluri pentru ecranul de titlu, inclusiv fotografii libere de pe Openverse.",
+ "v3.n.recsadd.t": "Adaugă la o instanță existentă",
+ "v3.n.recsadd.d": "Moduri recomandate potrivite instanței tale, cu previzualizare, copie de rezervă și anulare cu un clic.",
+ "v3.n035": "Nou în 0.3.5",
+ "v3.n035.1": "Recomandări: adaugă un set la o instanță pe care o ai deja, cu cele compatibile primele.",
+ "v3.n035.2": "Fiecare mod e potrivit versiunii și loaderului instanței; cele existente sau în conflict sunt omise.",
+ "v3.n035.3": "Vezi exact ce se schimbă înainte de instalare, inclusiv dependențele.",
+ "v3.n035.4": "Întâi se face o copie de rezervă, iar Anulează readuce instanța cu un clic.",
+ "v3.n035.5": "Încă 17 texte din meniul jocului traduse în toate limbile."
 }

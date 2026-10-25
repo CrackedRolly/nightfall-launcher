@@ -213,5 +213,19 @@
  "v3.n034.2": "Le menu en jeu est traduit dans les 23 langues, sur toutes les versions.",
  "v3.n034.3": "Personnaliser : 55 polices gratuites avec aperçu en direct, téléchargées seulement quand vous les choisissez (Minecraft 1.16+).",
  "v3.n034.4": "Fonds d’écran titre sur toutes les versions : une couleur, votre image ou une photo libre d’Openverse avec crédit.",
- "v3.n034.5": "Le mode Enfants a aussi Personnaliser, avec la recherche d’images en ligne désactivée par défaut."
+ "v3.n034.5": "Le mode Enfants a aussi Personnaliser, avec la recherche d’images en ligne désactivée par défaut.",
+ "v3.fp.new035": "Nouveautés des 0.3.4 et 0.3.5",
+ "v3.fp.new035sub": "Un nouveau menu en jeu, votre propre style et des mods recommandés pour vos packs existants.",
+ "v3.n.menu035.t": "Nouveau menu en jeu",
+ "v3.n.menu035.d": "Catégories, pages et recherche, sur toutes les versions depuis 1.8.9, en 23 langues.",
+ "v3.n.customize035.t": "Personnaliser",
+ "v3.n.customize035.d": "55 polices gratuites et fonds d’écran titre, y compris des photos libres d’Openverse.",
+ "v3.n.recsadd.t": "Ajouter à une instance existante",
+ "v3.n.recsadd.d": "Des mods recommandés adaptés à votre instance, avec aperçu, sauvegarde et annulation en un clic.",
+ "v3.n035": "Nouveautés de la 0.3.5",
+ "v3.n035.1": "Recommandations : ajoutez un ensemble à une instance existante, les compatibles en premier.",
+ "v3.n035.2": "Chaque mod est adapté à la version et au loader de l’instance ; ceux déjà présents ou en conflit sont ignorés.",
+ "v3.n035.3": "Vous voyez exactement ce qui change avant toute installation, dépendances comprises.",
+ "v3.n035.4": "Une sauvegarde est faite avant, et Annuler restaure l’instance en un clic.",
+ "v3.n035.5": "17 textes de plus du menu en jeu traduits dans toutes les langues."
 }

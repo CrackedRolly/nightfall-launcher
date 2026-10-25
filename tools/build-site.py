@@ -164,7 +164,8 @@ def newfig(k, d='030', wh=(1440, 900)):
 TOUR = [('g1',['import','share','builder','optimize','conflicts','modmap']),('g2',['pvphud','hudeditor','emotes']),('g3',['customize','themes','perfcheck','server'])]
 ART = ['sword_midnight','sword_frost','sword_ember','sword_void','sword_mint','pickaxe_frost','axe_ember','shield_nightfall','ore_amethyst','ore_diamond']
 def tour_full():
-    out = f'<h2 class="tour-h rv" data-i18n="v3.fp.new032">{EN["v3.fp.new032"]}</h2>{T("v3.fp.new032sub","p"," class=\"note rv\" style=\"margin:-6px 0 18px\"")}<div class="strip">' + ''.join(newfig(k, '032', (1280, 800)) for k in ['mods','version','templates']) + '</div>'
+    out = f'<h2 class="tour-h rv" data-i18n="v3.fp.new035">{EN["v3.fp.new035"]}</h2>{T("v3.fp.new035sub","p"," class=\"note rv\" style=\"margin:-6px 0 18px\"")}<div class="strip">' + ''.join(newfig(k, '035', (1280, 800)) for k in ['menu035','customize035','recsadd']) + '</div>'
+    out += f'<h2 class="tour-h rv" data-i18n="v3.fp.new032">{EN["v3.fp.new032"]}</h2>{T("v3.fp.new032sub","p"," class=\"note rv\" style=\"margin:-6px 0 18px\"")}<div class="strip">' + ''.join(newfig(k, '032', (1280, 800)) for k in ['mods','version','templates']) + '</div>'
     out += f'<h2 class="tour-h rv" data-i18n="v3.fp.new">{EN["v3.fp.new"]}</h2>{T("v3.fp.newsub","p"," class=\"note rv\" style=\"margin:-6px 0 18px\"")}<div class="strip">' + ''.join(newfig(k) for k in ['home','guide','friends','meteors'][:3]) + '</div>'
     for g, ks in TOUR:
         out += f'<h2 class="tour-h rv" data-i18n="tour.{g}">{EN["tour."+g]}</h2><div class="strip{' s4' if len(ks) == 4 else ''}">{"".join(fig(k) for k in ks)}</div>'
@@ -291,7 +292,7 @@ write('faq.html', head('FAQ — Nightfall Launcher','meta.desc','faq.html') + na
 FALLBACK_NOTE = f'<article class="rel"><div class="when"><div class="v">v{VER}</div></div><div class="notes"><p><a class="lnk" href="{REPO}/releases" rel="noopener" data-i18n="log.github">{EN["log.github"]}</a></p></div></article>'
 write('changelog.html', head('Changelog — Nightfall Launcher','meta.desc','changelog.html') + nav('log') +
       f'<main id="main"><div class="w">{page_hero("log.kicker","log.title","log.sub", f"<div class=cta-row><a class=\"btn sm\" href=\"{REPO}/releases.atom\" rel=\"noopener\">{svg("rss")}<span data-i18n=\"v3.log.rss\">{EN["v3.log.rss"]}</span></a></div>")}'
-      f'<nav class="jump" id="jump" aria-label="{E(EN["v3.log.jump"])}"></nav><p class="note" id="log-status" aria-live="polite" data-i18n="log.loading">{EN["log.loading"]}</p><section class="rel hl033"><h2 data-i18n="v3.n034">{EN["v3.n034"]}</h2><ul>{"".join(f"<li data-i18n=v3.n034.{i}>{EN[f'v3.n034.{i}']}</li>" for i in range(1,6))}</ul></section><section class="rel hl033"><h2 data-i18n="v3.n033">{EN["v3.n033"]}</h2><ul>{"".join(f"<li data-i18n=v3.n033.{i}>{EN[f'v3.n033.{i}']}</li>" for i in range(1,6))}</ul></section><div id="releases">{FALLBACK_NOTE}</div></div></main>' + footer())
+      f'<nav class="jump" id="jump" aria-label="{E(EN["v3.log.jump"])}"></nav><p class="note" id="log-status" aria-live="polite" data-i18n="log.loading">{EN["log.loading"]}</p><section class="rel hl033"><h2 data-i18n="v3.n035">{EN["v3.n035"]}</h2><ul>{"".join(f"<li data-i18n=v3.n035.{i}>{EN[f'v3.n035.{i}']}</li>" for i in range(1,6))}</ul></section><section class="rel hl033"><h2 data-i18n="v3.n034">{EN["v3.n034"]}</h2><ul>{"".join(f"<li data-i18n=v3.n034.{i}>{EN[f'v3.n034.{i}']}</li>" for i in range(1,6))}</ul></section><section class="rel hl033"><h2 data-i18n="v3.n033">{EN["v3.n033"]}</h2><ul>{"".join(f"<li data-i18n=v3.n033.{i}>{EN[f'v3.n033.{i}']}</li>" for i in range(1,6))}</ul></section><div id="releases">{FALLBACK_NOTE}</div></div></main>' + footer())
 
 # ---------- legal ----------
 def legal(fn, title):

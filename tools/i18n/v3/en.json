@@ -213,5 +213,19 @@
  "v3.n034.2": "The in-game menu is translated into all 23 languages, on every version.",
  "v3.n034.3": "Customize: 55 free fonts with a live preview, downloaded only when you pick one (Minecraft 1.16+).",
  "v3.n034.4": "Title-screen backgrounds on every version: a colour, your own picture or a free Openverse photo with credit.",
- "v3.n034.5": "Kids mode gets Customize too, with online picture search off by default."
+ "v3.n034.5": "Kids mode gets Customize too, with online picture search off by default.",
+ "v3.fp.new035": "New in 0.3.4 and 0.3.5",
+ "v3.fp.new035sub": "A new in-game menu, your own look, and recommended mods for packs you already have.",
+ "v3.n.menu035.t": "New in-game menu",
+ "v3.n.menu035.d": "Categories, pages and search, on every version from 1.8.9, in 23 languages.",
+ "v3.n.customize035.t": "Customize",
+ "v3.n.customize035.d": "55 free fonts and title-screen backgrounds, including free Openverse photos.",
+ "v3.n.recsadd.t": "Add to an existing instance",
+ "v3.n.recsadd.d": "Recommended mods matched to your instance, with a preview, a backup and one-click undo.",
+ "v3.n035": "New in 0.3.5",
+ "v3.n035.1": "Recommendations: add a set to an instance you already have, with compatible instances listed first.",
+ "v3.n035.2": "Every mod is matched to that instance's Minecraft version and loader; ones already there or that clash are skipped.",
+ "v3.n035.3": "See exactly what changes before anything is installed, including dependencies.",
+ "v3.n035.4": "A backup is made first, and Undo puts the instance back in one click.",
+ "v3.n035.5": "17 more in-game menu texts translated in every language."
 }

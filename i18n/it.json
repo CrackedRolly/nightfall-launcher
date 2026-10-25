@@ -397,5 +397,19 @@
  "v3.n034.2": "Il menu di gioco è tradotto in tutte le 23 lingue, su ogni versione.",
  "v3.n034.3": "Personalizza: 55 font gratuiti con anteprima dal vivo, scaricati solo quando li scegli (Minecraft 1.16+).",
  "v3.n034.4": "Sfondi della schermata del titolo su ogni versione: un colore, una tua immagine o una foto libera di Openverse con credito.",
- "v3.n034.5": "Anche la modalità Bambini ha Personalizza, con la ricerca di immagini online disattivata di default."
+ "v3.n034.5": "Anche la modalità Bambini ha Personalizza, con la ricerca di immagini online disattivata di default.",
+ "v3.fp.new035": "Novità di 0.3.4 e 0.3.5",
+ "v3.fp.new035sub": "Un nuovo menu di gioco, il tuo stile e mod consigliate per i pacchetti che hai già.",
+ "v3.n.menu035.t": "Nuovo menu di gioco",
+ "v3.n.menu035.d": "Categorie, pagine e ricerca, su ogni versione dalla 1.8.9, in 23 lingue.",
+ "v3.n.customize035.t": "Personalizza",
+ "v3.n.customize035.d": "55 font gratuiti e sfondi della schermata del titolo, anche foto libere di Openverse.",
+ "v3.n.recsadd.t": "Aggiungi a un’istanza esistente",
+ "v3.n.recsadd.d": "Mod consigliate adattate alla tua istanza, con anteprima, backup e annullamento con un clic.",
+ "v3.n035": "Novità della 0.3.5",
+ "v3.n035.1": "Consigliati: aggiungi un set a un’istanza che hai già, con quelle compatibili in cima.",
+ "v3.n035.2": "Ogni mod si adatta a versione e loader dell’istanza; quelle già presenti o in conflitto vengono saltate.",
+ "v3.n035.3": "Vedi esattamente cosa cambia prima di installare, dipendenze comprese.",
+ "v3.n035.4": "Prima viene fatto un backup e Annulla ripristina l’istanza con un clic.",
+ "v3.n035.5": "Altri 17 testi del menu di gioco tradotti in tutte le lingue."
 }

@@ -213,5 +213,19 @@
  "v3.n034.2": "Das Spielmenü ist in alle 23 Sprachen übersetzt, auf jeder Version.",
  "v3.n034.3": "Anpassen: 55 kostenlose Schriften mit Live-Vorschau, erst beim Auswählen heruntergeladen (Minecraft 1.16+).",
  "v3.n034.4": "Titelbild-Hintergründe auf jeder Version: eine Farbe, dein eigenes Bild oder ein freies Openverse-Foto mit Nennung.",
- "v3.n034.5": "Auch der Kindermodus bekommt Anpassen, die Online-Bildersuche ist standardmäßig aus."
+ "v3.n034.5": "Auch der Kindermodus bekommt Anpassen, die Online-Bildersuche ist standardmäßig aus.",
+ "v3.fp.new035": "Neu in 0.3.4 und 0.3.5",
+ "v3.fp.new035sub": "Ein neues Spielmenü, dein eigener Look und empfohlene Mods für Pakete, die du schon hast.",
+ "v3.n.menu035.t": "Neues Spielmenü",
+ "v3.n.menu035.d": "Kategorien, Seiten und Suche, auf jeder Version ab 1.8.9, in 23 Sprachen.",
+ "v3.n.customize035.t": "Anpassen",
+ "v3.n.customize035.d": "55 kostenlose Schriften und Titelbild-Hintergründe, auch freie Openverse-Fotos.",
+ "v3.n.recsadd.t": "Zu bestehender Instanz hinzufügen",
+ "v3.n.recsadd.d": "Empfohlene Mods passend zu deiner Instanz, mit Vorschau, Sicherung und Rückgängig per Klick.",
+ "v3.n035": "Neu in 0.3.5",
+ "v3.n035.1": "Empfehlungen: ein Set zu einer bestehenden Instanz hinzufügen, passende Instanzen stehen oben.",
+ "v3.n035.2": "Jeder Mod passt zur Minecraft-Version und zum Loader der Instanz; vorhandene oder kollidierende werden übersprungen.",
+ "v3.n035.3": "Du siehst genau, was sich ändert, bevor etwas installiert wird, inklusive Abhängigkeiten.",
+ "v3.n035.4": "Vorher wird gesichert, und Rückgängig stellt die Instanz mit einem Klick wieder her.",
+ "v3.n035.5": "17 weitere Texte im Spielmenü in jede Sprache übersetzt."
 }

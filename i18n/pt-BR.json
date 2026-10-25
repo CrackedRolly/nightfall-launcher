@@ -397,5 +397,19 @@
  "v3.n034.2": "O menu do jogo está traduzido nos 23 idiomas, em todas as versões.",
  "v3.n034.3": "Personalizar: 55 fontes grátis com prévia ao vivo, baixadas só quando você escolhe (Minecraft 1.16+).",
  "v3.n034.4": "Fundos da tela de título em todas as versões: uma cor, sua própria imagem ou uma foto livre do Openverse com crédito.",
- "v3.n034.5": "O modo Infantil também tem Personalizar, com a busca de imagens online desligada por padrão."
+ "v3.n034.5": "O modo Infantil também tem Personalizar, com a busca de imagens online desligada por padrão.",
+ "v3.fp.new035": "Novidades da 0.3.4 e 0.3.5",
+ "v3.fp.new035sub": "Um novo menu no jogo, seu próprio visual e mods recomendados para os packs que você já tem.",
+ "v3.n.menu035.t": "Novo menu no jogo",
+ "v3.n.menu035.d": "Categorias, páginas e busca, em todas as versões desde a 1.8.9, em 23 idiomas.",
+ "v3.n.customize035.t": "Personalizar",
+ "v3.n.customize035.d": "55 fontes grátis e fundos da tela de título, incluindo fotos livres do Openverse.",
+ "v3.n.recsadd.t": "Adicionar a uma instância existente",
+ "v3.n.recsadd.d": "Mods recomendados ajustados à sua instância, com prévia, backup e desfazer com um clique.",
+ "v3.n035": "Novidades da 0.3.5",
+ "v3.n035.1": "Recomendações: adicione um conjunto a uma instância que você já tem, com as compatíveis primeiro.",
+ "v3.n035.2": "Cada mod é ajustado à versão e ao loader da instância; os que já existem ou conflitam são pulados.",
+ "v3.n035.3": "Veja exatamente o que muda antes de instalar, incluindo dependências.",
+ "v3.n035.4": "Um backup é feito antes, e Desfazer restaura a instância com um clique.",
+ "v3.n035.5": "Mais 17 textos do menu do jogo traduzidos em todos os idiomas."
 }

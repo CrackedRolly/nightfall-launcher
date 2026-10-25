@@ -397,5 +397,19 @@
  "v3.n034.2": "Menu w grze jest przetłumaczone na wszystkie 23 języki, w każdej wersji.",
  "v3.n034.3": "Dostosuj: 55 darmowych czcionek z podglądem na żywo, pobieranych dopiero po wybraniu (Minecraft 1.16+).",
  "v3.n034.4": "Tła ekranu tytułowego w każdej wersji: kolor, własny obraz albo darmowe zdjęcie z Openverse z podpisem autora.",
- "v3.n034.5": "Tryb dla dzieci też ma Dostosuj, a wyszukiwanie obrazów w sieci jest domyślnie wyłączone."
+ "v3.n034.5": "Tryb dla dzieci też ma Dostosuj, a wyszukiwanie obrazów w sieci jest domyślnie wyłączone.",
+ "v3.fp.new035": "Nowości w 0.3.4 i 0.3.5",
+ "v3.fp.new035sub": "Nowe menu w grze, własny wygląd i polecane mody do paczek, które już masz.",
+ "v3.n.menu035.t": "Nowe menu w grze",
+ "v3.n.menu035.d": "Kategorie, strony i wyszukiwanie, w każdej wersji od 1.8.9, w 23 językach.",
+ "v3.n.customize035.t": "Dostosuj",
+ "v3.n.customize035.d": "55 darmowych czcionek i tła ekranu tytułowego, także darmowe zdjęcia z Openverse.",
+ "v3.n.recsadd.t": "Dodaj do istniejącej instancji",
+ "v3.n.recsadd.d": "Polecane mody dopasowane do instancji, z podglądem, kopią zapasową i cofaniem jednym kliknięciem.",
+ "v3.n035": "Nowości w 0.3.5",
+ "v3.n035.1": "Polecane: dodaj zestaw do instancji, którą już masz; zgodne instancje są na górze.",
+ "v3.n035.2": "Każdy mod jest dopasowany do wersji i loadera instancji; obecne lub kolidujące są pomijane.",
+ "v3.n035.3": "Widzisz dokładnie, co się zmieni, zanim cokolwiek zostanie zainstalowane, z zależnościami.",
+ "v3.n035.4": "Najpierw powstaje kopia zapasowa, a Cofnij przywraca instancję jednym kliknięciem.",
+ "v3.n035.5": "17 kolejnych tekstów menu w grze przetłumaczonych na każdy język."
 }
