@@ -227,5 +227,12 @@
  "v3.n035.2": "Every mod is matched to that instance's Minecraft version and loader; ones already there or that clash are skipped.",
  "v3.n035.3": "See exactly what changes before anything is installed, including dependencies.",
  "v3.n035.4": "A backup is made first, and Undo puts the instance back in one click.",
- "v3.n035.5": "17 more in-game menu texts translated in every language."
+ "v3.n035.5": "17 more in-game menu texts translated in every language.",
+ "v3.n036": "New in 0.3.6",
+ "v3.n036.1": "Updates download in the background and install quietly when you close the launcher, with no setup wizard.",
+ "v3.n036.2": "If the launcher stays open, a small card offers Restart now or Later.",
+ "v3.n036.3": "Never during a game: the update waits until Minecraft closes.",
+ "v3.n036.4": "After an update, a card shows the new version and what changed.",
+ "v3.n036.5": "Settings: “Install updates automatically” (on by default) and “Check now”. The Linux AppImage updates itself too.",
+ "v3.n036.6": "Fixed: customizing no longer resets view bobbing, damage tilt, chat and accessibility settings."
 }

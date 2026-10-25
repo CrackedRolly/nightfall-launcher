@@ -411,5 +411,12 @@
  "v3.n035.2": "Jeder Mod passt zur Minecraft-Version und zum Loader der Instanz; vorhandene oder kollidierende werden übersprungen.",
  "v3.n035.3": "Du siehst genau, was sich ändert, bevor etwas installiert wird, inklusive Abhängigkeiten.",
  "v3.n035.4": "Vorher wird gesichert, und Rückgängig stellt die Instanz mit einem Klick wieder her.",
- "v3.n035.5": "17 weitere Texte im Spielmenü in jede Sprache übersetzt."
+ "v3.n035.5": "17 weitere Texte im Spielmenü in jede Sprache übersetzt.",
+ "v3.n036": "Neu in 0.3.6",
+ "v3.n036.1": "Updates laden im Hintergrund und installieren sich still, wenn du den Launcher schließt, ohne Setup-Assistent.",
+ "v3.n036.2": "Bleibt der Launcher offen, bietet eine kleine Karte „Jetzt neu starten“ oder „Später“.",
+ "v3.n036.3": "Nie während eines Spiels: das Update wartet, bis Minecraft geschlossen ist.",
+ "v3.n036.4": "Nach einem Update zeigt eine Karte die neue Version und was sich geändert hat.",
+ "v3.n036.5": "Einstellungen: „Updates automatisch installieren“ (standardmäßig an) und „Jetzt prüfen“. Auch das Linux-AppImage aktualisiert sich selbst.",
+ "v3.n036.6": "Behoben: Anpassen setzt Bildwackeln, Schadensneigung, Chat- und Barrierefreiheits-Einstellungen nicht mehr zurück."
 }

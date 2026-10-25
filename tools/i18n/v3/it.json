@@ -227,5 +227,12 @@
  "v3.n035.2": "Ogni mod si adatta a versione e loader dell’istanza; quelle già presenti o in conflitto vengono saltate.",
  "v3.n035.3": "Vedi esattamente cosa cambia prima di installare, dipendenze comprese.",
  "v3.n035.4": "Prima viene fatto un backup e Annulla ripristina l’istanza con un clic.",
- "v3.n035.5": "Altri 17 testi del menu di gioco tradotti in tutte le lingue."
+ "v3.n035.5": "Altri 17 testi del menu di gioco tradotti in tutte le lingue.",
+ "v3.n036": "Novità della 0.3.6",
+ "v3.n036.1": "Gli aggiornamenti si scaricano in background e si installano in silenzio quando chiudi il launcher, senza procedura guidata.",
+ "v3.n036.2": "Se il launcher resta aperto, una piccola scheda offre Riavvia ora o Più tardi.",
+ "v3.n036.3": "Mai durante una partita: l’aggiornamento aspetta che Minecraft si chiuda.",
+ "v3.n036.4": "Dopo un aggiornamento, una scheda mostra la nuova versione e le novità.",
+ "v3.n036.5": "Impostazioni: «Installa gli aggiornamenti automaticamente» (attivo di default) e «Controlla ora». Anche l’AppImage Linux si aggiorna da solo.",
+ "v3.n036.6": "Corretto: personalizzare non reimposta più l’ondeggiamento, l’inclinazione da danno, la chat e l’accessibilità."
 }

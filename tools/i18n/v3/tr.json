@@ -227,5 +227,12 @@
  "v3.n035.2": "Her mod örneğin sürümüne ve yükleyicisine göre seçilir; zaten olanlar ve çakışanlar atlanır.",
  "v3.n035.3": "Bir şey kurulmadan önce, bağımlılıklar dahil neyin değişeceğini görürsün.",
  "v3.n035.4": "Önce yedek alınır, Geri al örneği tek tıkla eski haline getirir.",
- "v3.n035.5": "Oyun içi menüde 17 metin daha tüm dillere çevrildi."
+ "v3.n035.5": "Oyun içi menüde 17 metin daha tüm dillere çevrildi.",
+ "v3.n036": "0.3.6'da yeni",
+ "v3.n036.1": "Güncellemeler arka planda iner ve başlatıcıyı kapattığında kurulum sihirbazı olmadan sessizce kurulur.",
+ "v3.n036.2": "Başlatıcı açık kalırsa küçük bir kart Şimdi yeniden başlat veya Sonra seçeneklerini sunar.",
+ "v3.n036.3": "Oyun sırasında asla: güncelleme Minecraft kapanana kadar bekler.",
+ "v3.n036.4": "Güncellemeden sonra bir kart yeni sürümü ve değişiklikleri gösterir.",
+ "v3.n036.5": "Ayarlar: “Güncellemeleri otomatik kur” (varsayılan açık) ve “Şimdi denetle”. Linux AppImage da kendini günceller.",
+ "v3.n036.6": "Düzeltildi: özelleştirme artık görüş sallanmasını, hasar eğimini, sohbet ve erişilebilirlik ayarlarını sıfırlamıyor."
 }

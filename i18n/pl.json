@@ -411,5 +411,12 @@
  "v3.n035.2": "Każdy mod jest dopasowany do wersji i loadera instancji; obecne lub kolidujące są pomijane.",
  "v3.n035.3": "Widzisz dokładnie, co się zmieni, zanim cokolwiek zostanie zainstalowane, z zależnościami.",
  "v3.n035.4": "Najpierw powstaje kopia zapasowa, a Cofnij przywraca instancję jednym kliknięciem.",
- "v3.n035.5": "17 kolejnych tekstów menu w grze przetłumaczonych na każdy język."
+ "v3.n035.5": "17 kolejnych tekstów menu w grze przetłumaczonych na każdy język.",
+ "v3.n036": "Nowości w 0.3.6",
+ "v3.n036.1": "Aktualizacje pobierają się w tle i instalują po cichu po zamknięciu launchera, bez kreatora.",
+ "v3.n036.2": "Gdy launcher zostaje otwarty, mała karta proponuje Uruchom ponownie teraz lub Później.",
+ "v3.n036.3": "Nigdy podczas gry: aktualizacja czeka, aż Minecraft się zamknie.",
+ "v3.n036.4": "Po aktualizacji karta pokazuje nową wersję i zmiany.",
+ "v3.n036.5": "Ustawienia: „Instaluj aktualizacje automatycznie” (domyślnie włączone) i „Sprawdź teraz”. AppImage na Linuksie też aktualizuje się sam.",
+ "v3.n036.6": "Naprawiono: dostosowywanie nie resetuje już kołysania widoku, przechyłu przy obrażeniach, czatu ani ułatwień dostępu."
 }

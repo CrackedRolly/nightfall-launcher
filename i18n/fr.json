@@ -411,5 +411,12 @@
  "v3.n035.2": "Chaque mod est adapté à la version et au loader de l’instance ; ceux déjà présents ou en conflit sont ignorés.",
  "v3.n035.3": "Vous voyez exactement ce qui change avant toute installation, dépendances comprises.",
  "v3.n035.4": "Une sauvegarde est faite avant, et Annuler restaure l’instance en un clic.",
- "v3.n035.5": "17 textes de plus du menu en jeu traduits dans toutes les langues."
+ "v3.n035.5": "17 textes de plus du menu en jeu traduits dans toutes les langues.",
+ "v3.n036": "Nouveautés de la 0.3.6",
+ "v3.n036.1": "Les mises à jour se téléchargent en arrière-plan et s’installent discrètement à la fermeture du launcher, sans assistant.",
+ "v3.n036.2": "Si le launcher reste ouvert, une petite carte propose Redémarrer maintenant ou Plus tard.",
+ "v3.n036.3": "Jamais pendant une partie : la mise à jour attend la fermeture de Minecraft.",
+ "v3.n036.4": "Après une mise à jour, une carte montre la nouvelle version et ce qui a changé.",
+ "v3.n036.5": "Paramètres : « Installer les mises à jour automatiquement » (activé par défaut) et « Vérifier maintenant ». L’AppImage Linux se met aussi à jour seule.",
+ "v3.n036.6": "Corrigé : personnaliser ne réinitialise plus les balancements de vue, l’inclinaison des dégâts, le chat et l’accessibilité."
 }

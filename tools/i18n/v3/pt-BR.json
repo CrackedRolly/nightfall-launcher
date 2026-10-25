@@ -227,5 +227,12 @@
  "v3.n035.2": "Cada mod é ajustado à versão e ao loader da instância; os que já existem ou conflitam são pulados.",
  "v3.n035.3": "Veja exatamente o que muda antes de instalar, incluindo dependências.",
  "v3.n035.4": "Um backup é feito antes, e Desfazer restaura a instância com um clique.",
- "v3.n035.5": "Mais 17 textos do menu do jogo traduzidos em todos os idiomas."
+ "v3.n035.5": "Mais 17 textos do menu do jogo traduzidos em todos os idiomas.",
+ "v3.n036": "Novidades da 0.3.6",
+ "v3.n036.1": "As atualizações baixam em segundo plano e instalam em silêncio quando você fecha o launcher, sem assistente.",
+ "v3.n036.2": "Se o launcher continuar aberto, um pequeno cartão oferece Reiniciar agora ou Depois.",
+ "v3.n036.3": "Nunca durante o jogo: a atualização espera o Minecraft fechar.",
+ "v3.n036.4": "Depois de atualizar, um cartão mostra a nova versão e o que mudou.",
+ "v3.n036.5": "Configurações: “Instalar atualizações automaticamente” (ligado por padrão) e “Verificar agora”. O AppImage do Linux também se atualiza sozinho.",
+ "v3.n036.6": "Corrigido: personalizar não redefine mais o balanço da visão, a inclinação de dano, o chat e a acessibilidade."
 }

@@ -227,5 +227,12 @@
  "v3.n035.2": "Cada mod se ajusta a la versión y loader de la instancia; los que ya están o chocan se omiten.",
  "v3.n035.3": "Ves exactamente qué cambia antes de instalar nada, dependencias incluidas.",
  "v3.n035.4": "Antes se hace una copia de seguridad, y Deshacer restaura la instancia con un clic.",
- "v3.n035.5": "17 textos más del menú del juego traducidos a todos los idiomas."
+ "v3.n035.5": "17 textos más del menú del juego traducidos a todos los idiomas.",
+ "v3.n036": "Novedades de 0.3.6",
+ "v3.n036.1": "Las actualizaciones se descargan en segundo plano y se instalan sin avisar al cerrar el launcher, sin asistente.",
+ "v3.n036.2": "Si el launcher sigue abierto, una pequeña tarjeta ofrece Reiniciar ahora o Más tarde.",
+ "v3.n036.3": "Nunca durante una partida: la actualización espera a que se cierre Minecraft.",
+ "v3.n036.4": "Tras actualizar, una tarjeta muestra la nueva versión y qué ha cambiado.",
+ "v3.n036.5": "Ajustes: «Instalar actualizaciones automáticamente» (activado por defecto) y «Buscar ahora». El AppImage de Linux también se actualiza solo.",
+ "v3.n036.6": "Corregido: personalizar ya no restablece el balanceo de cámara, la inclinación por daño, el chat ni la accesibilidad."
 }
