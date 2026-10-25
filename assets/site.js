@@ -18,6 +18,8 @@
     var v=(rel.tag_name||'').replace(/^v/,'');var exe=(rel.assets||[]).filter(function(a){return /\.exe$/i.test(a.name)})[0];
     if(v){window.NF&&(NF.ver=v);document.querySelectorAll('.ver').forEach(function(e){e.textContent=v})}
     if(exe)document.querySelectorAll('.dl-link').forEach(function(a){a.href=exe.browser_download_url});
+    var app=(rel.assets||[]).filter(function(a){return /\.AppImage$/i.test(a.name)})[0];
+    if(app)document.querySelectorAll('.linux-link').forEach(function(a){a.href=app.browser_download_url});
     window.NF&&NF.refresh&&NF.refresh();
   }).catch(function(){});
   // changelog

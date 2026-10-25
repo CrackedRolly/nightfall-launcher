@@ -165,3 +165,13 @@ figcaption{padding:12px 10px 7px;font-size:13.5px;color:var(--dim)}figcaption b{
 .doc .toc{border-left:2px solid var(--ln3);padding:4px 0 4px 18px;margin:24px 0 8px}.doc .toc h2{margin:0 0 8px;font-size:16px;text-transform:uppercase;letter-spacing:.08em;color:var(--tx2)}.doc .toc li{margin-bottom:4px}
 .doc .lnote{font-size:13px;border:1px dashed var(--ln3);border-radius:8px;padding:10px 14px}.doc .lnote[hidden]{display:none}
 @media (max-width:600px){.doc{padding:40px 18px 32px}.doc h2{font-size:19px}}
+/* 0.2.9 tour */
+.tour-h{font:600 15px var(--mono,monospace);letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin:44px 0 0;display:flex;align-items:center;gap:14px}
+.tour-h::after{content:"";flex:1;height:1px;background:var(--ln)}
+#screens .head + .tour-h{margin-top:8px}
+.strip figcaption{padding:12px 10px 7px;font-size:13.5px;color:var(--dim)}.strip figcaption b{display:block;color:#fff;font-weight:500;margin-bottom:3px}
+.art{margin-top:18px;border:1px solid var(--ln2);border-radius:12px;background:var(--s0);padding:18px 20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.art-row{display:flex;gap:10px;flex-wrap:wrap}
+.art-row img{width:48px;height:48px;image-rendering:pixelated;border:1px solid var(--ln);border-radius:8px;background:var(--s1);padding:6px;box-sizing:content-box}
+.art p{flex:1;min-width:220px;font-size:13.5px;color:var(--dim)}
+.linux-link{color:inherit;text-decoration:underline;text-underline-offset:3px}

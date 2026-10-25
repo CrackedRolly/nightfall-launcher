@@ -30,6 +30,10 @@ I = {  # 24px stroke icons
  'shared':'<path d="M4 6h16M4 12h10M4 18h6"/><circle cx="18" cy="16" r="3"/>',
  'loaders':'<path d="M12 2l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5M3 17l9 5 9-5"/>',
  'access':'<circle cx="12" cy="4.5" r="1.8"/><path d="M5 8l7 1.5L19 8M12 9.5V15l-3 6M12 15l3 6"/>',
+ 'storage':'<ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>',
+ 'share':'<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3M21 14v.01M17 21h4v-4M14 21v-3"/>',
+ 'import':'<path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/>',
+ 'linux':'<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>',
  'menu':'<path d="M4 7h16M4 12h16M4 17h16"/>',
  'github':'<path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/>',
 }
@@ -74,6 +78,7 @@ def footer():
 </div></footer>
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Screenshot"><img alt=""></div>
 <script src="assets/site.js" defer></script>
+<script src="assets/meteors.js" defer></script>
 </body></html>
 '''
 
@@ -85,35 +90,41 @@ def hero():
 <p class="lead rv" data-i18n="hero.lead">{EN["hero.lead"]}</p>
 <div class="cta rv"><a class="btn primary dl-link" href="{LATEST}">{svg("dl")}<span data-i18n="hero.download">{EN["hero.download"]}</span></a>
 <a class="btn" href="{INVITE}" rel="noopener">{svg("discord")}<span data-i18n="hero.discord">{EN["hero.discord"]}</span></a></div>
+<p class="meta small rv"><span data-i18n="hero.linux">{EN["hero.linux"]}</span> <a class="linux-link" href="{LATEST}"><span data-i18n="hero.linuxLink">{EN["hero.linuxLink"]}</span></a></p>
 <p class="meta rv"><span data-i18n="hero.meta" data-v>{EN["hero.meta"].replace("{v}","0.1.1")}</span></p>
 <p class="meta small rv" data-i18n="hero.smartscreen">{EN["hero.smartscreen"]}</p>
 <p class="meta small rv" data-i18n="hero.signin">{EN["hero.signin"]}</p>
-<div class="frame rv"><img src="assets/shots/home.webp" width="1600" height="1000" alt="{EN["hero.shotAlt"]}" data-i18n-alt="hero.shotAlt" fetchpriority="high"></div>
+<div class="frame rv"><img src="assets/shots/home-029.webp" width="1600" height="900" alt="{EN["hero.shotAlt"]}" data-i18n-alt="hero.shotAlt" fetchpriority="high"></div>
 </div></header>'''
 
-FEATS = [('perf','perf',0),('modrinth','modrinth',0),('toggle','toggle',0),('update','update',0),('crash','crash',1),('simple','simple',1),('shared','shared',1),('loaders','loaders',0),('access','access',1)]
+FEATS = [('perf','perf',0),('modrinth','modrinth',0),('storage','storage',0),('share','share',0),('import','import',0),('loaders','loaders',0),('toggle','toggle',0),('crash','crash',0),('shared','shared',0),('update','update',0),('linux','linux',0),('access','access',0)]
 def features():
     cards = ''.join(f'<div class="card rv"><div class="ic">{svg(ic)}</div><h3>{tx(f"feat.{k}.t")}{"<span class=soon>0.2</span>" if soon else ""}</h3>{t(f"feat.{k}.d","p")}</div>' for k,ic,soon in FEATS)
     return f'''<section id="features"><div class="w">
 <div class="head rv"><span class="mono" data-i18n="feat.kicker">{EN["feat.kicker"]}</span><h2 data-i18n="feat.title">{EN["feat.title"]}</h2>{t("feat.sub","p")}</div>
 <div class="grid">{cards}</div>
-<p class="note rv">{tx("feat.soonNote")}</p>
 </div></section>'''
 
-def fig(k, cls=''):
-    return f'<figure class="rv {cls}"><img src="assets/shots/{k}.webp" loading="lazy" width="1600" height="1000" alt="{EN[f"shots.{k}.t"]}" data-i18n-alt="shots.{k}.t" title="{EN["shots.zoom"]}"><figcaption><b data-i18n="shots.{k}.t">{EN[f"shots.{k}.t"]}</b>{tx(f"shots.{k}.d")}</figcaption></figure>'
+def fig(k):
+    return f'<figure class="rv"><img src="assets/shots/tour/{k}.webp" loading="lazy" width="1440" height="900" alt="{EN[f"tour.{k}.t"]}" data-i18n-alt="tour.{k}.t" title="{EN["shots.zoom"]}"><figcaption><b data-i18n="tour.{k}.t">{EN[f"tour.{k}.t"]}</b>{tx(f"tour.{k}.d")}</figcaption></figure>'
+TOUR = [('g1',['import','share','builder','optimize','conflicts','modmap']),('g2',['mixer','originals','pvphud','hudeditor','emotes','customize']),('g3',['perfcheck','themes','server'])]
+ART = ['sword_midnight','sword_frost','sword_ember','sword_void','sword_mint','pickaxe_frost','axe_ember','shield_nightfall','ore_amethyst','ore_diamond']
 def shots():
+    groups = ''
+    for g, ks in TOUR:
+        groups += f'<h3 class="tour-h rv" data-i18n="tour.{g}">{EN["tour."+g]}</h3><div class="strip">{"".join(fig(k) for k in ks)}</div>'
+        if g == 'g2':
+            groups += '<div class="art rv"><div class="art-row">' + ''.join(f'<img src="assets/shots/art/{a}.webp" width="96" height="96" alt="" loading="lazy">' for a in ART) + f'</div>{t("tour.art","p")}</div>'
     return f'''<section id="screens"><div class="w">
-<div class="head rv"><span class="mono" data-i18n="shots.kicker">{EN["shots.kicker"]}</span><h2 data-i18n="shots.title">{EN["shots.title"]}</h2>{t("shots.sub","p")}</div>
-<div class="shots">{fig("mods","tall")}<div class="side">{fig("simple")}{fig("crash")}</div></div>
-<div class="strip">{fig("instance")}{fig("access")}{fig("home")}</div>
+<div class="head rv"><span class="mono" data-i18n="tour.kicker">{EN["tour.kicker"]}</span><h2 data-i18n="tour.title">{EN["tour.title"]}</h2>{t("tour.sub","p")}</div>
+{groups}
 </div></section>'''
 
 # Y yes, P partial, N no, S 0.2, X 0.2 experimental, K pending Mojang approval
 CMP_COLS = ['Nightfall','Official','Prism','Modrinth App','CurseForge','ATLauncher','GDLauncher']
-CMP = [('signin','K','YYYYYY'),('instances','Y','PYYYYY'),('fabric','Y','NYYYYY'),('forge','X','NYYYYY'),('java','Y','YYYYYY'),
-       ('modrinth','Y','NYYNPY'),('mrpack','Y','NYYNPY'),('perf','Y','NNNNNN'),('toggle','Y','NNNNNN'),('crash','S','NPPNNP'),
-       ('shared','S','PNNNNN'),('simple','S','YNNNNN'),('update','Y','YYYYYY'),('ads','Y','YYNNYP'),('bedrock','N','YNNNNN')]
+CMP = [('signin','K','YYYYYY'),('instances','Y','PYYYYY'),('fabric','Y','NYYYYY'),('forge','Y','NYYYYY'),('java','Y','YYYYYY'),
+       ('modrinth','Y','NYYNPY'),('curseforge','Y','NYNYYY'),('mrpack','Y','NYYNPY'),('perf','Y','NNNNNN'),('toggle','Y','NNNNNN'),('mixer','Y','NNNNNN'),('crash','Y','NPPNNP'),
+       ('shared','Y','PNNNNN'),('update','Y','YYYYYY'),('ads','Y','YYNNYP'),('bedrock','N','YNNNNN')]
 def cell(c, nf=False):
     cls = ' class="nf"' if nf else ''
     if c=='Y': return f'<td{cls}><span class="y" data-i18n="cmp.yes">Yes</span></td>'
@@ -137,7 +148,7 @@ def band():
 <div class="cta"><a class="btn primary dl-link" href="{LATEST}">{svg("dl")}<span data-i18n="hero.download">{EN["hero.download"]}</span></a><a class="btn" href="{INVITE}" rel="noopener">{svg("discord")}<span data-i18n="hero.discord">{EN["hero.discord"]}</span></a></div>
 </div></div></section>'''
 
-def faq_list(n=9):
+def faq_list(n=13):
     return '<div class="faq">' + ''.join(f'<details><summary data-i18n="faq.q{i}">{EN[f"faq.q{i}"]}</summary><div class="a" data-i18n="faq.a{i}">{EN[f"faq.a{i}"]}</div></details>' for i in range(1,n+1)) + '</div>'
 
 def write(name, body):
@@ -148,6 +159,7 @@ write('index.html', head('meta.title','meta.desc','') + nav('home') + '<main id=
 write('faq.html', head('nav.faq','meta.desc','faq.html', 'FAQ — Nightfall Launcher') + nav('faq') +
       f'<main id="main"><div class="w"><div class="page-hero"><span class="mono" data-i18n="faq.kicker">{EN["faq.kicker"]}</span><h1 data-i18n="faq.title">{EN["faq.title"]}</h1><p data-i18n="faq.sub">{EN["faq.sub"]}</p><div class="cta-row"><a class="btn sm" href="crash-help.html" data-i18n="nav.crash">{EN["nav.crash"]}</a><a class="btn sm" href="{INVITE}" rel="noopener">{svg("discord")}Discord</a></div></div><section style="padding-top:40px">' + faq_list() + '</section></div></main>' + footer())
 
+WRITE_OTHERS = False
 # Static fallback for changelog (replaced live from the GitHub API when reachable)
 FALLBACK = [
  ('v0.1.1','2026-10-23',[ 'First release with automatic updates.',
@@ -155,7 +167,7 @@ FALLBACK = [
    'New design and the Falling Star icon.']),
 ]
 fb = ''.join(f'<article class="rel"><div class="when"><div class="v">{v}</div><div class="mono d">{d}</div></div><div class="notes"><ul>{"".join(f"<li>{x}</li>" for x in items)}</ul><div class="dl"><a class="btn sm" href="{REPO}/releases/tag/{v}" rel="noopener">{svg("github")}<span data-i18n="log.github">{EN["log.github"]}</span></a></div></div></article>' for v,d,items in FALLBACK)
-write('changelog.html', head('nav.changelog','meta.desc','changelog.html','Changelog — Nightfall Launcher') + nav('log') +
+if WRITE_OTHERS: write('changelog.html', head('nav.changelog','meta.desc','changelog.html','Changelog — Nightfall Launcher') + nav('log') +
       f'<main id="main"><div class="w"><div class="page-hero"><span class="mono" data-i18n="log.kicker">{EN["log.kicker"]}</span><h1 data-i18n="log.title">{EN["log.title"]}</h1><p data-i18n="log.sub">{EN["log.sub"]}</p></div>'
       f'<p class="note" id="log-status" aria-live="polite" data-i18n="log.loading">{EN["log.loading"]}</p><div id="releases" data-repo="CrackedRolly/nightfall-launcher">{fb}</div></div></main>' + footer())
 
@@ -165,7 +177,7 @@ def legal(fn, title):
     m = re.search(r'<main[^>]*>(.*?)</main>', src, re.S)
     inner = m.group(1).strip()
     write(fn, head('meta.title','meta.desc',fn, f'{title} — Nightfall Launcher') + nav('') + f'<main id="main" class="w doc">{inner}</main>' + footer())
-legal('privacy.html','Privacy Policy'); legal('terms.html','Terms of Use')
+if WRITE_OTHERS: legal('privacy.html','Privacy Policy'); legal('terms.html','Terms of Use')
 
 # translations
 os.makedirs(os.path.join(ROOT,'i18n'), exist_ok=True)
@@ -192,4 +204,4 @@ def crash_help():
         f'<div class="chips" role="group" aria-label="Categories">{chips}</div><p class="note"><span id="count">{len(kb["entries"])}</span> <span data-i18n="help.errors">{EN["help.errors"]}</span> &middot; <span data-i18n="help.en">{EN["help.en"]}</span></p>'
         f'<div class="kblist" id="list">{"".join(items)}</div>'
         f'<p class="note"><a href="{REPO}/issues" data-i18n="help.issue">{EN["help.issue"]}</a> &middot; <a href="data/crash-kb.json">crash-kb.json</a> ({kb["updated"]})</p></div></main><script>{js}</script>')
-write('crash-help.html', head('help.title', 'meta.desc', 'crash-help.html', 'Crash help — Nightfall Launcher') + nav('crash') + crash_help() + footer())
+if WRITE_OTHERS: write('crash-help.html', head('help.title', 'meta.desc', 'crash-help.html', 'Crash help — Nightfall Launcher') + nav('crash') + crash_help() + footer())
