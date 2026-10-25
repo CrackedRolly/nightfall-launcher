@@ -143,6 +143,7 @@ section{padding:110px 0 0}
 
 /* tour strips */
 .strip{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.strip.s4{grid-template-columns:repeat(4,1fr);gap:18px}@media (max-width:1100px){.strip.s4{grid-template-columns:repeat(2,1fr)}}
 .strip figure{border:1px solid var(--ln2);background:var(--s0);padding:6px;transition:border-color .15s}
 .strip figure:hover{border-color:var(--ln3)}
 .strip img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top left;cursor:zoom-in}
@@ -333,7 +334,7 @@ footer .fine{grid-column:1/-1;border-top:1px solid var(--ln);padding-top:24px;ma
 }
 @media (max-width:760px){
  html{font-size:15.5px}.w{padding:0 20px}section{padding:84px 0 0}
- .strip{grid-template-columns:1fr}.flist{grid-template-columns:1fr}.fi:nth-child(even){padding-left:0;border-left:0}
+ .strip,.strip.s4{grid-template-columns:1fr}.flist{grid-template-columns:1fr}.fi:nth-child(even){padding-left:0;border-left:0}
  .fi{padding:22px 0}
  .dc{grid-template-columns:1fr}.dc > div{padding:28px 22px}.dc .side{border-left:0;border-top:1px dashed var(--ln3)}
  .band{grid-template-columns:1fr;padding:56px 0}

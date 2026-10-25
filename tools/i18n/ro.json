@@ -1,6 +1,6 @@
 {
  "meta.title": "Nightfall Launcher — un launcher rapid și gratuit pentru Minecraft: Java Edition",
- "meta.desc": "Nightfall este un launcher gratuit, fără reclame, pentru Minecraft: Java Edition pe Windows și Linux, cu Modrinth și CurseForge integrate, stocare comună a modurilor, coduri de partajare, Texture Mixer și ajutor la crash.",
+ "meta.desc": "Nightfall este un launcher gratuit, fără reclame, pentru Minecraft: Java Edition pe Windows și Linux, cu Modrinth și CurseForge integrate, stocare comună a modurilor, coduri de partajare, doctor FPS și ajutor la crash.",
  "nav.features": "Funcții",
  "nav.screens": "Capturi",
  "nav.compare": "Comparație",
@@ -163,10 +163,6 @@
  "tour.conflicts.d": "Conflictele cunoscute și dependențele lipsă sunt semnalate înainte să joci.",
  "tour.modmap.t": "Harta modurilor",
  "tour.modmap.d": "Vezi ce moduri depind de care și ce este opțional.",
- "tour.mixer.t": "Texture Mixer",
- "tour.mixer.d": "Săbii dintr-un pachet, cerul din altul: primești un singur resource pack, cu credite.",
- "tour.originals.t": "Nightfall Originals",
- "tour.originals.d": "Pixel art creat de noi, 36 de designuri, gratuite sub CC BY 4.0.",
  "tour.pvphud.t": "HUD de PvP",
  "tour.pvphud.d": "Inventar, reach și contoare pentru totemuri, poțiuni și săgeți, folosind doar ce îți arată deja jocul.",
  "tour.hudeditor.t": "Editor de aranjare HUD",
@@ -181,15 +177,11 @@
  "tour.themes.d": "Întunecat, luminos sau ca sistemul, culori de accent și CSS personalizat pentru utilizatorii avansați.",
  "tour.server.t": "Server local",
  "tour.server.d": "Pornește un server dintr-o instanță, doar pentru PC-ul tău sau rețeaua de acasă (LAN).",
- "tour.art": "Câteva designuri Nightfall Originals. Folosește-le, modifică-le, distribuie-le: doar menționează Nightfall (CC BY 4.0).",
  "cmp.r.curseforge": "Moduri și modpackuri CurseForge",
- "cmp.r.mixer": "Mixer de texturi",
  "faq.q10": "Îmi va da Nightfall mai multe FPS?",
  "faq.a10": "Nightfall este construit pentru FPS maxim: un preset de performanță, setări Java optimizate, iar launcherul se oprește cât timp joci. FPS-ul depinde totuși mai ales de PC, de setările jocului și de moduri, așa că nu promitem un număr. Rulează <b>Verificare de performanță</b> (Instanță → Opțiuni) ca să vezi ce placă video și câtă memorie va folosi jocul.",
  "faq.q11": "Cine îmi poate vedea emote-urile și insigna Nightfall?",
  "faq.a11": "Doar alți jucători Nightfall și doar după lansarea serviciului online opțional Nightfall. Este oprit implicit și împarte doar ID-ul tău de jucător Minecraft. Până atunci, emote-urile se văd doar la tine.",
- "faq.q12": "Pot folosi texturile Nightfall Originals?",
- "faq.a12": "Da. Sunt creațiile noastre, sub CC BY 4.0: folosește-le, modifică-le și distribuie-le, doar menționează Nightfall. Pachetele de pe Modrinth sunt amestecate doar când licența lor permite, sau pe PC-ul tău, pentru uz personal.",
- "faq.q13": "Pot prietenii să intre pe serverul meu local prin internet?",
- "faq.a13": "Serverul local este pentru PC-ul tău și rețeaua de acasă (LAN). Prietenii din afara casei nu pot intra fără un server configurat de tine."
+ "faq.q12": "Pot prietenii să intre pe serverul meu local prin internet?",
+ "faq.a12": "Serverul local este pentru PC-ul tău și rețeaua de acasă (LAN). Prietenii din afara casei nu pot intra fără un server configurat de tine."
 }

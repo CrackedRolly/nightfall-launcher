@@ -1,6 +1,6 @@
 {
  "meta.title": "Nightfall Launcher — un launcher veloce e gratuito per Minecraft: Java Edition",
- "meta.desc": "Nightfall è un launcher gratuito e senza pubblicità per Minecraft: Java Edition su Windows e Linux, con Modrinth e CurseForge integrati, archivio condiviso delle mod, codici di condivisione, Texture Mixer e aiuto per i crash.",
+ "meta.desc": "Nightfall è un launcher gratuito e senza pubblicità per Minecraft: Java Edition su Windows e Linux, con Modrinth e CurseForge integrati, archivio condiviso delle mod, codici di condivisione, dottore FPS e aiuto per i crash.",
  "nav.features": "Funzioni",
  "nav.screens": "Screenshot",
  "nav.compare": "Confronto",
@@ -163,10 +163,6 @@
  "tour.conflicts.d": "Conflitti noti e dipendenze mancanti vengono segnalati prima di giocare.",
  "tour.modmap.t": "Mappa delle mod",
  "tour.modmap.d": "Vedi quali mod dipendono da quali e cosa è opzionale.",
- "tour.mixer.t": "Texture Mixer",
- "tour.mixer.d": "Spade da un pack, il cielo da un altro: ottieni un solo resource pack con i crediti.",
- "tour.originals.t": "Nightfall Originals",
- "tour.originals.d": "Pixel art nostra, 36 design, gratis con licenza CC BY 4.0.",
  "tour.pvphud.t": "HUD PvP",
  "tour.pvphud.d": "Inventario, portata e contatori di totem, pozioni e frecce, usando solo ciò che il gioco già ti mostra.",
  "tour.hudeditor.t": "Editor del layout HUD",
@@ -181,15 +177,11 @@
  "tour.themes.d": "Scuro, chiaro o di sistema, colori d'accento e CSS personalizzato per utenti esperti.",
  "tour.server.t": "Server locale",
  "tour.server.d": "Avvia un server da un'istanza, solo per il tuo PC o la rete di casa (LAN).",
- "tour.art": "Alcuni design di Nightfall Originals. Usali, modificali e condividili: basta citare Nightfall (CC BY 4.0).",
  "cmp.r.curseforge": "Mod e modpack di CurseForge",
- "cmp.r.mixer": "Mixer di texture",
  "faq.q10": "Nightfall mi darà più FPS?",
  "faq.a10": "Nightfall è pensato per il massimo degli FPS: un preset di prestazioni, opzioni Java ottimizzate, e il launcher si mette in pausa mentre giochi. I tuoi FPS dipendono comunque soprattutto dal PC, dalle impostazioni di gioco e dalle mod, quindi non promettiamo un numero. Usa il <b>Controllo prestazioni</b> (Istanza → Opzioni) per vedere quale scheda video e quanta memoria userà il gioco.",
  "faq.q11": "Chi può vedere le mie emote e il mio badge Nightfall?",
  "faq.a11": "Solo altri giocatori Nightfall, e solo quando partirà il servizio online opzionale di Nightfall. È disattivato di default e condivide solo il tuo ID giocatore di Minecraft. Fino ad allora, le emote le vedi solo tu.",
- "faq.q12": "Posso usare le texture di Nightfall Originals?",
- "faq.a12": "Sì. Sono arte nostra con licenza CC BY 4.0: usale, modificale e condividile, basta citare Nightfall. I pack di Modrinth vengono mescolati solo se la loro licenza lo consente, o sul tuo PC per uso personale.",
- "faq.q13": "I miei amici possono entrare nel mio server locale via internet?",
- "faq.a13": "Il server locale è per il tuo PC e la rete di casa (LAN). Gli amici fuori casa non possono entrare senza un server configurato da te."
+ "faq.q12": "I miei amici possono entrare nel mio server locale via internet?",
+ "faq.a12": "Il server locale è per il tuo PC e la rete di casa (LAN). Gli amici fuori casa non possono entrare senza un server configurato da te."
 }

@@ -161,19 +161,17 @@ def newfig(k):
     else:
         media = f'<div class="phbox" role="img" aria-label="{E(EN["v3.ph"])}"><span data-i18n="v3.ph">{EN["v3.ph"]}</span></div>'
     return f'<figure class="rv">{media}<figcaption><b data-i18n="v3.n.{k}.t">{EN[f"v3.n.{k}.t"]}</b>{T(f"v3.n.{k}.d")}</figcaption></figure>'
-TOUR = [('g1',['import','share','builder','optimize','conflicts','modmap']),('g2',['mixer','originals','pvphud','hudeditor','emotes','customize']),('g3',['perfcheck','themes','server'])]
+TOUR = [('g1',['import','share','builder','optimize','conflicts','modmap']),('g2',['pvphud','hudeditor','emotes']),('g3',['customize','themes','perfcheck','server'])]
 ART = ['sword_midnight','sword_frost','sword_ember','sword_void','sword_mint','pickaxe_frost','axe_ember','shield_nightfall','ore_amethyst','ore_diamond']
 def tour_full():
     out = f'<h2 class="tour-h rv" data-i18n="v3.fp.new">{EN["v3.fp.new"]}</h2>{T("v3.fp.newsub","p"," class=\"note rv\" style=\"margin:-6px 0 18px\"")}<div class="strip">' + ''.join(newfig(k) for k in ['home','guide','friends','meteors'][:3]) + '</div>'
     for g, ks in TOUR:
-        out += f'<h2 class="tour-h rv" data-i18n="tour.{g}">{EN["tour."+g]}</h2><div class="strip">{"".join(fig(k) for k in ks)}</div>'
-        if g == 'g2':
-            out += '<div class="art rv"><div class="art-row">' + ''.join(f'<img src="assets/shots/art/{a}.webp" width="96" height="96" alt="" loading="lazy">' for a in ART) + f'</div>{T("tour.art","p")}</div>'
+        out += f'<h2 class="tour-h rv" data-i18n="tour.{g}">{EN["tour."+g]}</h2><div class="strip{' s4' if len(ks) == 4 else ''}">{"".join(fig(k) for k in ks)}</div>'
     return out
 
 def tour_sec(no):
     return f'''<section id="tour"><div class="w">{sh(no,"v3.sec.tour")}{headblk("v3.tour.title","tour.sub")}
-<div class="strip lead">{fig("mixer")}{fig("perfcheck")}{fig("optimize")}</div>
+<div class="strip lead">{fig("perfcheck")}{fig("optimize")}{fig("pvphud")}</div>
 <p class="more rv"><a class="lnk arrow" href="features.html" data-i18n="v3.tour.more">{EN["v3.tour.more"]}</a></p></div></section>'''
 
 # Modpacks (Modrinth slugs). Fallback numbers baked at build time; site.js refreshes them live.
@@ -198,7 +196,7 @@ def packs_sec(no):
 
 CMP_COLS = ['Nightfall','Official','Prism','Modrinth App','CurseForge','ATLauncher','GDLauncher']
 CMP = [('signin','K','YYYYYY'),('instances','Y','PYYYYY'),('fabric','Y','NYYYYY'),('forge','Y','NYYYYY'),('java','Y','YYYYYY'),
-       ('modrinth','Y','NYYNPY'),('curseforge','Y','NYNYYY'),('mrpack','Y','NYYNPY'),('perf','Y','NNNNNN'),('toggle','Y','NNNNNN'),('mixer','Y','NNNNNN'),('crash','Y','NPPNNP'),
+       ('modrinth','Y','NYYNPY'),('curseforge','Y','NYNYYY'),('mrpack','Y','NYYNPY'),('perf','Y','NNNNNN'),('toggle','Y','NNNNNN'),('crash','Y','NPPNNP'),
        ('shared','Y','PNNNNN'),('update','Y','YYYYYY'),('ads','Y','YYNNYP'),('bedrock','N','YNNNNN')]
 def cell(c, nf=False):
     cls = ' class="nf"' if nf else ''
@@ -274,7 +272,7 @@ def done(k): return f'<div class="it"><b data-i18n="{k}">{EN[k]}</b></div>'
 cols = (f'<div class="col now"><h2 data-i18n="v3.rm.now">{EN["v3.rm.now"]}</h2>{it("redesign")}<div class="it"><b data-i18n="v3.n.friends.t">{EN["v3.n.friends.t"]}</b>{T("v3.n.friends.d")}</div>{it("fps")}</div>'
         f'<div class="col"><h2 data-i18n="v3.rm.next">{EN["v3.rm.next"]}</h2>{it("signin")}{it("online")}{it("suggest")}</div>'
         f'<div class="col"><h2 data-i18n="v3.rm.later">{EN["v3.rm.later"]}</h2>{it("light")}{it("store")}{it("mac")}</div>'
-        f'<div class="col done"><h2 data-i18n="v3.rm.done">{EN["v3.rm.done"]}</h2>{done("tour.mixer.t")}{done("tour.pvphud.t")}{done("tour.perfcheck.t")}{done("feat.shared.t")}{done("tour.import.t")}{done("feat.linux.t")}</div>')
+        f'<div class="col done"><h2 data-i18n="v3.rm.done">{EN["v3.rm.done"]}</h2>{done("tour.pvphud.t")}{done("tour.perfcheck.t")}{done("feat.shared.t")}{done("tour.import.t")}{done("feat.linux.t")}</div>')
 write('roadmap.html', head('Roadmap — Nightfall Launcher','meta.desc','roadmap.html') + nav('roadmap') +
       f'<main id="main"><div class="w">{page_hero("v3.rm.kicker","v3.rm.title","v3.rm.sub")}<div class="rm rv">{cols}</div>'
       f'<p class="more"><a class="btn" href="{INVITE}" rel="noopener">{svg("discord")}<span data-i18n="v3.rm.idea">{EN["v3.rm.idea"]}</span></a></p></div></main>' + footer())
@@ -285,7 +283,7 @@ def faq_list(pre, n):
 write('faq.html', head('FAQ — Nightfall Launcher','meta.desc','faq.html') + nav('faq') +
       f'<main id="main"><div class="w">{page_hero("faq.kicker","faq.title","faq.sub")}'
       f'<div class="faqgrid" style="margin-top:56px"><nav class="faqside" aria-label="FAQ"><a href="#questions" data-i18n="faq.kicker">{EN["faq.kicker"]}</a><a href="#troubleshooting" data-i18n="v3.ts.title">{EN["v3.ts.title"]}</a><a href="crash-help.html" data-i18n="nav.crash">{EN["nav.crash"]}</a><a href="{INVITE}" rel="noopener">Discord</a></nav>'
-      f'<div><div id="questions">{faq_list("faq.",13)}</div>'
+      f'<div><div id="questions">{faq_list("faq.",12)}</div>'
       f'<section id="troubleshooting" style="padding-top:90px">{sh("§","v3.ts.title")}<h2 class="rv" data-i18n="v3.ts.title">{EN["v3.ts.title"]}</h2>{T("v3.ts.sub","p"," style=\"color:var(--dim);margin:16px 0 30px\"")}{faq_list("v3.ts.",7)}</section></div></div></div></main>' + footer())
 
 # ---------- changelog ----------
