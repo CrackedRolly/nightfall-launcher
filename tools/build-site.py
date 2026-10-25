@@ -154,17 +154,18 @@ def fps_sec(no="§02"):
 SHOTDIR = os.path.join(ROOT, 'assets', 'shots')
 def fig(k):
     return f'<figure class="rv"><img src="assets/shots/tour/{k}.webp" loading="lazy" width="1440" height="900" alt="{E(EN[f"tour.{k}.t"])}" data-i18n-alt="tour.{k}.t"><figcaption><b data-i18n="tour.{k}.t">{EN[f"tour.{k}.t"]}</b>{T(f"tour.{k}.d")}</figcaption></figure>'
-def newfig(k):
-    p = f'assets/shots/030/{k}.webp'
+def newfig(k, d='030', wh=(1440, 900)):
+    p = f'assets/shots/{d}/{k}.webp'
     if os.path.exists(os.path.join(ROOT, p)):
-        media = f'<img src="{p}" loading="lazy" width="1440" height="900" alt="{E(EN[f"v3.n.{k}.t"])}" data-i18n-alt="v3.n.{k}.t">'
+        media = f'<img src="{p}" loading="lazy" width="{wh[0]}" height="{wh[1]}" alt="{E(EN[f"v3.n.{k}.t"])}" data-i18n-alt="v3.n.{k}.t">'
     else:
         media = f'<div class="phbox" role="img" aria-label="{E(EN["v3.ph"])}"><span data-i18n="v3.ph">{EN["v3.ph"]}</span></div>'
     return f'<figure class="rv">{media}<figcaption><b data-i18n="v3.n.{k}.t">{EN[f"v3.n.{k}.t"]}</b>{T(f"v3.n.{k}.d")}</figcaption></figure>'
 TOUR = [('g1',['import','share','builder','optimize','conflicts','modmap']),('g2',['pvphud','hudeditor','emotes']),('g3',['customize','themes','perfcheck','server'])]
 ART = ['sword_midnight','sword_frost','sword_ember','sword_void','sword_mint','pickaxe_frost','axe_ember','shield_nightfall','ore_amethyst','ore_diamond']
 def tour_full():
-    out = f'<h2 class="tour-h rv" data-i18n="v3.fp.new">{EN["v3.fp.new"]}</h2>{T("v3.fp.newsub","p"," class=\"note rv\" style=\"margin:-6px 0 18px\"")}<div class="strip">' + ''.join(newfig(k) for k in ['home','guide','friends','meteors'][:3]) + '</div>'
+    out = f'<h2 class="tour-h rv" data-i18n="v3.fp.new032">{EN["v3.fp.new032"]}</h2>{T("v3.fp.new032sub","p"," class=\"note rv\" style=\"margin:-6px 0 18px\"")}<div class="strip">' + ''.join(newfig(k, '032', (1280, 800)) for k in ['mods','version','templates']) + '</div>'
+    out += f'<h2 class="tour-h rv" data-i18n="v3.fp.new">{EN["v3.fp.new"]}</h2>{T("v3.fp.newsub","p"," class=\"note rv\" style=\"margin:-6px 0 18px\"")}<div class="strip">' + ''.join(newfig(k) for k in ['home','guide','friends','meteors'][:3]) + '</div>'
     for g, ks in TOUR:
         out += f'<h2 class="tour-h rv" data-i18n="tour.{g}">{EN["tour."+g]}</h2><div class="strip{' s4' if len(ks) == 4 else ''}">{"".join(fig(k) for k in ks)}</div>'
     return out

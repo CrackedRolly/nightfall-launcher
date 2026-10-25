@@ -193,5 +193,13 @@
  "v3.foot.made": "A small independent project.",
  "v3.d.sha": "SHA-256",
  "v3.d.pc": "Your PC",
- "v3.d.file": "File"
+ "v3.d.file": "File",
+ "v3.fp.new032": "New in 0.3.2",
+ "v3.fp.new032sub": "Organize big modpacks, switch versions safely and start new instances from your own setup.",
+ "v3.n.mods.t": "Tags, search and bulk actions",
+ "v3.n.mods.d": "Filter mods by tag, then turn them on or off, update or remove them together, with a preview before updating.",
+ "v3.n.version.t": "Change version or loader",
+ "v3.n.version.d": "Every mod is swapped for a compatible build. Mods without one are listed and turned off, and a backup makes it undoable.",
+ "v3.n.templates.t": "Templates and pack updates",
+ "v3.n.templates.d": "Save an instance as a template for new ones, and update a modpack from a newer file while keeping your configs and worlds."
 }

@@ -377,5 +377,13 @@
  "v3.foot.made": "Ein kleines unabhängiges Projekt.",
  "v3.d.sha": "SHA-256",
  "v3.d.pc": "Dein PC",
- "v3.d.file": "Datei"
+ "v3.d.file": "Datei",
+ "v3.fp.new032": "Neu in 0.3.2",
+ "v3.fp.new032sub": "Große Modpacks ordnen, Versionen sicher wechseln und neue Instanzen mit deinem eigenen Setup starten.",
+ "v3.n.mods.t": "Tags, Suche und Sammelaktionen",
+ "v3.n.mods.d": "Mods nach Tag filtern und gemeinsam ein- oder ausschalten, aktualisieren oder entfernen, mit Vorschau vor dem Update.",
+ "v3.n.version.t": "Version oder Loader wechseln",
+ "v3.n.version.d": "Jeder Mod wird durch eine passende Version ersetzt. Mods ohne passende Version werden aufgelistet und ausgeschaltet, ein Backup macht alles rückgängig.",
+ "v3.n.templates.t": "Vorlagen und Pack-Updates",
+ "v3.n.templates.d": "Speichere eine Instanz als Vorlage für neue und aktualisiere ein Modpack aus einer neueren Datei, ohne deine Configs und Welten zu verlieren."
 }

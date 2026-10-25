@@ -193,5 +193,13 @@
  "v3.foot.made": "Un mic proiect independent.",
  "v3.d.sha": "SHA-256",
  "v3.d.pc": "PC-ul tău",
- "v3.d.file": "Fișier"
+ "v3.d.file": "Fișier",
+ "v3.fp.new032": "Nou în 0.3.2",
+ "v3.fp.new032sub": "Organizează modpack-uri mari, schimbă versiunea în siguranță și pornește instanțe noi din propria configurație.",
+ "v3.n.mods.t": "Etichete, căutare și acțiuni în grup",
+ "v3.n.mods.d": "Filtrează modurile după etichetă, apoi pornește-le, oprește-le, actualizează-le sau șterge-le împreună, cu previzualizare înainte de actualizare.",
+ "v3.n.version.t": "Schimbă versiunea sau loaderul",
+ "v3.n.version.d": "Fiecare mod e înlocuit cu o versiune compatibilă. Cele fără una sunt listate și oprite, iar o copie de siguranță permite anularea.",
+ "v3.n.templates.t": "Șabloane și actualizări de pack",
+ "v3.n.templates.d": "Salvează o instanță ca șablon pentru altele noi și actualizează un modpack dintr-un fișier mai nou, păstrând configurările și lumile."
 }

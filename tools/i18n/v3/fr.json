@@ -193,5 +193,13 @@
  "v3.foot.made": "Un petit projet indépendant.",
  "v3.d.sha": "SHA-256",
  "v3.d.pc": "Ton PC",
- "v3.d.file": "Fichier"
+ "v3.d.file": "Fichier",
+ "v3.fp.new032": "Nouveau dans 0.3.2",
+ "v3.fp.new032sub": "Organisez les gros modpacks, changez de version sans risque et créez des instances à partir de votre propre configuration.",
+ "v3.n.mods.t": "Tags, recherche et actions groupées",
+ "v3.n.mods.d": "Filtrez les mods par tag, puis activez, désactivez, mettez à jour ou supprimez-les ensemble, avec un aperçu avant la mise à jour.",
+ "v3.n.version.t": "Changer de version ou de loader",
+ "v3.n.version.d": "Chaque mod est remplacé par une version compatible. Ceux qui n'en ont pas sont listés et désactivés, et une sauvegarde permet d'annuler.",
+ "v3.n.templates.t": "Modèles et mises à jour de pack",
+ "v3.n.templates.d": "Enregistrez une instance comme modèle pour les suivantes et mettez à jour un modpack depuis un fichier plus récent en gardant vos configs et vos mondes."
 }

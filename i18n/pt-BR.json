@@ -377,5 +377,13 @@
  "v3.foot.made": "Um pequeno projeto independente.",
  "v3.d.sha": "SHA-256",
  "v3.d.pc": "Seu PC",
- "v3.d.file": "Arquivo"
+ "v3.d.file": "Arquivo",
+ "v3.fp.new032": "Novo na 0.3.2",
+ "v3.fp.new032sub": "Organize modpacks grandes, troque de versão com segurança e crie instâncias a partir da sua própria configuração.",
+ "v3.n.mods.t": "Tags, busca e ações em massa",
+ "v3.n.mods.d": "Filtre mods por tag e ative, desative, atualize ou remova vários de uma vez, com prévia antes de atualizar.",
+ "v3.n.version.t": "Trocar versão ou loader",
+ "v3.n.version.d": "Cada mod é trocado por uma versão compatível. Os que não têm são listados e desativados, e um backup permite desfazer.",
+ "v3.n.templates.t": "Modelos e atualização de pack",
+ "v3.n.templates.d": "Salve uma instância como modelo para novas e atualize um modpack a partir de um arquivo mais novo, mantendo suas configs e mundos."
 }

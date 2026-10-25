@@ -193,5 +193,13 @@
  "v3.foot.made": "Küçük, bağımsız bir proje.",
  "v3.d.sha": "SHA-256",
  "v3.d.pc": "Bilgisayarın",
- "v3.d.file": "Dosya"
+ "v3.d.file": "Dosya",
+ "v3.fp.new032": "0.3.2'de yeni",
+ "v3.fp.new032sub": "Büyük mod paketlerini düzenle, sürümü güvenle değiştir ve kendi ayarlarınla yeni kurulumlar başlat.",
+ "v3.n.mods.t": "Etiketler, arama ve toplu işlemler",
+ "v3.n.mods.d": "Modları etikete göre süz, sonra hepsini birlikte aç, kapat, güncelle veya kaldır; güncellemeden önce önizleme gör.",
+ "v3.n.version.t": "Sürüm veya yükleyici değiştir",
+ "v3.n.version.d": "Her mod uyumlu bir sürümle değiştirilir. Uyumlu sürümü olmayanlar listelenip kapatılır, yedek sayesinde geri alınabilir.",
+ "v3.n.templates.t": "Şablonlar ve paket güncelleme",
+ "v3.n.templates.d": "Bir kurulumu yenileri için şablon olarak kaydet ve bir mod paketini ayarlarını ve dünyalarını koruyarak daha yeni bir dosyadan güncelle."
 }
