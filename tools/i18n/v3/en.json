@@ -242,5 +242,9 @@
  "v3.n038": "New in 0.3.8",
  "v3.n038.1": "World manager: rename worlds and export them as a .zip.",
  "v3.n038.2": "Every backup is listed; restore it as a copy or replace the current world.",
- "v3.n038.3": "Deleting a world keeps a backup, so mistakes can be undone."
+ "v3.n038.3": "Deleting a world keeps a backup, so mistakes can be undone.",
+ "v3.nv0.3.9": "New in 0.3.9",
+ "v3.nv0.3.9.1": "Optimize presets: Balanced, Max FPS, Low-end PC or Same look.",
+ "v3.nv0.3.9.2": "See memory, garbage collector and performance mods before and after.",
+ "v3.nv0.3.9.3": "A backup is made first, with one-click Undo."
 }

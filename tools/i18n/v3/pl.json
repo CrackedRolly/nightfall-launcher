@@ -242,5 +242,9 @@
  "v3.n038": "Nowości w 0.3.8",
  "v3.n038.1": "Menedżer światów: zmieniaj nazwy światów i eksportuj je jako .zip.",
  "v3.n038.2": "Każda kopia jest na liście; przywróć ją jako kopię lub zastąp obecny świat.",
- "v3.n038.3": "Usunięcie świata zostawia kopię, więc błąd można cofnąć."
+ "v3.n038.3": "Usunięcie świata zostawia kopię, więc błąd można cofnąć.",
+ "v3.nv0.3.9": "Nowości w 0.3.9",
+ "v3.nv0.3.9.1": "Profile optymalizacji: Zrównoważony, Maks. FPS, Słaby PC lub Ten sam wygląd.",
+ "v3.nv0.3.9.2": "Zobacz pamięć, garbage collector i mody wydajności przed i po.",
+ "v3.nv0.3.9.3": "Najpierw tworzona jest kopia zapasowa, z cofnięciem jednym kliknięciem."
 }

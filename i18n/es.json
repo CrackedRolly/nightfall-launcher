@@ -426,5 +426,9 @@
  "v3.n038": "Novedades de 0.3.8",
  "v3.n038.1": "Gestor de mundos: renombra mundos y expórtalos como .zip.",
  "v3.n038.2": "Todas las copias aparecen en una lista; restaura como copia o reemplaza el mundo actual.",
- "v3.n038.3": "Borrar un mundo guarda una copia, así los errores tienen arreglo."
+ "v3.n038.3": "Borrar un mundo guarda una copia, así los errores tienen arreglo.",
+ "v3.nv0.3.9": "Novedades de 0.3.9",
+ "v3.nv0.3.9.1": "Perfiles de optimización: Equilibrado, FPS máximos, PC modesto o Mismo aspecto.",
+ "v3.nv0.3.9.2": "Mira la memoria, el recolector de basura y los mods de rendimiento antes y después.",
+ "v3.nv0.3.9.3": "Primero se hace una copia de seguridad, con Deshacer en un clic."
 }

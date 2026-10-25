@@ -242,5 +242,9 @@
  "v3.n038": "Novità della 0.3.8",
  "v3.n038.1": "Gestione mondi: rinomina i mondi ed esportali come .zip.",
  "v3.n038.2": "Ogni backup è in elenco; ripristinalo come copia o sostituisci il mondo attuale.",
- "v3.n038.3": "Eliminare un mondo ne tiene un backup, così gli errori si possono annullare."
+ "v3.n038.3": "Eliminare un mondo ne tiene un backup, così gli errori si possono annullare.",
+ "v3.nv0.3.9": "Novità della 0.3.9",
+ "v3.nv0.3.9.1": "Preset di ottimizzazione: Bilanciato, FPS massimi, PC modesto o Stesso aspetto.",
+ "v3.nv0.3.9.2": "Vedi memoria, garbage collector e mod di prestazioni prima e dopo.",
+ "v3.nv0.3.9.3": "Prima viene creato un backup, con Annulla in un clic."
 }

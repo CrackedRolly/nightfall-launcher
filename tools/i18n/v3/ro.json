@@ -242,5 +242,9 @@
  "v3.n038": "Nou în 0.3.8",
  "v3.n038.1": "Manager de lumi: redenumește lumile și exportă-le ca .zip.",
  "v3.n038.2": "Toate copiile apar într-o listă; restaurează ca o copie sau înlocuiește lumea actuală.",
- "v3.n038.3": "Ștergerea unei lumi păstrează o copie, ca greșelile să poată fi anulate."
+ "v3.n038.3": "Ștergerea unei lumi păstrează o copie, ca greșelile să poată fi anulate.",
+ "v3.nv0.3.9": "Nou în 0.3.9",
+ "v3.nv0.3.9.1": "Presetări de optimizare: Echilibrat, FPS maxim, PC slab sau Același aspect.",
+ "v3.nv0.3.9.2": "Vezi memoria, garbage collectorul și modurile de performanță înainte și după.",
+ "v3.nv0.3.9.3": "Mai întâi se face o copie de rezervă, cu Anulare dintr-un clic."
 }

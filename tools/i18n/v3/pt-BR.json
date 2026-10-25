@@ -242,5 +242,9 @@
  "v3.n038": "Novidades da 0.3.8",
  "v3.n038.1": "Gerenciador de mundos: renomeie mundos e exporte como .zip.",
  "v3.n038.2": "Todos os backups aparecem em lista; restaure como cópia ou substitua o mundo atual.",
- "v3.n038.3": "Excluir um mundo mantém um backup, então dá para desfazer."
+ "v3.n038.3": "Excluir um mundo mantém um backup, então dá para desfazer.",
+ "v3.nv0.3.9": "Novidades da 0.3.9",
+ "v3.nv0.3.9.1": "Predefinições de otimização: Equilibrado, FPS máximo, PC fraco ou Mesmo visual.",
+ "v3.nv0.3.9.2": "Veja memória, coletor de lixo e mods de desempenho antes e depois.",
+ "v3.nv0.3.9.3": "Um backup é feito antes, com Desfazer em um clique."
 }

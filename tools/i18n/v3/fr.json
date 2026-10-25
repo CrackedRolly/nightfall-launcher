@@ -242,5 +242,9 @@
  "v3.n038": "Nouveautés de la 0.3.8",
  "v3.n038.1": "Gestion des mondes : renommez vos mondes et exportez-les en .zip.",
  "v3.n038.2": "Chaque sauvegarde est listée ; restaurez-la en copie ou remplacez le monde actuel.",
- "v3.n038.3": "Supprimer un monde garde une sauvegarde, une erreur peut être annulée."
+ "v3.n038.3": "Supprimer un monde garde une sauvegarde, une erreur peut être annulée.",
+ "v3.nv0.3.9": "Nouveautés de 0.3.9",
+ "v3.nv0.3.9.1": "Préréglages d’optimisation : Équilibré, FPS max, PC modeste ou Même rendu.",
+ "v3.nv0.3.9.2": "Vois la mémoire, le ramasse-miettes et les mods de performance avant et après.",
+ "v3.nv0.3.9.3": "Une sauvegarde est faite avant, avec Annuler en un clic."
 }

@@ -426,5 +426,9 @@
  "v3.n038": "Neu in 0.3.8",
  "v3.n038.1": "Weltverwaltung: Welten umbenennen und als .zip exportieren.",
  "v3.n038.2": "Jede Sicherung wird aufgelistet; als Kopie wiederherstellen oder die aktuelle Welt ersetzen.",
- "v3.n038.3": "Beim Löschen einer Welt bleibt eine Sicherung, Fehler lassen sich rückgängig machen."
+ "v3.n038.3": "Beim Löschen einer Welt bleibt eine Sicherung, Fehler lassen sich rückgängig machen.",
+ "v3.nv0.3.9": "Neu in 0.3.9",
+ "v3.nv0.3.9.1": "Optimierungs-Voreinstellungen: Ausgewogen, Max. FPS, Schwacher PC oder Gleicher Look.",
+ "v3.nv0.3.9.2": "Speicher, Garbage Collector und Performance-Mods vorher und nachher sehen.",
+ "v3.nv0.3.9.3": "Vorher wird ein Backup erstellt, mit Rückgängig per Klick."
 }
