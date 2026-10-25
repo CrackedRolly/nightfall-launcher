@@ -207,5 +207,11 @@
  "v3.n033.2": "Your FPS cap is never overwritten; a fairer Compare FPS and a CurseForge-identical test launch.",
  "v3.n033.3": "Turn off all HUD with one switch or a key, and get exactly what you had back.",
  "v3.n033.4": "New instances start clean: transfer all your settings from another instance, or start fresh.",
- "v3.n033.5": "Fixed: Customize no longer changes your GUI scale."
+ "v3.n033.5": "Fixed: Customize no longer changes your GUI scale.",
+ "v3.n034": "New in 0.3.4",
+ "v3.n034.1": "A new in-game menu with categories, pages and search, now on 1.8.9, 1.12.2 and 1.16–1.19 too.",
+ "v3.n034.2": "The in-game menu is translated into all 23 languages, on every version.",
+ "v3.n034.3": "Customize: 55 free fonts with a live preview, downloaded only when you pick one (Minecraft 1.16+).",
+ "v3.n034.4": "Title-screen backgrounds on every version: a colour, your own picture or a free Openverse photo with credit.",
+ "v3.n034.5": "Kids mode gets Customize too, with online picture search off by default."
 }

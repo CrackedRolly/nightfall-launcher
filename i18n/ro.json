@@ -391,5 +391,11 @@
  "v3.n033.2": "Limita ta de FPS nu mai e suprascrisă niciodată; comparație FPS mai corectă și o pornire de test identică cu CurseForge.",
  "v3.n033.3": "Oprește tot HUD-ul dintr-un comutator sau o tastă și primești înapoi exact ce aveai.",
  "v3.n033.4": "Instanțele noi pornesc curat: transferă toate setările dintr-o altă instanță sau pornește de la zero.",
- "v3.n033.5": "Reparat: Personalizare nu mai schimbă mărimea GUI."
+ "v3.n033.5": "Reparat: Personalizare nu mai schimbă mărimea GUI.",
+ "v3.n034": "Nou în 0.3.4",
+ "v3.n034.1": "Un meniu nou în joc, cu categorii, pagini și căutare, acum și pe 1.8.9, 1.12.2 și 1.16–1.19.",
+ "v3.n034.2": "Meniul din joc e tradus în toate cele 23 de limbi, pe fiecare versiune.",
+ "v3.n034.3": "Personalizare: 55 de fonturi gratuite cu previzualizare live, descărcate doar când alegi unul (Minecraft 1.16+).",
+ "v3.n034.4": "Fundaluri pentru ecranul de titlu pe orice versiune: o culoare, poza ta sau o fotografie liberă de pe Openverse, cu autorul menționat.",
+ "v3.n034.5": "Și modul Copii are Personalizare, cu căutarea online de imagini oprită implicit."
 }

@@ -391,5 +391,11 @@
  "v3.n033.2": "Dein FPS-Limit wird nie überschrieben; fairerer FPS-Vergleich und ein Teststart wie bei CurseForge.",
  "v3.n033.3": "Gesamtes HUD mit einem Schalter oder einer Taste aus – und genau so wieder an.",
  "v3.n033.4": "Neue Instanzen starten sauber: alle Einstellungen aus einer anderen Instanz übernehmen oder neu beginnen.",
- "v3.n033.5": "Behoben: Anpassen ändert deine GUI-Größe nicht mehr."
+ "v3.n033.5": "Behoben: Anpassen ändert deine GUI-Größe nicht mehr.",
+ "v3.n034": "Neu in 0.3.4",
+ "v3.n034.1": "Ein neues Spielmenü mit Kategorien, Seiten und Suche, jetzt auch auf 1.8.9, 1.12.2 und 1.16–1.19.",
+ "v3.n034.2": "Das Spielmenü ist in alle 23 Sprachen übersetzt, auf jeder Version.",
+ "v3.n034.3": "Anpassen: 55 kostenlose Schriften mit Live-Vorschau, erst beim Auswählen heruntergeladen (Minecraft 1.16+).",
+ "v3.n034.4": "Titelbild-Hintergründe auf jeder Version: eine Farbe, dein eigenes Bild oder ein freies Openverse-Foto mit Nennung.",
+ "v3.n034.5": "Auch der Kindermodus bekommt Anpassen, die Online-Bildersuche ist standardmäßig aus."
 }

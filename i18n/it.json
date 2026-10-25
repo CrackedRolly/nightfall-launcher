@@ -391,5 +391,11 @@
  "v3.n033.2": "Il tuo limite FPS non viene mai sovrascritto; confronto FPS più equo e un avvio di prova identico a CurseForge.",
  "v3.n033.3": "Spegni tutto l’HUD con un interruttore o un tasto e ritrova esattamente ciò che avevi.",
  "v3.n033.4": "Le nuove istanze partono pulite: trasferisci tutte le impostazioni da un’altra istanza o inizia da zero.",
- "v3.n033.5": "Corretto: Personalizza non cambia più la dimensione della GUI."
+ "v3.n033.5": "Corretto: Personalizza non cambia più la dimensione della GUI.",
+ "v3.n034": "Novità della 0.3.4",
+ "v3.n034.1": "Un nuovo menu di gioco con categorie, pagine e ricerca, ora anche su 1.8.9, 1.12.2 e 1.16–1.19.",
+ "v3.n034.2": "Il menu di gioco è tradotto in tutte le 23 lingue, su ogni versione.",
+ "v3.n034.3": "Personalizza: 55 font gratuiti con anteprima dal vivo, scaricati solo quando li scegli (Minecraft 1.16+).",
+ "v3.n034.4": "Sfondi della schermata del titolo su ogni versione: un colore, una tua immagine o una foto libera di Openverse con credito.",
+ "v3.n034.5": "Anche la modalità Bambini ha Personalizza, con la ricerca di immagini online disattivata di default."
 }

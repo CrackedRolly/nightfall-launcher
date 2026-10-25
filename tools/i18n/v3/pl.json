@@ -207,5 +207,11 @@
  "v3.n033.2": "Twój limit FPS nigdy nie jest nadpisywany; uczciwsze porównanie FPS i testowe uruchomienie jak w CurseForge.",
  "v3.n033.3": "Wyłącz cały HUD jednym przełącznikiem lub klawiszem i odzyskaj dokładnie to, co było.",
  "v3.n033.4": "Nowe instancje startują czysto: przenieś wszystkie ustawienia z innej instancji albo zacznij od nowa.",
- "v3.n033.5": "Naprawiono: Dostosuj nie zmienia już rozmiaru GUI."
+ "v3.n033.5": "Naprawiono: Dostosuj nie zmienia już rozmiaru GUI.",
+ "v3.n034": "Nowości w 0.3.4",
+ "v3.n034.1": "Nowe menu w grze z kategoriami, stronami i wyszukiwaniem, teraz też na 1.8.9, 1.12.2 i 1.16–1.19.",
+ "v3.n034.2": "Menu w grze jest przetłumaczone na wszystkie 23 języki, w każdej wersji.",
+ "v3.n034.3": "Dostosuj: 55 darmowych czcionek z podglądem na żywo, pobieranych dopiero po wybraniu (Minecraft 1.16+).",
+ "v3.n034.4": "Tła ekranu tytułowego w każdej wersji: kolor, własny obraz albo darmowe zdjęcie z Openverse z podpisem autora.",
+ "v3.n034.5": "Tryb dla dzieci też ma Dostosuj, a wyszukiwanie obrazów w sieci jest domyślnie wyłączone."
 }

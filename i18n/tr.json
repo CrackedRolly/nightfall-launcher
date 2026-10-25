@@ -391,5 +391,11 @@
  "v3.n033.2": "FPS sınırın asla değiştirilmez; daha adil FPS karşılaştırması ve CurseForge ile aynı test başlatması.",
  "v3.n033.3": "Tüm HUD'u tek anahtarla veya bir tuşla kapat, açınca tam olarak eskisi gelsin.",
  "v3.n033.4": "Yeni kurulumlar temiz başlar: tüm ayarlarını başka bir kurulumdan aktar ya da sıfırdan başla.",
- "v3.n033.5": "Düzeltildi: Özelleştir artık arayüz boyutunu değiştirmiyor."
+ "v3.n033.5": "Düzeltildi: Özelleştir artık arayüz boyutunu değiştirmiyor.",
+ "v3.n034": "0.3.4'te yeni",
+ "v3.n034.1": "Kategoriler, sayfalar ve aramayla yeni oyun içi menü; artık 1.8.9, 1.12.2 ve 1.16–1.19'da da.",
+ "v3.n034.2": "Oyun içi menü her sürümde 23 dilin tamamına çevrildi.",
+ "v3.n034.3": "Özelleştir: canlı önizlemeli 55 ücretsiz yazı tipi, yalnızca seçtiğinde indirilir (Minecraft 1.16+).",
+ "v3.n034.4": "Her sürümde başlık ekranı arka planı: bir renk, kendi resmin ya da yazarı belirtilmiş ücretsiz bir Openverse fotoğrafı.",
+ "v3.n034.5": "Çocuk modunda da Özelleştir var; çevrimiçi resim araması varsayılan olarak kapalı."
 }
