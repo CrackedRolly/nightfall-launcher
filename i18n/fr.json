@@ -418,5 +418,9 @@
  "v3.n036.3": "Jamais pendant une partie : la mise à jour attend la fermeture de Minecraft.",
  "v3.n036.4": "Après une mise à jour, une carte montre la nouvelle version et ce qui a changé.",
  "v3.n036.5": "Paramètres : « Installer les mises à jour automatiquement » (activé par défaut) et « Vérifier maintenant ». L’AppImage Linux se met aussi à jour seule.",
- "v3.n036.6": "Corrigé : personnaliser ne réinitialise plus les balancements de vue, l’inclinaison des dégâts, le chat et l’accessibilité."
+ "v3.n036.6": "Corrigé : personnaliser ne réinitialise plus les balancements de vue, l’inclinaison des dégâts, le chat et l’accessibilité.",
+ "v3.n037": "Nouveautés de la 0.3.7",
+ "v3.n037.1": "Rangez vos instances dans des dossiers (PvP, Modpacks, Anciennes versions…) depuis leur carte.",
+ "v3.n037.2": "Les dossiers apparaissent comme filtres à côté de la recherche.",
+ "v3.n037.3": "Les instances favorites restent en haut."
 }

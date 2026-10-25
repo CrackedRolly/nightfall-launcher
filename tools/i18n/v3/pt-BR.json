@@ -234,5 +234,9 @@
  "v3.n036.3": "Nunca durante o jogo: a atualização espera o Minecraft fechar.",
  "v3.n036.4": "Depois de atualizar, um cartão mostra a nova versão e o que mudou.",
  "v3.n036.5": "Configurações: “Instalar atualizações automaticamente” (ligado por padrão) e “Verificar agora”. O AppImage do Linux também se atualiza sozinho.",
- "v3.n036.6": "Corrigido: personalizar não redefine mais o balanço da visão, a inclinação de dano, o chat e a acessibilidade."
+ "v3.n036.6": "Corrigido: personalizar não redefine mais o balanço da visão, a inclinação de dano, o chat e a acessibilidade.",
+ "v3.n037": "Novidades da 0.3.7",
+ "v3.n037.1": "Coloque instâncias em pastas (PvP, Modpacks, Versões antigas…) direto do cartão.",
+ "v3.n037.2": "As pastas aparecem como filtros ao lado da busca.",
+ "v3.n037.3": "Instâncias favoritas ficam no topo."
 }

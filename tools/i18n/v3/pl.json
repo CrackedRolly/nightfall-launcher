@@ -234,5 +234,9 @@
  "v3.n036.3": "Nigdy podczas gry: aktualizacja czeka, aż Minecraft się zamknie.",
  "v3.n036.4": "Po aktualizacji karta pokazuje nową wersję i zmiany.",
  "v3.n036.5": "Ustawienia: „Instaluj aktualizacje automatycznie” (domyślnie włączone) i „Sprawdź teraz”. AppImage na Linuksie też aktualizuje się sam.",
- "v3.n036.6": "Naprawiono: dostosowywanie nie resetuje już kołysania widoku, przechyłu przy obrażeniach, czatu ani ułatwień dostępu."
+ "v3.n036.6": "Naprawiono: dostosowywanie nie resetuje już kołysania widoku, przechyłu przy obrażeniach, czatu ani ułatwień dostępu.",
+ "v3.n037": "Nowości w 0.3.7",
+ "v3.n037.1": "Układaj instancje w folderach (PvP, Modpacki, Stare wersje…) prosto z ich karty.",
+ "v3.n037.2": "Foldery pojawiają się jako filtry obok wyszukiwarki.",
+ "v3.n037.3": "Ulubione instancje zostają na górze."
 }

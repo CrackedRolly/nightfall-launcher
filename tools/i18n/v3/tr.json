@@ -234,5 +234,9 @@
  "v3.n036.3": "Oyun sırasında asla: güncelleme Minecraft kapanana kadar bekler.",
  "v3.n036.4": "Güncellemeden sonra bir kart yeni sürümü ve değişiklikleri gösterir.",
  "v3.n036.5": "Ayarlar: “Güncellemeleri otomatik kur” (varsayılan açık) ve “Şimdi denetle”. Linux AppImage da kendini günceller.",
- "v3.n036.6": "Düzeltildi: özelleştirme artık görüş sallanmasını, hasar eğimini, sohbet ve erişilebilirlik ayarlarını sıfırlamıyor."
+ "v3.n036.6": "Düzeltildi: özelleştirme artık görüş sallanmasını, hasar eğimini, sohbet ve erişilebilirlik ayarlarını sıfırlamıyor.",
+ "v3.n037": "0.3.7'de yeni",
+ "v3.n037.1": "Örnekleri doğrudan kartlarından klasörlere koy (PvP, Mod paketleri, Eski sürümler…).",
+ "v3.n037.2": "Klasörler aramanın yanında filtre olarak görünür.",
+ "v3.n037.3": "Yıldızlı örnekler en üstte kalır."
 }

@@ -234,5 +234,9 @@
  "v3.n036.3": "Niciodată în timpul jocului: actualizarea așteaptă până se închide Minecraft.",
  "v3.n036.4": "După o actualizare, un card arată noua versiune și ce s-a schimbat.",
  "v3.n036.5": "Setări: „Instalează actualizările automat” (pornit implicit) și „Verifică acum”. Și AppImage-ul pentru Linux se actualizează singur.",
- "v3.n036.6": "Reparat: personalizarea nu mai resetează balansarea imaginii, înclinarea la daune, chatul și accesibilitatea."
+ "v3.n036.6": "Reparat: personalizarea nu mai resetează balansarea imaginii, înclinarea la daune, chatul și accesibilitatea.",
+ "v3.n037": "Nou în 0.3.7",
+ "v3.n037.1": "Pune instanțele în dosare (PvP, Modpackuri, Versiuni vechi…) direct de pe cardul lor.",
+ "v3.n037.2": "Dosarele apar ca filtre lângă căutare.",
+ "v3.n037.3": "Instanțele favorite rămân sus."
 }

@@ -234,5 +234,9 @@
  "v3.n036.3": "Nie während eines Spiels: das Update wartet, bis Minecraft geschlossen ist.",
  "v3.n036.4": "Nach einem Update zeigt eine Karte die neue Version und was sich geändert hat.",
  "v3.n036.5": "Einstellungen: „Updates automatisch installieren“ (standardmäßig an) und „Jetzt prüfen“. Auch das Linux-AppImage aktualisiert sich selbst.",
- "v3.n036.6": "Behoben: Anpassen setzt Bildwackeln, Schadensneigung, Chat- und Barrierefreiheits-Einstellungen nicht mehr zurück."
+ "v3.n036.6": "Behoben: Anpassen setzt Bildwackeln, Schadensneigung, Chat- und Barrierefreiheits-Einstellungen nicht mehr zurück.",
+ "v3.n037": "Neu in 0.3.7",
+ "v3.n037.1": "Instanzen direkt von ihrer Karte aus in Ordner legen (PvP, Modpacks, Alte Versionen …).",
+ "v3.n037.2": "Ordner erscheinen als Filter neben der Instanzsuche.",
+ "v3.n037.3": "Markierte Instanzen bleiben oben."
 }

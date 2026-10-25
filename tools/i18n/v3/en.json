@@ -234,5 +234,9 @@
  "v3.n036.3": "Never during a game: the update waits until Minecraft closes.",
  "v3.n036.4": "After an update, a card shows the new version and what changed.",
  "v3.n036.5": "Settings: “Install updates automatically” (on by default) and “Check now”. The Linux AppImage updates itself too.",
- "v3.n036.6": "Fixed: customizing no longer resets view bobbing, damage tilt, chat and accessibility settings."
+ "v3.n036.6": "Fixed: customizing no longer resets view bobbing, damage tilt, chat and accessibility settings.",
+ "v3.n037": "New in 0.3.7",
+ "v3.n037.1": "Put instances in folders (PvP, Modpacks, Old versions…) right from their card.",
+ "v3.n037.2": "Folders appear as filters next to the instance search.",
+ "v3.n037.3": "Starred instances stay at the top."
 }

@@ -418,5 +418,9 @@
  "v3.n036.3": "Nunca durante una partida: la actualización espera a que se cierre Minecraft.",
  "v3.n036.4": "Tras actualizar, una tarjeta muestra la nueva versión y qué ha cambiado.",
  "v3.n036.5": "Ajustes: «Instalar actualizaciones automáticamente» (activado por defecto) y «Buscar ahora». El AppImage de Linux también se actualiza solo.",
- "v3.n036.6": "Corregido: personalizar ya no restablece el balanceo de cámara, la inclinación por daño, el chat ni la accesibilidad."
+ "v3.n036.6": "Corregido: personalizar ya no restablece el balanceo de cámara, la inclinación por daño, el chat ni la accesibilidad.",
+ "v3.n037": "Novedades de 0.3.7",
+ "v3.n037.1": "Organiza instancias en carpetas (PvP, Modpacks, Versiones antiguas…) desde su tarjeta.",
+ "v3.n037.2": "Las carpetas aparecen como filtros junto a la búsqueda.",
+ "v3.n037.3": "Las instancias favoritas se quedan arriba."
 }

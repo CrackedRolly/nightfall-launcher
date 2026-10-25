@@ -418,5 +418,9 @@
  "v3.n036.3": "Mai durante una partita: l’aggiornamento aspetta che Minecraft si chiuda.",
  "v3.n036.4": "Dopo un aggiornamento, una scheda mostra la nuova versione e le novità.",
  "v3.n036.5": "Impostazioni: «Installa gli aggiornamenti automaticamente» (attivo di default) e «Controlla ora». Anche l’AppImage Linux si aggiorna da solo.",
- "v3.n036.6": "Corretto: personalizzare non reimposta più l’ondeggiamento, l’inclinazione da danno, la chat e l’accessibilità."
+ "v3.n036.6": "Corretto: personalizzare non reimposta più l’ondeggiamento, l’inclinazione da danno, la chat e l’accessibilità.",
+ "v3.n037": "Novità della 0.3.7",
+ "v3.n037.1": "Metti le istanze in cartelle (PvP, Modpack, Versioni vecchie…) direttamente dalla loro scheda.",
+ "v3.n037.2": "Le cartelle compaiono come filtri accanto alla ricerca.",
+ "v3.n037.3": "Le istanze preferite restano in cima."
 }
