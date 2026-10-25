@@ -22,7 +22,7 @@ def get(url):
     except Exception as e:
         print('fetch failed', url, e); return None
 REL = get('https://api.github.com/repos/CrackedRolly/nightfall-launcher/releases/latest') or {}
-VER = (REL.get('tag_name') or 'v0.2.9').lstrip('v')
+VER = (REL.get('tag_name') or 'v0.3.1').lstrip('v')
 ASSETS = {a['name']: a for a in REL.get('assets', [])}
 def asset(rx):
     for n, a in ASSETS.items():
@@ -129,7 +129,7 @@ def hero():
 <p class="fine rv" data-i18n="hero.signin">{EN["hero.signin"]}</p></div>
 {spec()}</div>
 <figure class="frame rv"><i></i><i></i><i></i><i></i><img src="assets/shots/home-029.webp" width="1600" height="900" alt="{E(EN["hero.shotAlt"])}" data-i18n-alt="hero.shotAlt" fetchpriority="high"></figure>
-<div class="cap"><span>FIG. 01 — <span data-i18n="hero.shotAlt">{EN["hero.shotAlt"]}</span></span><span>v0.2.9</span></div>
+<div class="cap"><span>FIG. 01 — <span data-i18n="hero.shotAlt">{EN["hero.shotAlt"]}</span></span><span>v{VER}</span></div>
 </div></header>'''
 
 FEATS = [('perf','perf'),('modrinth','modrinth'),('storage','storage'),('share','share'),('import','import'),('loaders','loaders'),('toggle','toggle'),('crash','crash'),('shared','shared'),('update','update'),('linux','linux'),('access','access')]
