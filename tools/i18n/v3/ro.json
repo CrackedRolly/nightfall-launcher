@@ -251,5 +251,8 @@
  "v3.nv0.4.0.1": "Stocare comună: modurile mai multor instanțe sunt stocate o dată. Spațiul economisit apare în Setări.",
  "v3.nv0.4.0.2": "Codurile găsesc și fișiere CurseForge; fișierele .nightfall se importă dintr-un clic.",
  "v3.nv0.4.0.3": "Verifică probleme: rezolvă sau ignoră fiecare conflict sau mod lipsă.",
- "v3.nv0.4.0.4": "Fereastra de crash cu remedieri dintr-un clic: mod lipsă, modul vinovat, Java, RAM."
+ "v3.nv0.4.0.4": "Fereastra de crash cu remedieri dintr-un clic: mod lipsă, modul vinovat, Java, RAM.",
+ "v3.nv0.4.1": "Nou în 0.4.1",
+ "v3.nv0.4.1.1": "Reparat: o imagine încărcată apare acum ca fundal pe ecranul de titlu imediat după Aplică.",
+ "v3.nv0.4.1.2": "Poți încărca și imagini WEBP (salvate ca PNG)."
 }

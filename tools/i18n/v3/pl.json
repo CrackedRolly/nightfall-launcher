@@ -251,5 +251,8 @@
  "v3.nv0.4.0.1": "Wspólny magazyn modów: mody kilku instancji są zapisane raz. Zaoszczędzone miejsce w Ustawieniach.",
  "v3.nv0.4.0.2": "Kody udostępniania znajdują też pliki CurseForge; pliki .nightfall importujesz jednym kliknięciem.",
  "v3.nv0.4.0.3": "Sprawdź problemy: napraw lub ignoruj każdy konflikt lub brakujący mod.",
- "v3.nv0.4.0.4": "Okno awarii z naprawami jednym kliknięciem: brakujący mod, winny mod, Java, RAM."
+ "v3.nv0.4.0.4": "Okno awarii z naprawami jednym kliknięciem: brakujący mod, winny mod, Java, RAM.",
+ "v3.nv0.4.1": "Nowość w 0.4.1",
+ "v3.nv0.4.1.1": "Naprawiono: przesłany obraz pojawia się teraz jako tło ekranu tytułowego zaraz po Zastosuj.",
+ "v3.nv0.4.1.2": "Można też przesyłać obrazy WEBP (zapisywane jako PNG)."
 }

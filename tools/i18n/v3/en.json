@@ -251,5 +251,8 @@
  "v3.nv0.4.0.1": "Shared mod storage: mods used by several instances are stored once. See Disk saved in Settings.",
  "v3.nv0.4.0.2": "Share codes find CurseForge files too; .nightfall files import in one click.",
  "v3.nv0.4.0.3": "Check for problems: fix or ignore each conflict or missing mod.",
- "v3.nv0.4.0.4": "Crash dialog with one-click fixes: missing mod, culprit mod, Java, RAM."
+ "v3.nv0.4.0.4": "Crash dialog with one-click fixes: missing mod, culprit mod, Java, RAM.",
+ "v3.nv0.4.1": "New in 0.4.1",
+ "v3.nv0.4.1.1": "Fixed: an uploaded picture now shows as the title-screen background right after Apply.",
+ "v3.nv0.4.1.2": "WEBP pictures can be uploaded too (saved as PNG)."
 }

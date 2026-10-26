@@ -251,5 +251,8 @@
  "v3.nv0.4.0.1": "Armazenamento de mods compartilhado: mods de várias instâncias ficam guardados uma vez. Veja o espaço economizado em Configurações.",
  "v3.nv0.4.0.2": "Códigos também acham arquivos do CurseForge; arquivos .nightfall importam com um clique.",
  "v3.nv0.4.0.3": "Verificar problemas: corrija ou ignore cada conflito ou mod faltando.",
- "v3.nv0.4.0.4": "Tela de crash com correções em um clique: mod faltando, mod culpado, Java, RAM."
+ "v3.nv0.4.0.4": "Tela de crash com correções em um clique: mod faltando, mod culpado, Java, RAM.",
+ "v3.nv0.4.1": "Novo na 0.4.1",
+ "v3.nv0.4.1.1": "Corrigido: uma imagem enviada agora aparece como fundo da tela de título logo após Aplicar.",
+ "v3.nv0.4.1.2": "Imagens WEBP também podem ser enviadas (salvas como PNG)."
 }

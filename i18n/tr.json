@@ -435,5 +435,8 @@
  "v3.nv0.4.0.1": "Ortak mod deposu: birden çok kurulumun modları bir kez saklanır. Kazanılan alan Ayarlar’da.",
  "v3.nv0.4.0.2": "Paylaşım kodları CurseForge dosyalarını da bulur; .nightfall dosyaları tek tıkla içe aktarılır.",
  "v3.nv0.4.0.3": "Sorunları denetle: her çakışmayı veya eksik modu düzelt ya da yok say.",
- "v3.nv0.4.0.4": "Çökme penceresinde tek tıkla düzeltme: eksik mod, suçlu mod, Java, RAM."
+ "v3.nv0.4.0.4": "Çökme penceresinde tek tıkla düzeltme: eksik mod, suçlu mod, Java, RAM.",
+ "v3.nv0.4.1": "0.4.1'de yeni",
+ "v3.nv0.4.1.1": "Düzeltildi: yüklenen resim artık Uygula'dan hemen sonra başlık ekranı arka planı olarak görünüyor.",
+ "v3.nv0.4.1.2": "WEBP resimler de yüklenebilir (PNG olarak kaydedilir)."
 }

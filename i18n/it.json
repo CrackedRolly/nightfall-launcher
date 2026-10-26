@@ -435,5 +435,8 @@
  "v3.nv0.4.0.1": "Archivio mod condiviso: le mod di più istanze vengono salvate una volta. Spazio risparmiato nelle Impostazioni.",
  "v3.nv0.4.0.2": "I codici trovano anche i file CurseForge; i file .nightfall si importano con un clic.",
  "v3.nv0.4.0.3": "Controlla problemi: correggi o ignora ogni conflitto o mod mancante.",
- "v3.nv0.4.0.4": "Finestra di crash con correzioni in un clic: mod mancante, mod colpevole, Java, RAM."
+ "v3.nv0.4.0.4": "Finestra di crash con correzioni in un clic: mod mancante, mod colpevole, Java, RAM.",
+ "v3.nv0.4.1": "Novità in 0.4.1",
+ "v3.nv0.4.1.1": "Risolto: un'immagine caricata ora appare come sfondo della schermata del titolo subito dopo Applica.",
+ "v3.nv0.4.1.2": "Si possono caricare anche immagini WEBP (salvate come PNG)."
 }

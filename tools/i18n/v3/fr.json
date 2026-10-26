@@ -251,5 +251,8 @@
  "v3.nv0.4.0.1": "Stockage de mods partagé : les mods de plusieurs instances sont stockés une fois. Espace gagné dans les Réglages.",
  "v3.nv0.4.0.2": "Les codes de partage trouvent aussi les fichiers CurseForge ; les .nightfall s’importent en un clic.",
  "v3.nv0.4.0.3": "Vérifier les problèmes : corrige ou ignore chaque conflit ou mod manquant.",
- "v3.nv0.4.0.4": "Fenêtre de crash avec corrections en un clic : mod manquant, mod fautif, Java, RAM."
+ "v3.nv0.4.0.4": "Fenêtre de crash avec corrections en un clic : mod manquant, mod fautif, Java, RAM.",
+ "v3.nv0.4.1": "Nouveau dans 0.4.1",
+ "v3.nv0.4.1.1": "Corrigé : une image importée s'affiche maintenant en fond de l'écran titre juste après Appliquer.",
+ "v3.nv0.4.1.2": "Les images WEBP peuvent aussi être importées (enregistrées en PNG)."
 }

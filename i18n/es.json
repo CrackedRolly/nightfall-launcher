@@ -435,5 +435,8 @@
  "v3.nv0.4.0.1": "Almacén de mods compartido: los mods de varias instancias se guardan una vez. Mira el espacio ahorrado en Ajustes.",
  "v3.nv0.4.0.2": "Los códigos también encuentran archivos de CurseForge; los .nightfall se importan en un clic.",
  "v3.nv0.4.0.3": "Buscar problemas: arregla o ignora cada conflicto o mod que falta.",
- "v3.nv0.4.0.4": "Diálogo de fallo con arreglos en un clic: mod que falta, mod culpable, Java, RAM."
+ "v3.nv0.4.0.4": "Diálogo de fallo con arreglos en un clic: mod que falta, mod culpable, Java, RAM.",
+ "v3.nv0.4.1": "Novedades en 0.4.1",
+ "v3.nv0.4.1.1": "Corregido: una imagen subida ahora aparece como fondo de la pantalla de título justo después de Aplicar.",
+ "v3.nv0.4.1.2": "También se pueden subir imágenes WEBP (se guardan como PNG)."
 }
