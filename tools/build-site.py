@@ -17,6 +17,7 @@ EN = jl(os.path.join(SRC, 'en.json')); EN.update(jl(os.path.join(SRC, 'v3', 'en.
 E = html.escape
 
 def get(url):
+    if os.environ.get('NF_SITE_OFFLINE') == '1': return None
     try:
         with urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'nightfall-site-build'}), timeout=20) as r: return json.load(r)
     except Exception as e:

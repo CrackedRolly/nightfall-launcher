@@ -1,0 +1,53 @@
+name: Website CI
+on:
+  push:
+    branches: [feature/nightfall-next-update, main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: website-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  website:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with: {fetch-depth: 0, persist-credentials: false}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with: {python-version: '3.12'}
+      - run: python3 tools/check-site.py
+      - name: Prevent accidental tracked deletions
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          python3 - <<'PYCODE'
+          import os,subprocess,pathlib
+          for name in ['AGENTS.md','index.html','download.html','tools/build-site.py','tools/check-site.py','data/crash-kb.json']:
+              assert pathlib.Path(name).is_file(),name
+          base=os.environ.get('BASE_SHA','')
+          if base and set(base)!={'0'}:
+              deleted=subprocess.check_output(['git','diff','--name-only','--diff-filter=D',base,'HEAD'],text=True)
+              assert not deleted,'Tracked deletions require deliberate guard review: '+deleted
+          PYCODE
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: website-source
+          path: |
+            *.html
+            *.css
+            assets/
+            i18n/
+            data/
+            promos.json
+  secrets:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with: {fetch-depth: 0, persist-credentials: false}
+      - uses: gitleaks/gitleaks-action@ff98106e4c7b2bc287b24eaf42907196329070c7 # v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
