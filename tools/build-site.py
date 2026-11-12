@@ -16,13 +16,18 @@ def jl(p): return json.load(open(p, encoding='utf-8'))
 EN = jl(os.path.join(SRC, 'en.json')); EN.update(jl(os.path.join(SRC, 'v3', 'en.json')))
 E = html.escape
 
-def get(url):
+TOKEN = os.environ.get('GITHUB_TOKEN') or os.environ.get('GH_TOKEN')
+def get(url, auth=False):
+    headers = {'User-Agent': 'nightfall-site-build'}
+    if auth and TOKEN: headers['Authorization'] = 'Bearer ' + TOKEN
     try:
-        with urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'nightfall-site-build'}), timeout=20) as r: return json.load(r)
+        with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=20) as r: return json.load(r)
     except Exception as e:
         print('fetch failed', url, e); return None
-REL = get('https://api.github.com/repos/CrackedRolly/nightfall-launcher/releases/latest') or {}
-VER = (REL.get('tag_name') or 'v0.3.1').lstrip('v')
+REL = get('https://api.github.com/repos/CrackedRolly/nightfall-launcher/releases/latest', auth=True)
+if not REL or not REL.get('tag_name'):
+    raise SystemExit('build-site: could not read the latest release. Set GITHUB_TOKEN, or run it in CI. Refusing to build the site with a guessed version.')
+VER = REL['tag_name'].lstrip('v')
 ASSETS = {a['name']: a for a in REL.get('assets', [])}
 def asset(rx):
     for n, a in ASSETS.items():
