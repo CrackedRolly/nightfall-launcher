@@ -81,7 +81,8 @@ NAV = [('features.html','nav.features','features'),('download.html','nav.downloa
        ('changelog.html','nav.changelog','log'),('roadmap.html','nav.roadmap','roadmap'),('faq.html','nav.faq','faq'),('crash-help.html','nav.crash','crash')]
 def nav(cur):
     opts = ''.join(f'<option value="{c}">{E(n)}</option>' for c,n in LANGS)
-    links = ''.join(f'<a href="{h}" data-i18n="{k}"{" aria-current=\"page\"" if c==cur else ""}>{EN[k]}</a>' for h,k,c in NAV)
+    cur_attr = ' aria-current="page"'
+    links = ''.join(f'<a href="{h}" data-i18n="{k}"{cur_attr if c==cur else ""}>{EN[k]}</a>' for h,k,c in NAV)
     return f'''<nav id="nav"><div class="w">
 <a class="brand" href="./" aria-label="Nightfall home"><img src="assets/star.svg" alt="" width="22" height="22"><span>NIGHTFALL</span></a>
 <div class="links" id="links">{links}</div>
@@ -169,11 +170,14 @@ def newfig(k, d='030', wh=(1440, 900)):
 TOUR = [('g1',['import','share','builder','optimize','conflicts','modmap']),('g2',['pvphud','hudeditor','emotes']),('g3',['customize','themes','perfcheck','server'])]
 ART = ['sword_midnight','sword_frost','sword_ember','sword_void','sword_mint','pickaxe_frost','axe_ember','shield_nightfall','ore_amethyst','ore_diamond']
 def tour_full():
-    out = f'<h2 class="tour-h rv" data-i18n="v3.fp.new035">{EN["v3.fp.new035"]}</h2>{T("v3.fp.new035sub","p"," class=\"note rv\" style=\"margin:-6px 0 18px\"")}<div class="strip">' + ''.join(newfig(k, '035', (1280, 800)) for k in ['menu035','customize035','recsadd']) + '</div>'
-    out += f'<h2 class="tour-h rv" data-i18n="v3.fp.new032">{EN["v3.fp.new032"]}</h2>{T("v3.fp.new032sub","p"," class=\"note rv\" style=\"margin:-6px 0 18px\"")}<div class="strip">' + ''.join(newfig(k, '032', (1280, 800)) for k in ['mods','version','templates']) + '</div>'
-    out += f'<h2 class="tour-h rv" data-i18n="v3.fp.new">{EN["v3.fp.new"]}</h2>{T("v3.fp.newsub","p"," class=\"note rv\" style=\"margin:-6px 0 18px\"")}<div class="strip">' + ''.join(newfig(k) for k in ['home','guide','friends','meteors'][:3]) + '</div>'
+    note_attr = ' class="note rv" style="margin:-6px 0 18px"'
+    out = f'<h2 class="tour-h rv" data-i18n="v3.fp.new035">{EN["v3.fp.new035"]}</h2>{T("v3.fp.new035sub","p",note_attr)}<div class="strip">' + ''.join(newfig(k, '035', (1280, 800)) for k in ['menu035','customize035','recsadd']) + '</div>'
+    out += f'<h2 class="tour-h rv" data-i18n="v3.fp.new032">{EN["v3.fp.new032"]}</h2>{T("v3.fp.new032sub","p",note_attr)}<div class="strip">' + ''.join(newfig(k, '032', (1280, 800)) for k in ['mods','version','templates']) + '</div>'
+    out += f'<h2 class="tour-h rv" data-i18n="v3.fp.new">{EN["v3.fp.new"]}</h2>{T("v3.fp.newsub","p",note_attr)}<div class="strip">' + ''.join(newfig(k) for k in ['home','guide','friends','meteors'][:3]) + '</div>'
     for g, ks in TOUR:
-        out += f'<h2 class="tour-h rv" data-i18n="tour.{g}">{EN["tour."+g]}</h2><div class="strip{' s4' if len(ks) == 4 else ''}">{"".join(fig(k) for k in ks)}</div>'
+        s4_cls = ' s4' if len(ks) == 4 else ''
+        figs = ''.join(fig(k) for k in ks)
+        out += f'<h2 class="tour-h rv" data-i18n="tour.{g}">{EN["tour."+g]}</h2><div class="strip{s4_cls}">{figs}</div>'
     return out
 
 def tour_sec(no):
@@ -232,7 +236,8 @@ def band():
 def write(name, body):
     open(os.path.join(ROOT, name), 'w', encoding='utf-8').write(body)
 def page_hero(kicker_k, title_k, sub_k, extra=''):
-    return f'<div class="page-hero"><div class="sh rv"><span class="no">§</span><span class="mono" data-i18n="{kicker_k}">{EN[kicker_k]}</span><i></i></div><h1 class="rv" data-i18n="{title_k}">{EN[title_k]}</h1>{T(sub_k,"p"," class=\"rv\"")}{extra}</div>'
+    sub_html = T(sub_k, 'p', ' class="rv"')
+    return f'<div class="page-hero"><div class="sh rv"><span class="no">§</span><span class="mono" data-i18n="{kicker_k}">{EN[kicker_k]}</span><i></i></div><h1 class="rv" data-i18n="{title_k}">{EN[title_k]}</h1>{sub_html}{extra}</div>'
 
 # ---------- index ----------
 write('index.html', head(EN['meta.title'],'meta.desc','', 'meta.title') + nav('home') + '<main id="main">' + hero() + features_sec() + fps_sec('§02') + tour_sec('§03') + packs_sec('§04') + compare_sec('§05') + discord_sec('§06') + band() + '</main>' + footer())
@@ -261,7 +266,7 @@ write('download.html', head('Download — Nightfall Launcher','meta.desc','downl
       f'<section id="install">{sh("§01","v3.d.wsteps.t")}<ol class="steps rv"><li data-i18n="v3.d.w1">{EN["v3.d.w1"]}</li><li data-i18n="v3.d.w2">{EN["v3.d.w2"]}</li><li data-i18n="v3.d.w3">{EN["v3.d.w3"]}</li></ol>'
       f'<p class="note" data-i18n="hero.signin">{EN["hero.signin"]}</p></section>'
       f'<section id="linux">{sh("§02","v3.d.lsteps.t")}<ol class="steps rv"><li data-i18n="v3.d.l1">{EN["v3.d.l1"]}</li><li><span data-i18n="v3.d.l2">{EN["v3.d.l2"]}</span><br><code>chmod +x Nightfall-Launcher-*.AppImage</code></li><li data-i18n="v3.d.l3">{EN["v3.d.l3"]}</li></ol></section>'
-      f'<section id="verify">{sh("§03","v3.d.sha")}<div class="twocol"><div class="rv"><h2 data-i18n="v3.d.verify.t">{EN["v3.d.verify.t"]}</h2>{T("v3.d.verify.d","p"," style=\"color:var(--dim);margin-top:16px\"")}</div>'
+      f'<section id="verify">{sh("§03","v3.d.sha")}<div class="twocol"><div class="rv"><h2 data-i18n="v3.d.verify.t">{EN["v3.d.verify.t"]}</h2>' + T("v3.d.verify.d","p", ' style="color:var(--dim);margin-top:16px"') + '</div>'
       f'<div class="box rv"><span class="lbl" style="margin-top:0" data-i18n="v3.d.verify.win">{EN["v3.d.verify.win"]}</span><pre>Get-FileHash .\\Nightfall-Launcher-<span class="ver">{VER}</span>-win-x64.exe -Algorithm SHA256</pre>'
       f'<span class="lbl" data-i18n="v3.d.verify.lin">{EN["v3.d.verify.lin"]}</span><pre>sha256sum Nightfall-Launcher-<span class="ver">{VER}</span>-linux-x86_64.AppImage</pre></div></div></section>'
       f'<section id="requirements">{sh("§04","v3.d.pc")}{headblk("v3.req.t","v3.req.sub")}<div class="tbl req rv" tabindex="0" role="region" aria-label="{E(EN["v3.req.t"])}"><table><thead><tr><th scope="col" data-i18n="v3.req.part">{EN["v3.req.part"]}</th><th scope="col" data-i18n="v3.req.min">{EN["v3.req.min"]}</th><th scope="col" data-i18n="v3.req.rec">{EN["v3.req.rec"]}</th></tr></thead><tbody>{req_rows}</tbody></table></div>'
@@ -287,17 +292,35 @@ write('roadmap.html', head('Roadmap — Nightfall Launcher','meta.desc','roadmap
 # ---------- faq ----------
 def faq_list(pre, n):
     return '<div class="faq">' + ''.join(f'<details><summary data-i18n="{pre}q{i}">{EN[f"{pre}q{i}"]}</summary><div class="a" data-i18n="{pre}a{i}">{EN[f"{pre}a{i}"]}</div></details>' for i in range(1,n+1)) + '</div>'
+ts_attr = ' style="color:var(--dim);margin:16px 0 30px"'
 write('faq.html', head('FAQ — Nightfall Launcher','meta.desc','faq.html') + nav('faq') +
       f'<main id="main"><div class="w">{page_hero("faq.kicker","faq.title","faq.sub")}'
       f'<div class="faqgrid" style="margin-top:56px"><nav class="faqside" aria-label="FAQ"><a href="#questions" data-i18n="faq.kicker">{EN["faq.kicker"]}</a><a href="#troubleshooting" data-i18n="v3.ts.title">{EN["v3.ts.title"]}</a><a href="crash-help.html" data-i18n="nav.crash">{EN["nav.crash"]}</a><a href="{INVITE}" rel="noopener">Discord</a></nav>'
       f'<div><div id="questions">{faq_list("faq.",12)}</div>'
-      f'<section id="troubleshooting" style="padding-top:90px">{sh("§","v3.ts.title")}<h2 class="rv" data-i18n="v3.ts.title">{EN["v3.ts.title"]}</h2>{T("v3.ts.sub","p"," style=\"color:var(--dim);margin:16px 0 30px\"")}{faq_list("v3.ts.",7)}</section></div></div></div></main>' + footer())
+      f'<section id="troubleshooting" style="padding-top:90px">{sh("§","v3.ts.title")}<h2 class="rv" data-i18n="v3.ts.title">{EN["v3.ts.title"]}</h2>{T("v3.ts.sub","p",ts_attr)}{faq_list("v3.ts.",7)}</section></div></div></div></main>' + footer())
 
 # ---------- changelog ----------
 FALLBACK_NOTE = f'<article class="rel"><div class="when"><div class="v">v{VER}</div></div><div class="notes"><p><a class="lnk" href="{REPO}/releases" rel="noopener" data-i18n="log.github">{EN["log.github"]}</a></p></div></article>'
+rss_cta = f'<div class=cta-row><a class="btn sm" href="{REPO}/releases.atom" rel="noopener">{svg("rss")}<span data-i18n="v3.log.rss">{EN["v3.log.rss"]}</span></a></div>'
+def make_rel(key, n):
+    items = ''.join(f'<li data-i18n="{key}.{i}">{EN.get(f"{key}.{i}", "")}</li>' for i in range(1, n+1))
+    return f'<section class="rel hl033"><h2 data-i18n="{key}">{EN.get(key, "")}</h2><ul>{items}</ul></section>'
+
+rels = ''.join([
+    make_rel('v3.nv0.3.9', 3),
+    make_rel('v3.nv0.4.1', 2),
+    make_rel('v3.nv0.4.0', 4),
+    make_rel('v3.n038', 3),
+    make_rel('v3.n037', 3),
+    make_rel('v3.n036', 6),
+    make_rel('v3.n035', 5),
+    make_rel('v3.n034', 5),
+    make_rel('v3.n033', 5),
+])
+
 write('changelog.html', head('Changelog — Nightfall Launcher','meta.desc','changelog.html') + nav('log') +
-      f'<main id="main"><div class="w">{page_hero("log.kicker","log.title","log.sub", f"<div class=cta-row><a class=\"btn sm\" href=\"{REPO}/releases.atom\" rel=\"noopener\">{svg("rss")}<span data-i18n=\"v3.log.rss\">{EN["v3.log.rss"]}</span></a></div>")}'
-      f'<nav class="jump" id="jump" aria-label="{E(EN["v3.log.jump"])}"></nav><p class="note" id="log-status" aria-live="polite" data-i18n="log.loading">{EN["log.loading"]}</p><section class="rel hl033"><h2 data-i18n="v3.nv0.3.9">{EN["v3.nv0.3.9"]}</h2><ul>{"".join(f"<li data-i18n=v3.nv0.3.9.{i}>{EN[f'v3.nv0.3.9.{i}']}</li>" for i in range(1,4))}</ul></section><section class="rel hl033"><h2 data-i18n="v3.nv0.4.1">{EN["v3.nv0.4.1"]}</h2><ul>{"".join(f"<li data-i18n=v3.nv0.4.1.{i}>{EN[f'v3.nv0.4.1.{i}']}</li>" for i in range(1,3))}</ul></section><section class="rel hl033"><h2 data-i18n="v3.nv0.4.0">{EN["v3.nv0.4.0"]}</h2><ul>{"".join(f"<li data-i18n=v3.nv0.4.0.{i}>{EN[f'v3.nv0.4.0.{i}']}</li>" for i in range(1,5))}</ul></section><section class="rel hl033"><h2 data-i18n="v3.n038">{EN["v3.n038"]}</h2><ul>{"".join(f"<li data-i18n=v3.n038.{i}>{EN[f'v3.n038.{i}']}</li>" for i in range(1,4))}</ul></section><section class="rel hl033"><h2 data-i18n="v3.n037">{EN["v3.n037"]}</h2><ul>{"".join(f"<li data-i18n=v3.n037.{i}>{EN[f'v3.n037.{i}']}</li>" for i in range(1,4))}</ul></section><section class="rel hl033"><h2 data-i18n="v3.n036">{EN["v3.n036"]}</h2><ul>{"".join(f"<li data-i18n=v3.n036.{i}>{EN[f'v3.n036.{i}']}</li>" for i in range(1,7))}</ul></section><section class="rel hl033"><h2 data-i18n="v3.n035">{EN["v3.n035"]}</h2><ul>{"".join(f"<li data-i18n=v3.n035.{i}>{EN[f'v3.n035.{i}']}</li>" for i in range(1,6))}</ul></section><section class="rel hl033"><h2 data-i18n="v3.n034">{EN["v3.n034"]}</h2><ul>{"".join(f"<li data-i18n=v3.n034.{i}>{EN[f'v3.n034.{i}']}</li>" for i in range(1,6))}</ul></section><section class="rel hl033"><h2 data-i18n="v3.n033">{EN["v3.n033"]}</h2><ul>{"".join(f"<li data-i18n=v3.n033.{i}>{EN[f'v3.n033.{i}']}</li>" for i in range(1,6))}</ul></section><div id="releases">{FALLBACK_NOTE}</div></div></main>' + footer())
+      f'<main id="main"><div class="w">{page_hero("log.kicker","log.title","log.sub", rss_cta)}'
+      f'<nav class="jump" id="jump" aria-label="{E(EN["v3.log.jump"])}"></nav><p class="note" id="log-status" aria-live="polite" data-i18n="log.loading">{EN["log.loading"]}</p>{rels}<div id="releases">{FALLBACK_NOTE}</div></div></main>' + footer())
 
 # ---------- legal ----------
 def legal(fn, title):
