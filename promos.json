@@ -2,6 +2,15 @@
  "version": 1,
  "promos": [
   {
+   "id": "house-website",
+   "slot": "home",
+   "label": "Nightfall",
+   "title": "Visit the Official Nightfall Website",
+   "body": "Explore modpack picks, view the live crash knowledge base, and check out the roadmap.",
+   "cta": "Open Website",
+   "url": "https://crackedrolly.github.io/nightfall-launcher/"
+  },
+  {
    "id": "house-discord",
    "slot": "home",
    "label": "Nightfall",
