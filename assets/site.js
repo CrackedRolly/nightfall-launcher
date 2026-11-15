@@ -37,10 +37,15 @@
       var sh=c.querySelector('.sha');if(sh)sh.textContent=(a.digest||'').replace('sha256:','')||'—';var b=c.querySelector('.dlb');if(b)b.href=a.browser_download_url})}
     window.NF&&NF.refresh&&NF.refresh();
   }).catch(function(){});
+  // Discord OAuth connect links (auto-detects Windows / Linux / macOS)
+  var webOs=/mac/.test(plat)||/mac os/i.test(ua)?'macos':os==='linux'?'linux':'windows';
+  document.querySelectorAll('.dc-connect').forEach(function(a){a.href='https://nightfall-launcher-app.onrender.com/oauth/discord/start?source=web&os='+webOs});
   // Discord live counts
   var dc=document.getElementById('dc-count');
   if(dc)fetch('https://discord.com/api/v9/invites/PGanscBPUt?with_counts=true').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){
-    if(!j.approximate_member_count)return;document.getElementById('dc-on').textContent=j.approximate_presence_count||0;document.getElementById('dc-all').textContent=j.approximate_member_count;dc.hidden=false}).catch(function(){});
+    if(!j.approximate_member_count)throw 0;document.getElementById('dc-on').textContent=j.approximate_presence_count||0;document.getElementById('dc-all').textContent=j.approximate_member_count;dc.hidden=false}).catch(function(){
+    fetch('https://nightfall-launcher-app.onrender.com/api/v1/public/stats').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(s){
+      if(!s.members)return;document.getElementById('dc-on').textContent=s.online||0;document.getElementById('dc-all').textContent=s.members;dc.hidden=false}).catch(function(){})});
   // Modrinth live data
   var packs=document.querySelectorAll('.pack[data-slug]');
   if(packs.length){var ids=[].map.call(packs,function(p){return p.dataset.slug});
